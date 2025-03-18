@@ -20,26 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Terminal Effect
   const terminalContent = document.querySelector('.matrix-text');
   const messages = [
-    'الظلام يقترب',
-    'أصوات في الجدران',
-    'هل سمعت ذلك؟',
-    'شيء ما يتحرك في الظل',
-    'انتبه خلفك',
-    'لا تنظر إلى الظلام كثيراً',
-    'الصمت يخفي الكثير',
-    'الحقيقة موجودة في مكان ما',
-    'اتبع الإشارات',
-    'كل شيء مترابط',
-    'الرسائل المخفية',
-    'الكود الأخير',
-    'النظام يراقب',
-    'الواقع يتلاشى',
-    'الزمن يتوقف',
-    'الذاكرة تتلاشى',
-    'الصدى يتردد',
-    'الأرقام تتكلم',
-    'الرموز تكشف',
-    'البوابة تفتح',
     'INITIALIZING_SYSTEM...',
     'SCANNING_REALITY_MATRIX...',
     'DETECTING_ANOMALIES...',
@@ -112,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sileoButton) {
     sileoButton.addEventListener('click', (e) => {
       e.preventDefault();
-      const sileoUrl = 'sileo://source/https://jzu4.github.io';
+      const sileoUrl = 'sileo://source/https://your-repo-url.com';
       window.location.href = sileoUrl;
       
       setTimeout(() => {
