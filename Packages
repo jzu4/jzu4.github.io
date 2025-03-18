@@ -1,0 +1,251 @@
+Package: com.Rives.Choicy.rootless
+Architecture: iphoneos-arm64
+Version: 1.4
+Section: ترجمة ادوات
+Maintainer: Rives - @jz_u4
+Filename: ./debian_file/com.Rives.Choicy.rootless.deb
+Size: 2488
+MD5sum: ad707160f070e8e37c356af46e410106
+SHA1: 348131d85258f24f78f1673157e42945c1b019e8
+SHA256: 1c9ea5565f79de1bd826417bf46dedf5810de4ac2e2af2a71aeddb1d4bf05870
+SHA512: a7f82675075143702e3d5723f20e59384ae77a74fa53938ea1a0acaecb49c388af00208537d4b6d20b0accb172ee66af84b9365482404a0c2be537b6856849bd
+Description: Only Rootless - bootstrap
+Name: Choicy ترجمة اداة
+Author: Rives
+
+Package: com.bandarhl.bhinsta
+Architecture: iphoneos-arm64
+Version: 1.0.3
+Section: Tweaks
+Maintainer: Bandar Alruwaili
+Installed-Size: 648
+Depends: mobilesubstrate
+Filename: ./debian_file/com.bandarhl.bhinsta_1.0.3_iphoneos-arm64.deb
+Size: 162788
+MD5sum: af010de66b571b34c7f731cb6cb454d6
+SHA1: c8524e132e6d3a23f232bc638b405a580643108b
+SHA256: a8e0b68b4772267f9a8953ed258017737d882c9a1dad06b57d495c27c76d4d5b
+SHA512: 2b402d8b43f9b4f383dd6f3f247f8c231eb464c1686b82a7bdaef1afeeaa39cfa1674210df3858bbb93cb826af0cdeffc2c32c31fa3dec3c01d075af8b9aa9bc
+Description: An awesome tweak for Instagram!
+Name: BHInsta
+Author: Bandar Alruwaili
+
+Package: com.bandarhl.bhinsta
+Architecture: iphoneos-arm64e
+Version: 1.0.3
+Section: Tweaks
+Maintainer: Bandar Alruwaili
+Installed-Size: 648
+Depends: mobilesubstrate
+Filename: ./debian_file/com.bandarhl.bhinsta_1.0.3_iphoneos-arm64e.deb
+Size: 161658
+MD5sum: ffa3deb30dc4093b6f4ac33f4d47af39
+SHA1: 965c1a1d7f106dc0c0e3a451b7d2c8a03b7a75c3
+SHA256: 35a0fe03d14c5dc99c489c768c0e832a4834c2c239ea75c4240ad4cf4016122b
+SHA512: 1f4a31268916328737003d5bdb29c7bc08c568d7756db42f9d900180a912bb2e16bead83fad98045236120be62b5f58b14fceff970909c4045b91a5709c1ed43
+Description: An awesome tweak for Instagram!
+Name: BHInsta
+Author: Bandar Alruwaili
+
+Package: com.dvntm.cc18.rootless
+Architecture: iphoneos-arm64
+Version: 0.0.1
+Section: Tweaks
+Maintainer: dvntm
+Depends: mobilesubstrate (>= 0.9.5000), firmware (< 18.0)
+Filename: ./debian_file/com.dvntm.cc18.rootless_0.0.1_iphoneos-arm64.deb
+Size: 4464
+MD5sum: b9afd78bdbf064fec2921dff49c4ac47
+SHA1: 6d3e96c78a8beb7a02136858ac19da0d7f591385
+SHA256: 59857e456565077589d80a57db4f9081925824296db12c92c73dd5ce0affd223
+SHA512: ed721d4ef478a2b5c7ce8c42bab111053bc2d0513c4ccabb4964d5ebfbd1bfa629ec9df51fb226ab00b7616752d8cdc57f28244dcb98a6cea225a87c2390313b
+Description: تحويل ثيم مركز التحكم الى نظام ios18
+Name: CC18
+Author: dvntm
+
+Package: com.rivesDev.classicFolders3.rootless
+Architecture: iphoneos-arm64
+Version: 1.0
+Section: تعريب ادوات
+Maintainer: Rives - Tel:Jz_u4
+Filename: ./debian_file/com.rivesDev.classicFolders3.rootless_1.0_iphoneos-arm64.deb
+Size: 1504
+MD5sum: 24de9ec783449868adefe32e67249de5
+SHA1: 21d0a0f5460dac790ebcdbe76b3568c5bd10296b
+SHA256: 6b993add3520ca72f227812ead9e985719b5c612b22af94d420319cda7039d49
+SHA512: 948f3fbb152513ef1152a238115ae730aaf0ecb1d5ae18ba11d7323da64f8713a228e688f994e451dbbb585382ef0e6e727d8b78ffcfb26930eada9299bc9779
+Description: RootLess
+Author: Rives - X:_juz4
+Name: تعريب classicFolders3
+
+Package: com.rivesDev.coolCC.rootless
+Architecture: iphoneos-arm64
+Version: 2.0.1
+Section: تعريب ادوات
+Maintainer: Rives - Tel:Jz_u4
+Filename: ./debian_file/com.rivesDev.coolCC.rootless_1.0_iphoneos-arm64.deb
+Size: 1396
+MD5sum: e09b7f5d715f991fe7dfd7a632927267
+SHA1: ae1e85ae7d0ff5640d5b502c20962d296d293c52
+SHA256: 62b67c5d516cfc64e4035db0654f81517e47268ad81f63b7fb0ba80e7603cea4
+SHA512: e6613162e4efd49a3a24457afe0c0c2f745857abaa3658f37b7da7acd56b0389115e7d67cdfddab87b9351519bee37f36cff07890c04bb494068733b566f7b2f
+Description: RootLess
+Author: Rives - X:_juz4
+Name: تعريب coolCC
+
+Package: com.rivesDev.eneko
+Architecture: iphoneos-arm64
+Version: 1.4.2
+Section: Ar Tools
+Maintainer: Rives - Tel:@jz_u4
+Filename: ./debian_file/com.rivesDev.eneko_1.4.2_iphoneos-arm64.deb
+Size: 2488
+MD5sum: 5dde927129ad0c83bd4d704553bb62c5
+SHA1: aafa29a3ddae21621ed7a98b5d9dc3ac87e4e34f
+SHA256: d6622ef4e279677ce2885bcb10e6d8faa19eee90b7157d6918c6d5ebe914aa58
+SHA512: 7990776429569bc54cad9abd73418a924b8e3d15c8c05bcdffb4dca36d9fe75a29f518c83149d91c827fbc26fc957d853fc6c90696d5e05ee8e6404c5a7958c6
+Description: Only Rootless
+Name: تعريب Eneko
+Author: Rives - X:_juz4
+
+Package: com.rivesdev.A-Font.rootless
+Architecture: iphoneos-arm64
+Version: 2.0
+Section: تعريب ادوات
+Maintainer: Rives - Tel:Jz_u4
+Filename: ./debian_file/com.rivesdev.A-Font.rootless_2.0_iphoneos-arm64.deb
+Size: 2324
+MD5sum: e3e731ed9b64f70aa9a47ac7499a99ba
+SHA1: 055fac115af62424368c0bf77e936a638f12d820
+SHA256: a6755a10be44ac30003a7eb926bd9c5f0404f801e97392e05bfa0cd622c55151
+SHA512: 9d0f888c4724193d83955d03cb7a85449bd29dac81bf32901a4ef326aa2459a2fe0a86304ce822eb202c51e96dd925a454c53b0b5a12bc2e9a2bee0fe9e059d6
+Description: RootLess
+Author: Rives - X:_juz4
+Name: تعريب A-Font
+
+Package: com.rivesdev.griddy.rootless
+Architecture: iphoneos-arm64
+Version: 1.0
+Section: Tweaks
+Maintainer: Rives - Tel:Jz_u4
+Filename: ./debian_file/com.rivesdev.griddy.rootless_1.0_iphoneos-arm64.deb
+Size: 16248
+MD5sum: 92f83a85833cb9cd6a6324f1e5674a03
+SHA1: 8b8bb4c5deb1ccd42fe5e74ef3532fb6bf6aeb76
+SHA256: 24d234ed1c2df2d52aefb34fbe63cf3cf9871818aa71a7c1072956284055d7f6
+SHA512: 2c495d12d1fd74fe57bc36a9a1ceb7905fc44208d0b9fd0a5a5cbda5a7d268857d6e09b6ef4b97fd31e232c5a40dc0e9389a5a4bdf2d86a2479334a60f798826
+Description: RootLess
+Author: Rives - X:_juz4
+Name: Griddy Crack
+
+Package: com.rivesdev.snapper3.rootless
+Architecture: iphoneos-arm64
+Version: 1.0k
+Section: Tweaks
+Maintainer: Rives - X:_juz4
+Depends: mobilesubstrate, firmware(>=15.0), preferenceloader
+Filename: ./debian_file/com.rivesdev.snapper3.rootless_1.0k_iphoneos-arm64.deb
+Size: 933728
+MD5sum: 73092f7389bc3b018ad4644ce498578f
+SHA1: a96533711dfa60ba71c7166b8aaf78d6a1ebfbb7
+SHA256: 7173e3f884bbb870a6a9712a7b52512fcbb778ec45396a2d9a567d4f2594cf8d
+SHA512: bf5f86fec7d6c1452e907eb2a9ae155ad262da1ebe34560728373b2fa02512948a686e175b642e971e2cbfa90392b14674decbe123844dd1815c963a9db985af
+Description: اداة Snapper 3 مكركه
+Name: Snapper 3
+Author: Jonathan
+
+Package: dev.objcmsgsend.iota.RivesDev
+Architecture: iphoneos-arm64e
+Version: 2.4
+Section: Tweaks
+Maintainer: objc_msgSend
+Installed-Size: 2472
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate
+Replaces: dev.objcmsgsend.iota.ar
+Filename: ./debian_file/dev.objcmsgsend.iota.RivesDev_2.4_iphoneos-arm64e.deb
+Size: 559572
+MD5sum: 7d7c663d00c4c0d7b0a8330ecc37d558
+SHA1: e2b5231cbd355881b050b037a906aba6aa458d3f
+SHA256: f4f0142fb5c70b1d7e4d33f48d9fd50c5470ffbebfa1ec48764a3b6cb90f208e
+SHA512: 3aeab58dbfb57f8eba2a244d937d408171fa800503ce1684631a723e1f334a6d1dacfd4366206d88096664c5e61194d1d9fe7e3273085b4a299b80aeeaaf1bf6
+Description: لتثبيت الاداة على أفضل وجه يرجى متابعة الشرح الموجود على حسابي في تويتر @_juz4
+Name: iota RootHide
+Author: objc_msgSend
+
+Package: twitter.nowesr1.location-spoofer.RootHide
+Architecture: iphoneos-arm64e
+Version: 0.0.2
+Section: Tweaks
+Maintainer: nowesr1
+Installed-Size: 488
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debian_file/twitter.nowesr1.location-spoofer.RootHide_0.0.2_iphoneos-arm64e.deb
+Size: 84236
+MD5sum: a3cdcb41881f7f617841b894477b2b66
+SHA1: 8d3d14f033bdb03e2ce25f8b663825af987c5959
+SHA256: 18959acb5a6719785e4d765ea7dd716a48675ada6fcc2df76da6f3076ea05671
+SHA512: b8a2c7227dd92ab374c3bfc7adf2ab77d1e0fb950aa9ea1d307b5e914ea35b2a157635faef8f787c79a14b33a4d81c6c76742fe7271b1035e7b6b7185de4a6ea
+Description: Spoof Location for WhatsApp
+Name: WALocationSpoofer RootHide
+Author: nowesr1
+Icon: https://raw.githubusercontent.com/nowesr1/WhatsApp-Location-Spoofer/refs/heads/main/Sileo/icon.png
+SileoDepiction: https://raw.githubusercontent.com/nowesr1/WhatsApp-Location-Spoofer/main/Sileo/depiction.json
+
+Package: twitter.nowesr1.location-spoofer
+Architecture: iphoneos-arm64
+Version: 0.0.2
+Section: Tweaks
+Maintainer: nowesr1
+Installed-Size: 488
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debian_file/twitter.nowesr1.location-spoofer_0.0.2_iphoneos-arm64.deb
+Size: 84246
+MD5sum: 3d06e4827d7b7ed65f7239cb0575769f
+SHA1: 9dfc34926df08fdcfe0709884ec792fc7cbad5ab
+SHA256: de146d201d849e59e847af7f38425ede88e86a75f1eba8a927be4fa1578788dc
+SHA512: 6549d26ac7f6530fb9eaa221b615ee48df595a46bb449016d3fa9459110b59ac56931a2fe23ef7b8d70de4363860d2242f5649a698caf7f9e776d1076f1b01d1
+Description: Spoof Location for WhatsApp
+Name: WALocationSpoofer
+Author: nowesr1
+Icon: https://raw.githubusercontent.com/nowesr1/WhatsApp-Location-Spoofer/refs/heads/main/Sileo/icon.png
+SileoDepiction: https://raw.githubusercontent.com/nowesr1/WhatsApp-Location-Spoofer/main/Sileo/depiction.json
+
+Package: twitter.nowesr1.waignorecalls.RootHide
+Architecture: iphoneos-arm64e
+Version: 1.1
+Section: Tweaks
+Maintainer: nowesr1
+Installed-Size: 144
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debian_file/twitter.nowesr1.waignorecalls.RootHide_1.1_iphoneos-arm64e.deb
+Size: 36764
+MD5sum: 24efcaed72a387fc840e1eb277f719e2
+SHA1: c66a1ec169b03e5adfd0176ab629bd46d7d29c06
+SHA256: 283536d0c8d30bab854aeeb9fac65bdf0e8b9acf7a82c1e673dcc7e41e97602f
+SHA512: e16ff95695b0cf278db4e3bc0bc4244835e771a420d78c7d4fba89fcf19e5e2b6e3efbb3a688abaa0f6b5813cc61d9f464c7a43572977c7813d0ad1ccc01a393
+Description: Ignore unwanted calls!
+Name: WAIgnoreCalls RootHide
+Author: nowesr1
+Icon: https://raw.githubusercontent.com/nowesr1/WhatsApp-Call-Blocker/refs/heads/main/Sileo/icon.png
+SileoDepiction: https://raw.githubusercontent.com/nowesr1/WhatsApp-Call-Blocker/main/Sileo/depiction.json
+
+Package: twitter.nowesr1.waignorecalls
+Architecture: iphoneos-arm64
+Version: 1.1
+Section: Tweaks
+Maintainer: nowesr1
+Installed-Size: 144
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debian_file/twitter.nowesr1.waignorecalls_1.1_iphoneos-arm64.deb
+Size: 37292
+MD5sum: 8e74fe6be0a708267d79fce101265e6e
+SHA1: e85db084b3e43f71437e9ee0a930624f5bb0a972
+SHA256: 751e98ab74d94a1b78f4c68643d328bf9d3566418894a6071850107db4605770
+SHA512: 1b2e24b7f65b9434e4a9f9594a43e4d87a4708827486159c50d2ee71a7cb00e1dc8636d232f080a97390e9532d0d0bb162084c61a5b575bbdc1cccd971fe7d13
+Description: Ignore unwanted calls!
+Name: WAIgnoreCalls
+Author: nowesr1
+Icon: https://raw.githubusercontent.com/nowesr1/WhatsApp-Call-Blocker/refs/heads/main/Sileo/icon.png
+SileoDepiction: https://raw.githubusercontent.com/nowesr1/WhatsApp-Call-Blocker/main/Sileo/depiction.json
+
