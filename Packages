@@ -253,3 +253,41 @@ MD5sum: 24efcaed72a387fc840e1eb277f719e2
 SHA1: c66a1ec169b03e5adfd0176ab629bd46d7d29c06
 SHA256: 283536d0c8d30bab854aeeb9fac65bdf0e8b9acf7a82c1e673dcc7e41e97602f
 Section: Tweaks
+
+Package: twitter.nowesr1.location-spoofer
+Name: WALocationSpoofer
+Description: Spoof Location for WhatsApp
+Maintainer: nowesr1
+Author: nowesr1
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
+Icon: https://raw.githubusercontent.com/nowesr1/WhatsApp-Location-Spoofer/refs/heads/main/Sileo/icon.png
+SileoDepiction: https://raw.githubusercontent.com/nowesr1/WhatsApp-Location-Spoofer/main/Sileo/depiction.json
+Architecture: iphoneos-arm64
+Version: 0.0.2
+Filename: ./debian_file/twitter.nowesr1.location-spoofer_0.0.2_iphoneos-arm64.deb
+Size: 84246
+Installed-Size: 2472
+MD5sum: 3d06e4827d7b7ed65f7239cb0575769f
+SHA1: 9dfc34926df08fdcfe0709884ec792fc7cbad5ab
+SHA256: de146d201d849e59e847af7f38425ede88e86a75f1eba8a927be4fa1578788dc
+Section: Tweaks
+
+Package: twitter.nowesr1.location-spoofer.RootHide
+Name: WALocationSpoofer RootHide
+Description: Spoof Location for WhatsApp
+Maintainer: nowesr1
+Author: nowesr1
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
+Icon: https://raw.githubusercontent.com/nowesr1/WhatsApp-Location-Spoofer/refs/heads/main/Sileo/icon.png
+SileoDepiction: https://raw.githubusercontent.com/nowesr1/WhatsApp-Location-Spoofer/main/Sileo/depiction.json
+Architecture: iphoneos-arm64e
+Version: 0.0.2
+Filename: ./debian_file/twitter.nowesr1.location-spoofer_0.0.2_iphoneos-arm64.deb
+Size: 84236
+Installed-Size: 2472
+MD5sum: a3cdcb41881f7f617841b894477b2b66
+SHA1: 8d3d14f033bdb03e2ce25f8b663825af987c5959
+SHA256: 18959acb5a6719785e4d765ea7dd716a48675ada6fcc2df76da6f3076ea05671
+Section: Tweaks
