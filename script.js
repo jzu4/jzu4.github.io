@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sileoButton) {
     sileoButton.addEventListener('click', (e) => {
       e.preventDefault();
-      const sileoUrl = 'sileo://source/https://your-repo-url.com';
+      const sileoUrl = 'sileo://source/https://jzu4.github.io';
       window.location.href = sileoUrl;
       
       setTimeout(() => {
