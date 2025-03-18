@@ -215,3 +215,41 @@ Section: Tweaks
 Description: لتثبيت الاداة على أفضل وجه يرجى متابعة الشرح الموجود على حسابي في تويتر @_juz4
 Author: objc_msgSend
 Name: Iota RootHide
+
+Package: twitter.nowesr1.waignorecalls
+Name: WAIgnoreCalls
+Description: Ignore unwanted calls!
+Maintainer: nowesr1
+Author: nowesr1
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
+Icon: https://raw.githubusercontent.com/nowesr1/WhatsApp-Call-Blocker/refs/heads/main/Sileo/icon.png
+SileoDepiction: https://raw.githubusercontent.com/nowesr1/WhatsApp-Call-Blocker/main/Sileo/depiction.json
+Architecture: iphoneos-arm64
+Version: 1.1
+Filename: ./debian_file/twitter.nowesr1.waignorecalls_1.1_iphoneos-arm64.deb
+Size: 37292
+Installed-Size: 2472
+MD5sum: 8e74fe6be0a708267d79fce101265e6e
+SHA1: e85db084b3e43f71437e9ee0a930624f5bb0a972
+SHA256: 751e98ab74d94a1b78f4c68643d328bf9d3566418894a6071850107db4605770
+Section: Tweaks
+
+Package: twitter.nowesr1.waignorecalls.RootHide
+Name: WAIgnoreCalls RootHide
+Description: Ignore unwanted calls!
+Maintainer: nowesr1
+Author: nowesr1
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
+Icon: https://raw.githubusercontent.com/nowesr1/WhatsApp-Call-Blocker/refs/heads/main/Sileo/icon.png
+SileoDepiction: https://raw.githubusercontent.com/nowesr1/WhatsApp-Call-Blocker/main/Sileo/depiction.json
+Architecture: iphoneos-arm64e
+Version: 1.1
+Filename: ./debian_file/twitter.nowesr1.waignorecalls.RootHide_1.1_iphoneos-arm64e.deb
+Size: 36764
+Installed-Size: 2472
+MD5sum: 24efcaed72a387fc840e1eb277f719e2
+SHA1: c66a1ec169b03e5adfd0176ab629bd46d7d29c06
+SHA256: 283536d0c8d30bab854aeeb9fac65bdf0e8b9acf7a82c1e673dcc7e41e97602f
+Section: Tweaks
