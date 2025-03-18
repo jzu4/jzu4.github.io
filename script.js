@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sileoButton) {
     sileoButton.addEventListener('click', (e) => {
       e.preventDefault();
-      const sileoUrl = 'sileo://source/https:/jzu4.github.io';
+      const sileoUrl = 'sileo://source/https://jzu4.github.io';
       window.location.href = sileoUrl;
       
       setTimeout(() => {
@@ -121,3 +121,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500);
     });
   }
+
+  // Sound Effects
+  const glitchSounds = [
+    'https://www.soundjay.com/mechanical/sounds/robot-movement-1.mp3',
+    'https://www.soundjay.com/mechanical/sounds/robot-movement-2.mp3',
+    'https://www.soundjay.com/mechanical/sounds/mechanical-switch-1.mp3',
+    'https://www.soundjay.com/electronic/sounds/static-noise-1.mp3'
+  ];
+
+  function playRandomSound() {
+    const sound = new Audio(glitchSounds[Math.floor(Math.random() * glitchSounds.length)]);
+    sound.volume = 0.2;
+    sound.play().catch(() => {});
+  }
+
+  // Add sound effects to button interactions
+  document.querySelectorAll('.cyber-button, .sileo-button').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      if (Math.random() > 0.5) playRandomSound();
+    });
+  });
+
+  // Random glitch effect on the page
+  function randomGlitch() {
+    if (Math.random() > 0.7) {
+      document.body.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+      playRandomSound();
+      
+      setTimeout(() => {
+        document.body.style.filter = '';
+      }, 100);
+    }
+  }
+
+  setInterval(randomGlitch, 5000);
+});
