@@ -173,6 +173,25 @@ Description: لتثبيت الاداة على أفضل وجه يرجى متاب�
 Name: iota RootHide
 Author: objc_msgSend
 
+Package: dev.objcmsgsend.iota.ar.RootHide
+Architecture: iphoneos-arm64e
+Version: 2.4
+Section: Tweaks
+Maintainer: objc_msgSend
+Installed-Size: 2472
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate
+Replaces: dev.objcmsgsend.iota
+Filename: ./debian_file/dev.objcmsgsend.iota.ar.RootHide_2.4_iphoneos-arm64e.deb
+Size: 332192
+MD5sum: e2c35afb52cc57d30607eca1ee383538
+SHA1: 18f061228efdb6621d10f68a0444d08ccdd2926b
+SHA256: 21ba6b176f0253e8bc2b2a3271af72b2fc1f811a620604e347d139990bc23f1d
+SHA512: 1ab746e6226addd903a673ed626191c77b8017f8e51e138fb29e044377bf5d63b30ab8656403a656fe9e9a9763f1635e0c41529ed0ffc6272bb59eab2ef61ddd
+Description: لتثبيت الاداة على أفضل وجه يرجى متابعة الشرح الموجود على حسابي في تويتر @_juz4
+Name: iota ar
+Author: objc_msgSend
+
 Package: twitter.nowesr1.location-spoofer.RootHide
 Architecture: iphoneos-arm64e
 Version: 0.0.2
