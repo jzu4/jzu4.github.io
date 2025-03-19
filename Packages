@@ -192,6 +192,114 @@ Description: لتثبيت الاداة على أفضل وجه يرجى متاب�
 Name: iota ar
 Author: objc_msgSend
 
+Package: dev.objcmsgsend.iota
+Architecture: iphoneos-arm64
+Version: 2.4
+Section: Tweaks
+Maintainer: objc_msgSend
+Installed-Size: 2472
+Depends: mobilesubstrate
+Replaces: dev.objcmsgsend.iota.ar
+Filename: ./debian_file/iota.2.4.arm64.deb
+Size: 557156
+MD5sum: aa018cbedf63a4c9092d380bf1da911b
+SHA1: 22c98581b63136e5ffe05924eec41df64d9b5e89
+SHA256: b87988663797a53c280c5cba3f7fcaade39a8c1bcc5409f034e5ab0d3602a964
+SHA512: d6478d065bbe6a624bb0139ea9c06ed56dbcb2006fc1217de51771ecef89d582fdaa98967aa704c4d8c5fc2e03c58dff0e4fe0f0ea81e827101b4467d6417750
+Description: A great Snapchat tweak 🥀.
+Name: iota
+Author: objc_msgSend
+
+Package: dev.objcmsgsend.iota.ar
+Architecture: iphoneos-arm64
+Version: 2.4
+Section: Tweaks
+Maintainer: objc_msgSend
+Installed-Size: 2472
+Depends: mobilesubstrate
+Replaces: dev.objcmsgsend.iota
+Filename: ./debian_file/iotaar.2.4.arm64.deb
+Size: 330196
+MD5sum: 2ec536672ef04b023a987ccdfe749e04
+SHA1: 206b343e6e40a93c1a9ce2cab4abd32fba1b7eb5
+SHA256: f7f63fd7f253d8325088f12e1fa1579d50401c2b1931cb60b4ecbaf8caa40910
+SHA512: 95e025f13842dd5d354b12625e551b4835dc8111a73ec08585498abf48c776189373897b7ea073cd63fba4f26142db9d0ea76464f47219a98dd304ab8a5cac37
+Description: A great Snapchat tweak 🥀.
+Name: iota ar
+Author: objc_msgSend
+
+Package: net.ajbbo.acinsta
+Architecture: iphoneos-arm64e
+Version: 1.4
+Section: Tweaks
+Maintainer: aJBboCydia
+Installed-Size: 660
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debian_file/net.ajbbo.acinsta_1.4_iphoneos-arm64e.deb
+Size: 176534
+MD5sum: c63ad5b115e19ff459d6bf0a33b47734
+SHA1: fd03ceaa1a3872d5d1c6c8cb52b165ee662f5db7
+SHA256: 7e83b7b4f8c29fc194902d73494df24d184fb636d9122ede7b37756b8a746570
+SHA512: 3bf938f948ebb7c4248df1e05d50d1e25078284a26532f383ddd1be603220be8d66b3c1b5744b1ba5a32671787a8867db797a23ba9fc12a589d200dfb88ebab6
+Description: An awesome ACInsta tweak!
+Name: ACInsta
+Author: aJBboCydia
+
+Package: net.ajbbo.acjodel
+Architecture: iphoneos-arm64e
+Version: 1.7
+Section: Tweaks
+Maintainer: aJBboCydia
+Installed-Size: 488
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debian_file/net.ajbbo.acjodel_1.7_iphoneos-arm64e.deb
+Size: 110746
+MD5sum: 12686300febdf908937de10ea0379531
+SHA1: ff4710cf299fdd04141d760a67b403147905e701
+SHA256: 9b9bc0b971710ce9267b2c7c081b1ab8f888c049d673c3c03e4deaeb86bf9b71
+SHA512: 8e9dd4f6b31b86285259acca5fe9f41d844bd0e5a7f05c41b935d81c6a706c0c75a56f2d728553efebc3126d14339a8a5e1a641d3149d73672a254e5609dd7ac
+Description: An awesome MobileSubstrate tweak!
+Name: ACJodel
+Author: aJBboCydia
+
+Package: net.ajbbo.acthreads
+Architecture: iphoneos-arm64e
+Version: 1.0
+Section: Tweaks
+Maintainer: aJBboCydia
+Installed-Size: 172
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debian_file/net.ajbbo.acthreads_1.0_iphoneos-arm64e.deb
+Size: 12516
+MD5sum: 94b5e45d5cad7918faaead7fe062df1c
+SHA1: 524f59d5353e3f6b7d81cc09490bc8c40fd31c78
+SHA256: 582bf514bd25545f9e1248ffbc262ba1d02ab13ca5fba4bbdecd05e2bc322515
+SHA512: 9ec1d5e9d8010e7f680ffbe5f1a1493e3844f5508c71d6eec7734c71d38884482289b50f1aed0212f5ecc2c52a4677080d965e45c44911d4ea14cba37a921547
+Description: An awesome MobileSubstrate tweak!
+Name: ACThreads
+Author: aJBboCydia
+
+Package: net.ajbbo.actiktok
+Architecture: iphoneos-arm64e
+Version: 2.0
+Section: Tweaks
+Maintainer: aJBboCydia
+Installed-Size: 1096
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debian_file/net.ajbbo.actiktok_2.0_iphoneos-arm64e.deb
+Size: 309158
+MD5sum: f108a3dc8e9782a55caa814e878e50c0
+SHA1: ceec95eb9fccf83215103db77bdc5c46fdd0f43a
+SHA256: 6876c61c6af094d745d9a5d0853861d9389ea598f0832e1f4ff6ca2b3d83ed5b
+SHA512: bf9a6c57bc10482a8f1e219fe9e43e1b0440526fcbc50f5466a7c4cc9dadff68c0df355a877f905be40d282071a87ab065a7e4ddc3ef57982a9d5541df0fd8bd
+Description: An awesome ACTikTok tweak!
+Name: ACTikTok
+Author: aJBboCydia
+
 Package: twitter.nowesr1.location-spoofer.RootHide
 Architecture: iphoneos-arm64e
 Version: 0.0.2
