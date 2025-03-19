@@ -1,3 +1,22 @@
+Package: com.ipapplus.instarab
+Architecture: iphoneos-arm64
+Version: 1.2.0
+Section: Localizations
+Maintainer: ipapplus
+Installed-Size: 240
+Depends: mobilesubstrate
+Filename: ./debian_file/Instagram(ArabicLocalized).1.2.0.arm64.deb
+Size: 35130
+MD5sum: 056ed959b498ab6547e1795f42b6e051
+SHA1: 8e0b521c40f1dd6695d5aa1d9c7c0810e118fa41
+SHA256: 590d0ee1c57f810baba731b1dde711f91e2cd3d37791e194627c8b13d95bac14
+SHA512: a6f5e47e2deab00b74cf2003bd16bc989c828671a804ba4b3a0c44a56bdfb1e3f5867128dd538bff529f62db0b25d6d8c7b38468ce3f60a65bf5c13aeea66408
+Description: Arabic language for Instagram, translated with contribution from @r22i0.
+Name: Instagram (Arabic Localized)
+Author: ipapplus
+Icon: https://i.imgur.com/ffrKJBH.jpeg
+Header: https://i.imgur.com/xAIYmyc.jpeg
+
 Package: com.Rives.Choicy.rootless
 Architecture: iphoneos-arm64
 Version: 1.4
@@ -102,6 +121,26 @@ Name: Watusi 3 for WhatsApp
 Depiction: https://apt.fouadraheb.com/package/com.fouadraheb.watusi3
 Author: Fouad Raheb <support@fouadraheb.com>
 Icon: file:///Library/Application Support/Watusi/Resources.bundle/Settings.bundle/WatusiSettingsLogo@3x.png
+
+Package: com.ipapplus.instarab
+Architecture: iphoneos-arm64e
+Version: 1.2.0
+Section: Localizations
+Maintainer: ipapplus
+Installed-Size: 240
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate
+Filename: ./debian_file/com.ipapplus.instarab_1.2.0_iphoneos-arm64e.deb
+Size: 49486
+MD5sum: d7d6f16f3b5ae72e6ccaa0c6ebdc170b
+SHA1: 941ab9f5f25e836680acafefb647f33bf94e1b78
+SHA256: 7f683f2e30d0577142de935aca175ea0abd6920901cbc6db4375009ece36d91a
+SHA512: b94c2f2b0946751b103713fb50f04297f050fb6b83a8f0cec8b27fca082fc85aee1fe355bc91280e3a39cfca9f1cd942ead8ce4ff28bcb55b3532ba6699b7c5c
+Description: Arabic language for Instagram, translated with contribution from @r22i0.
+Name: Instagram (Arabic Localized)
+Author: ipapplus
+Icon: https://i.imgur.com/ffrKJBH.jpeg
+Header: https://i.imgur.com/xAIYmyc.jpeg
 
 Package: com.rivesDev.classicFolders3.rootless
 Architecture: iphoneos-arm64
