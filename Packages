@@ -63,6 +63,46 @@ Description: تحويل ثيم مركز التحكم الى نظام ios18
 Name: CC18
 Author: dvntm
 
+Package: com.f0u4d.watusitools
+Architecture: iphoneos-arm64e
+Version: 2.5.14
+Section: Development
+Maintainer: Fouad Raheb <support@fouadraheb.com>
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 12.0)
+Conflicts: org.mr.watusitools, com.f0u4d.stalky (<< 4.1.33), com.f0u4d.onlinenotify (<< 3.4.11), com.fouadraheb.contactsync (<< 1.1.13), com.fouadraheb.watusi3 (<< 1.2.47), org.mr.watusi3, org.mr.watusi, org.mr.contactsync, com.pulandres.watusi2, xyz.cypwn.watusicrack, xyz.cypwn.watusitools, xyz.cypwn.regram, xyz.cypwn.regramcrack, xyz.cypwn.regramk, xyz.cypwn.watuzik, xyz.cypwn.fr33gram, xyz.cypwn.fouackoff, xyz.cypwn.stalky, xyz.cypwn.onlinenotify, xyz.cypwn.fouackoff729766, xyz.cypwn.freegram572029, xyz.cypwn.getfouaded, xyz.cypwn.wtspatch
+Filename: ./debian_file/com.f0u4d.watusitools_2.5.14_iphoneos-arm64e.deb
+Size: 12281366
+MD5sum: 55f933331232ccfefdc5e1a3bce96db0
+SHA1: dd2964e6249a8a0615904683b9b44ca4f79ff9f1
+SHA256: a83b8bc545bd0d4a0a11597d13b85c7077fd85146bc9cf4be78dcc3bf6f2b4e1
+SHA512: 1752f056cbb179bd333dc0e35820cadaa61d0a0470b16b487233ad329ed1bbb30b6fcad032f4a1a98847f5a4eacecdb89c2f01392aeef5c235b8d429ac5b4969
+Description: Library for Watusi, Regram and other tweaks
+Name: WatusiTools
+Author: Fouad Raheb <support@fouadraheb.com>
+Depiction: https://apt.fouadraheb.com/package/com.f0u4d.watusitools
+
+Package: com.fouadraheb.watusi3
+Architecture: iphoneos-arm64e
+Version: 1.2.64
+Section: Tweaks
+Maintainer: Fouad Raheb <support@fouadraheb.com>
+Installed-Size: 6424
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 12.0), mobilesubstrate (>= 0.9.5000), com.f0u4d.watusitools (>= 2.5.14)
+Conflicts: com.fouadraheb.watusi, com.f0u4d.watusi, org.thebigboss.watusi, xyz.cypwn.wtspatch, xyz.cypwn.watusicrack, xyz.cypwn.watusitools, xyz.cypwn.onlinenotify, xyz.cypwn.stalky, xyz.cypwn.regram, xyz.cypwn.regramcrack, xyz.cypwn.fouackyou, xyz.cypwn.freegram, xyz.cypwn.freegram389628, xyz.cypwn.fouackoff104033, xyz.cypwn.fouackoff568297, xyz.cypwn.fouackoff729766, xyz.cypwn.freegram335030, xyz.cypwn.freegram342921
+Filename: ./debian_file/com.fouadraheb.watusi3_1.2.64_iphoneos-arm64e.deb
+Size: 4669168
+MD5sum: 66fd7777d479550551838ed361e0a81d
+SHA1: 065d25c8659fd3d83d38b5f11c17bf3c233395c1
+SHA256: e634ecd99c7172edf031c578e9af141dd4a1cb5d191bbb65dc06238c8d70d6d2
+SHA512: 5e4230ad037b7a681ea5ce6245d148e653f46c5dec7bec00215856b4869245c9b367cfc8473a9db5df11b3a35bc9c428ab36b35a9b50620cba6404a1653f0490
+Description: The all-in-one tweak for WhatsApp Messenger
+Name: Watusi 3 for WhatsApp
+Depiction: https://apt.fouadraheb.com/package/com.fouadraheb.watusi3
+Author: Fouad Raheb <support@fouadraheb.com>
+Icon: file:///Library/Application Support/Watusi/Resources.bundle/Settings.bundle/WatusiSettingsLogo@3x.png
+
 Package: com.rivesDev.classicFolders3.rootless
 Architecture: iphoneos-arm64
 Version: 1.0
