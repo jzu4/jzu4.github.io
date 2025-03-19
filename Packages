@@ -82,6 +82,28 @@ Description: تحويل ثيم مركز التحكم الى نظام ios18
 Name: CC18
 Author: dvntm
 
+Package: com.exile90.icleanerpro
+Architecture: iphoneos-arm64e
+Version: 7.10.0
+Section: Utilities
+Maintainer: Ivano Bilenchi <support@ib-soft.net>
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 4.0), findutils, apt | apt7
+Conflicts: org.altervista.exilecom.icleaner
+Replaces: org.altervista.exilecom.icleaner
+Filename: ./debian_file/com.exile90.icleanerpro_7.10.0_iphoneos-arm64e.deb
+Size: 2500468
+MD5sum: 11cfc678f3fd5e4c12eb60ff8b31e6ec
+SHA1: fd7065ca6e23f1fee6c11ee8c98ba67e54d8e6d9
+SHA256: b55b4312dee09989754fcb3f9137f4eed093b8fdb84a2b953b757de027aa6821
+SHA512: 0aebaa3f600ff97cd555f60ae210405e522c5aab2b582beba49f662d2f0e7b0a9954b40eb5af64d191f42acf26174bb1d52aefcb34e18ca6d304b3df8af4e70a
+Homepage: http://ib-soft.net/icleaner
+Description: The first real iOS system cleanup and management utility
+Name: iCleaner Pro
+Author: Ivano Bilenchi <support@ib-soft.net>
+Depiction: http://ib-soft.net/depictions/?pkgId=com.exile90.icleanerpro
+Icon: https://raw.githubusercontent.com/ichitaso/file/refs/heads/main/images/Icons/iCleaner.png
+
 Package: com.f0u4d.watusitools
 Architecture: iphoneos-arm64e
 Version: 2.5.14
@@ -270,6 +292,27 @@ SHA512: 1ab746e6226addd903a673ed626191c77b8017f8e51e138fb29e044377bf5d63b30ab865
 Description: لتثبيت الاداة على أفضل وجه يرجى متابعة الشرح الموجود على حسابي في تويتر @_juz4
 Name: iota ar
 Author: objc_msgSend
+
+Package: com.exile90.icleanerpro
+Architecture: iphoneos-arm64
+Version: 7.10.0
+Section: Utilities
+Maintainer: Ivano Bilenchi <support@ib-soft.net>
+Depends: firmware (>= 4.0), findutils, apt | apt7
+Conflicts: org.altervista.exilecom.icleaner
+Replaces: org.altervista.exilecom.icleaner
+Filename: ./debian_file/iCleanerPro.7.10.0.arm64.deb
+Size: 1259402
+MD5sum: 6bf10790aabb8bf265fd84726c967a9b
+SHA1: d0c239d59f2a9d4aa291e9048fc4614c7db59dce
+SHA256: a1e8934fc9cb6eed5a1d39ba4c62fcf4e0125cbb1c085339fa4aa93d645e70fe
+SHA512: be7b310d752d48387828d754b6cf6b0587f77fc191a5efded465d2cbda13d807dba39323d6f49a8435fe4eae4eea7f18f91794c937d62580e6ec33ca520e61d7
+Homepage: http://ib-soft.net/icleaner
+Description: The first real iOS system cleanup and management utility
+Name: iCleaner Pro
+Author: Ivano Bilenchi <support@ib-soft.net>
+Depiction: http://ib-soft.net/depictions/?pkgId=com.exile90.icleanerpro
+Icon: https://raw.githubusercontent.com/ichitaso/file/refs/heads/main/images/Icons/iCleaner.png
 
 Package: dev.objcmsgsend.iota
 Architecture: iphoneos-arm64
