@@ -534,18 +534,18 @@ Author: aJBboCydia
 
 Package: net.ajbbo.acthreads
 Architecture: iphoneos-arm64e
-Version: 1.0
+Version: 1.1
 Section: Tweaks
 Maintainer: aJBboCydia
 Installed-Size: 172
 Pre-Depends: rootless-compat(>= 0.9)
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debian_file/net.ajbbo.acthreads_1.0_iphoneos-arm64e.deb
-Size: 12516
-MD5sum: 94b5e45d5cad7918faaead7fe062df1c
-SHA1: 524f59d5353e3f6b7d81cc09490bc8c40fd31c78
-SHA256: 582bf514bd25545f9e1248ffbc262ba1d02ab13ca5fba4bbdecd05e2bc322515
-SHA512: 9ec1d5e9d8010e7f680ffbe5f1a1493e3844f5508c71d6eec7734c71d38884482289b50f1aed0212f5ecc2c52a4677080d965e45c44911d4ea14cba37a921547
+Filename: ./debian_file/net.ajbbo.acthreads_1.1_iphoneos-arm64e.deb
+Size: 12396
+MD5sum: f8b2b616f159f4ba67af0871f8c4e42c
+SHA1: 7d65fd776a551bf8f39a3f0ab710bf03c12b2de6
+SHA256: 5120f7a8dd3301b21f8f2c526ffa0236eef33dbf39f17926cfcbdd82b3c1be4f
+SHA512: 5364e2d1e3d8f9dab9be51823083ea71f60957e538dcf1c4fdc13541bd3c218bb46a1f76601577be8609fc79d0818b774f3f970ba1320de1cbde7d7def22b2d8
 Description: An awesome MobileSubstrate tweak!
 Name: ACThreads
 Author: aJBboCydia
