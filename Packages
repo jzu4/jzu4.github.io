@@ -66,6 +66,29 @@ Description: An awesome tweak for Instagram!
 Name: BHInsta
 Author: Bandar Alruwaili
 
+Package: com.crazymind90.keyboardtools
+Architecture: iphoneos-arm64e
+Version: 1.4
+Section: Tweaks
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 167
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 11.0), mobilesubstrate (>= 0.9.5000)
+Filename: ./debian_file/com.crazymind90.keyboardtools_1.4_iphoneos-arm64e.deb
+Size: 11136
+MD5sum: 0ba2e348846824682f1328554cef30e4
+SHA1: 6b49efdb1d9bd7a913dda43c4ee4aa9e886d4b4f
+SHA256: 90e114194d5d49f2261ce16236fb4627d83edc092d7f548a888dda66a33806aa
+SHA512: 3135e22c4ced16f149b33263d6cbb73ae860628f37559eaaef101ed7555fd5917df82e8ab8ee8fc83c24c31956f5b41cd4185a0a0cc21107b8021d6e0a00c4b1
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=keyboardtoolsDp
+Description: More tools on your keyboard - Dissmiss,Copy,Paste,Cut,Select and Select all
+Tag: purpose::extension
+Author: @CrazyMind90 <CvCrazyMind@gmail.com>
+Name: KeyboardTools
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=keyboardtoolsDp
+Sponsor: thebigboss.org <http://thebigboss.org>
+dev: crazymind90
+
 Package: com.dvntm.cc18.rootless
 Architecture: iphoneos-arm64
 Version: 0.0.1
@@ -104,6 +127,48 @@ Author: Ivano Bilenchi <support@ib-soft.net>
 Depiction: http://ib-soft.net/depictions/?pkgId=com.exile90.icleanerpro
 Icon: https://raw.githubusercontent.com/ichitaso/file/refs/heads/main/images/Icons/iCleaner.png
 
+Package: com.f0u4d.onlinenotify
+Architecture: iphoneos-arm64e
+Version: 3.4.14
+Section: Tweaks
+Maintainer: Fouad Raheb <support@fouadraheb.com>
+Installed-Size: 684
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 12.0), mobilesubstrate (>= 0.9.5000), com.f0u4d.watusitools (>= 2.5.12)
+Conflicts: xyz.cypwn.watusicrack, xyz.cypwn.watusitools, xyz.cypwn.regram, xyz.cypwn.regramcrack
+Filename: ./debian_file/com.f0u4d.onlinenotify_3.4.14_iphoneos-arm64e.deb
+Size: 220116
+MD5sum: d68d8aecf8f334bf832aa34a641ec5aa
+SHA1: 5342e9c2b6b0b461bef483749128ea9833d778f8
+SHA256: ca9bccf5822f8ec721bb4089f674fba413839060d8e5a696c4cac12f1464b741
+SHA512: dbd75d90f06ec3fd725a90760f6aac010036135846104d0890fcd2c694b2d498a0499104de735dd30be2f2085b1359c9e62d7fcd4038ac209ef85185014814c3
+Description: Track your friends on WhatsApp Messenger!
+Name: OnlineNotify
+Author: Fouad Raheb <support@fouadraheb.com>
+Depiction: https://apt.fouadraheb.com/package/com.f0u4d.onlinenotify
+Icon: file:///Library/Application Support/OnlineNotify/Resources.bundle/OnlineNotify.png
+
+Package: com.f0u4d.stalky
+Architecture: iphoneos-arm64e
+Version: 4.1.37
+Section: Tweaks
+Maintainer: Fouad Raheb <support@fouadraheb.com>
+Installed-Size: 6760
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 12.0), mobilesubstrate (>= 0.9.5000), com.f0u4d.watusitools (>= 2.5.5)
+Conflicts: xyz.cypwn.watusicrack, xyz.cypwn.watusitools, xyz.cypwn.regram, xyz.cypwn.regramcrack, xyz.cypwn.stalky, xyz.cypwn.onlinenotify, xyz.cypwn.wtspatch, xyz.cypwn.fouackoff568297, xyz.cypwn.fouackoff729766, xyz.cypwn.freegram335030, xyz.cypwn.freegram342921
+Enhances: WhatsApp
+Filename: ./debian_file/com.f0u4d.stalky_4.1.37_iphoneos-arm64e.deb
+Size: 4223072
+MD5sum: f0ef9932879c13adbbd4a0ced47f271c
+SHA1: 8707e3d57c8bac3db1069c8f1bf25c45331598ac
+SHA256: 2a55e3462322a9a7b7c922055e432a6352e4dbef53285bbbb25bcb4ee407d52e
+SHA512: 51a32dc828973ceaeea74824d941846ddaf66feb3235cfaa0b8ba11e78b9f31b399e9767b7b5b4b7646e52cdeca6479176e20fd3de32aa936203567d67b2f9f3
+Description: Track & download your contacts latest profile & statuses updates on WhatsApp
+Name: Stalky
+Author: Fouad Raheb <support@fouadraheb.com>
+Depiction: https://apt.fouadraheb.com/package/com.f0u4d.stalky
+
 Package: com.f0u4d.watusitools
 Architecture: iphoneos-arm64e
 Version: 2.5.14
@@ -122,6 +187,68 @@ Description: Library for Watusi, Regram and other tweaks
 Name: WatusiTools
 Author: Fouad Raheb <support@fouadraheb.com>
 Depiction: https://apt.fouadraheb.com/package/com.f0u4d.watusitools
+
+Package: com.fiore.calculatorhistory
+Architecture: iphoneos-arm64e
+Version: 1.1.1
+Section: Tweaks
+Maintainer: fiore
+Installed-Size: 240
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate
+Filename: ./debian_file/com.fiore.calculatorhistory_1.1.1_iphoneos-arm64e.deb
+Size: 30848
+MD5sum: 71d45714ae230ee80f7c2802c92eac12
+SHA1: e5047a76e92cb605aa6e0f9c88b5322e3e5ad82f
+SHA256: 7c8f06dc2c940c8168e7aaefac8486ad4b70785c831e722de79537cecea682c8
+SHA512: 2874bf795d8d720ad56927ff8c9ff7972cc7c7f448ff74d9fece78805cff2a0ab37916cb97e128f8f4081bc55f04d658f308b8a407c5cb8c14f2be4fa44c59bc
+Description: Calculator gains history!
+Name: CalculatorHistory
+Author: fiore
+
+Package: com.fouadraheb.contactsync
+Architecture: iphoneos-arm64e
+Version: 1.1.14
+Section: Tweaks
+Maintainer: Fouad Raheb <support@fouadraheb.com>
+Installed-Size: 600
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 12.0), mobilesubstrate (>= 0.9.5000), com.f0u4d.watusitools (>= 2.5.0)
+Conflicts: xyz.cypwn.watusi3, xyz.cypwn.stalky, xyz.cypwn.contactsync, xyz.cypwn.onlinenotify, xyz.cypwn.watusitools
+Filename: ./debian_file/com.fouadraheb.contactsync_1.1.14_iphoneos-arm64e.deb
+Size: 149886
+MD5sum: edca524a7ed2df7d063ef76dcd2e25ef
+SHA1: 61163208545fcbb645b1f004a6a2f3c13df8b76b
+SHA256: b4cf782865900c43e3564ed6ae021a6a436f49743ca2af834bb52ed3cc696b0c
+SHA512: 402a151095b314f751bbf0a6da10fe2d42825c63771e01573019268a48ab39ff10723af0c35fa83bdf2ca8b5feaf5f0ce43ce3e9ded8f6d3c1ca1c794f871bd6
+Description: Sync WhatsApp Profile Pictures to your Contacts
+Name: ContactSync
+Author: Fouad Raheb <support@fouadraheb.com>
+Depiction: https://apt.fouadraheb.com/package/com.fouadraheb.contactsync
+SileoDepiction: https://apt.fouadraheb.com/package/com.fouadraheb.contactsync
+Icon: file:///Library/Application Support/ContactSync/Resources.bundle/Logo@3x.png
+
+Package: com.fouadraheb.regram
+Architecture: iphoneos-arm64e
+Version: 1.0~b24
+Section: Tweaks
+Maintainer: Fouad Raheb <support@fouadraheb.com>
+Installed-Size: 11120
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 14.0), mobilesubstrate (>= 0.9.5000)
+Conflicts: xyz.cypwn.watusicrack, xyz.cypwn.watusitools, xyz.cypwn.regram, xyz.cypwn.regramcrack, xyz.cypwn.fouackyou, xyz.cypwn.freegram, xyz.cypwn.onlinenotify, xyz.cypwn.stalky, xyz.cypwn.fr33gram, xyz.cypwn.fouackoff
+Filename: ./debian_file/com.fouadraheb.regram_1.0~b24_iphoneos-arm64e.deb
+Size: 8211394
+MD5sum: 4fce86dc1ac8cb3a283052eab799d7b2
+SHA1: 8a37365d6c6c7d8031c7047567923c6fcbb970aa
+SHA256: 869ca452d30d011d5fe7fc2fce431faca6a30d36893f6b53f63bc03034934fb3
+SHA512: b9add6024fcee2494b6a1c567b94bd40db72ce472a0ca30732f9b01e41765c8a453c9b56520908ada493c6c84a666acbcd45a731c820221001838929a432be9d
+Description: The all-in-one tweak for Instagram
+Name: Regram for Instagram
+Author: Fouad Raheb <support@fouadraheb.com>
+Depiction: https://apt.fouadraheb.com/package/com.fouadraheb.regram
+SileoDepiction: https://apt.fouadraheb.com/package/com.fouadraheb.regram
+Icon: file:///Library/Application Support/Regram/Resources.bundle/logo_filled@3x.png
 
 Package: com.fouadraheb.watusi3
 Architecture: iphoneos-arm64e
@@ -350,6 +477,25 @@ Description: A great Snapchat tweak 🥀.
 Name: iota ar
 Author: objc_msgSend
 
+Package: jp.r-plus.menusupport
+Architecture: iphoneos-arm64e
+Version: 1.3.0
+Section: Tweaks
+Maintainer: r_plus
+Installed-Size: 504
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate, firmware (>= 11.0)
+Filename: ./debian_file/jp.r-plus.menusupport_1.3.0_iphoneos-arm64e.deb
+Size: 46210
+MD5sum: 99ca75a9ffe3d5141af7b6ee9bb786d7
+SHA1: 8661513f1786a1f61917460fd7b75e6a73beb5b9
+SHA256: 38d2a2566c51713213a5f295940bd5e61eb6c671f899fca112af30440377031a
+SHA512: bcbb0ef83c15bff01b26e2712de8d78ecfbe00cf23958fc9524a113c8cdb4e7a87cd3e0251184cd3a5394fe869acab2685e64fbe8f613b668040a9b2295a3b1e
+Description: Simply plugin loader for iOS system menu.
+Name: MenuSupport
+Author: r_plus
+Icon: file:///Library/PreferenceBundles/MenuSupportSettings.bundle/MenuSupport@3x.png
+
 Package: net.ajbbo.acinsta
 Architecture: iphoneos-arm64e
 Version: 1.4
@@ -497,4 +643,25 @@ Name: WAIgnoreCalls
 Author: nowesr1
 Icon: https://raw.githubusercontent.com/nowesr1/WhatsApp-Call-Blocker/refs/heads/main/Sileo/icon.png
 SileoDepiction: https://raw.githubusercontent.com/nowesr1/WhatsApp-Call-Blocker/main/Sileo/depiction.json
+
+Package: weeb.lillie.youtubedislikesreturn
+Architecture: iphoneos-arm64e
+Version: 1.13.4
+Section: Tweaks
+Maintainer: PoomSmart and kirb <ytdislikesreturn@gmail.com>
+Installed-Size: 239
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 11.0)
+Filename: ./debian_file/weeb.lillie.youtubedislikesreturn_1.13.4_iphoneos-arm64e.deb
+Size: 34670
+MD5sum: 02c454e823e8b1652833c002aedff0a3
+SHA1: 0eee901cfca45319a287f743f391656178879d74
+SHA256: 9c980e52285390262534361a15a1a12d02157ccc9aceda41ebe9268e18d97bbc
+SHA512: f2898ddd4414da534ae71137caf35247f5285713982fa28040dab28ecd50463e72a18c49f97514f69d23fbe9839c270683547612d9a4c5770b1778cd7b818b9b
+Description: Brings Back Dislikes On iOS YouTube
+Tag: compatible_min::ios11.0
+Author: PoomSmart and kirb <ytdislikesreturn@gmail.com>
+Name: Return YouTube Dislike
+Icon: https://img.chariz.cloud/icon/return-youtube-dislike/icon@3x.png
+Depiction: https://chariz.com/get/return-youtube-dislike
 
