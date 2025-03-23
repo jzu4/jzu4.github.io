@@ -17,6 +17,58 @@ Author: ipapplus
 Icon: https://i.imgur.com/ffrKJBH.jpeg
 Header: https://i.imgur.com/xAIYmyc.jpeg
 
+Package: com.ichitaso.powerselector11
+Architecture: iphoneos-arm64
+Version: 1.4.0
+Section: Utilities
+Maintainer: ichitaso <willfeeltips+ps11@gmail.com>
+Installed-Size: 2212
+Pre-Depends: firmware (>= 11.0)
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.ichitaso.powerselector, com.dpkgdan.powertap, com.weesstt.powerdownoptions, com.subdiox.powertap2, com.rustybalboa.powertapxi
+Replaces: com.ichitaso.powerselector11
+Filename: ./debian_file/PowerSelector.1.4.0.arm64.deb
+Size: 201760
+MD5sum: 8239543ce656dcdfc767153ca91bf4e6
+SHA1: a903b8356ebf69ceb1df8c0b70629c27fba7c1b8
+SHA256: fc84a4e3f985998449beb6bfc84b79b13356efb94a3482aa1cbd50ff5e8b928a
+SHA512: 20ab63d38306683e19032702d31412ae89ae9aaa23fce358ff438d50d3a0a155e3eea962f0deb21dc33b1a365e6ea651a48bdf5bff5e883fe7a77ed39daf6fcf
+Homepage: https://cydia.ichitaso.com/depiction/powerselector11.html
+Description: The power supply relation of a device is operated.
+Tag: purpose::extension, compatible_min::ios11.0, compatible_max::ios17.1.2
+Author: ichitaso <willfeeltips+ps11@gmail.com>
+Name: PowerSelector
+Depiction: https://cydia.ichitaso.com/depiction/powerselector11.html
+dev: ichitaso
+Icon: https://cydia.ichitaso.com/icons/PowerSelector.png
+SileoDepiction: https://cydia.ichitaso.com/depiction/powerselector11.json
+
+Package: com.ichitaso.powerselector11
+Architecture: iphoneos-arm64e
+Version: 1.4.0
+Section: Utilities
+Maintainer: ichitaso <willfeeltips+ps11@gmail.com>
+Installed-Size: 2212
+Pre-Depends: rootless-compat(>= 0.9), firmware (>= 11.0)
+Depends: mobilesubstrate, preferenceloader, com.opa334.ccsupport
+Conflicts: com.ichitaso.powerselector, com.dpkgdan.powertap, com.weesstt.powerdownoptions, com.subdiox.powertap2, com.rustybalboa.powertapxi
+Replaces: com.ichitaso.powerselector11
+Filename: ./debian_file/PowerSelector.1.4.0.arm64e.deb
+Size: 430460
+MD5sum: e4e5f2e885db690b0ee977cb5a0b4f79
+SHA1: b7cb6b3282ba26406ffb09c459333255a713dd43
+SHA256: 623f2b146746bc5102b8aad884e981687c192d90a6cc38cc05d045acfc230d4c
+SHA512: a288360342ab5affae30293599b3c5964697b1d7d95c1afaea3e2d664eaba839310798c50de0ad5a3d88fac911687d78b2d448e124464b4c6e9157b2ba7b9455
+Homepage: https://cydia.ichitaso.com/depiction/powerselector11.html
+Description: The power supply relation of a device is operated.
+Tag: purpose::extension, compatible_min::ios11.0, compatible_max::ios17.1.2
+Author: ichitaso <willfeeltips+ps11@gmail.com>
+Name: PowerSelector
+Depiction: https://cydia.ichitaso.com/depiction/powerselector11.html
+dev: ichitaso
+Icon: https://cydia.ichitaso.com/icons/PowerSelector.png
+SileoDepiction: https://cydia.ichitaso.com/depiction/powerselector11.json
+
 Package: com.Rives.Choicy.rootless
 Architecture: iphoneos-arm64
 Version: 1.4
