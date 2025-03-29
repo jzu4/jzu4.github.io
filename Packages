@@ -778,3 +778,24 @@ Name: Return YouTube Dislike
 Icon: https://img.chariz.cloud/icon/return-youtube-dislike/icon@3x.png
 Depiction: https://chariz.com/get/return-youtube-dislike
 
+Package: weeb.lillie.youtubedislikesreturn
+Architecture: iphoneos-arm64e
+Version: 1.13.5
+Section: Tweaks
+Maintainer: PoomSmart and kirb <ytdislikesreturn@gmail.com>
+Installed-Size: 239
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 11.0)
+Filename: ./debian_file/weeb.lillie.youtubedislikesreturn_1.13.5_iphoneos-arm64e.deb
+Size: 34680
+MD5sum: 329caeed0746511f5ec6bd6fa5095bf1
+SHA1: e0d523d6703993fefbe9e1a4dc07894713077a69
+SHA256: 75f8e6d94fc87253ac83b27422fd25ba9a088f8563b7f68b14611b52f61592cd
+SHA512: 1c71245c0e59cd93ea963ec7e4a71dd77006deca594ef0c64a80c0ae83c4d7301a3ddad9cbdfe502d04083420b8b28ba12bcdd379142304e5f7d6dcd08169017
+Description: Brings Back Dislikes On iOS YouTube
+Tag: compatible_min::ios11.0
+Author: PoomSmart and kirb <ytdislikesreturn@gmail.com>
+Name: Return YouTube Dislike
+Icon: https://img.chariz.cloud/icon/return-youtube-dislike/icon@3x.png
+Depiction: https://chariz.com/get/return-youtube-dislike
+
