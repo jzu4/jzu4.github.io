@@ -1,300 +1,52 @@
 {
-  "last_update": "2025-04-04",
-  "version": "1.0",
-  "app_notice": {
-    "show": false,
-    "message": "نرحب بكم في النسخة الجديدة من تطبيق KICK 11",
-    "title": "مرحباً"
-  },
-  "categories": [
-    "beIN Sports HD",
-    "beIN Sports Premium",
-    "SSC الدوري السعودي",
-    "قنوات أبوظبي الرياضية",
-    "قنوات دبي الرياضية",
-    "قنوات الكأس",
-    "قنوات مصر الرياضية",
-    "قنوات اختبار"
-  ],
   "channels": [
     {
-      "id": "bein1hd",
-      "name": "beIN Sports 1 HD",
-      "url": "https://cdn2-europe.mgmlcdn.cdn3-cloudflare.com/live/238_.m3u8?",
-      "logo": "1.png",
-      "category": "beIN Sports HD",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "bein2hd",
-      "name": "beIN Sports 2 HD",
-      "url": "https://cdn2-europe.mgmlcdn.cdn3-cloudflare.com/live/240_.m3u8?",
-      "logo": "1.png",
-      "category": "beIN Sports HD",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "bein3hd",
-      "name": "beIN Sports 3 HD",
-      "url": "https://cdn2-europe.mgmlcdn.cdn3-cloudflare.com/live/241_.m3u8?",
-      "logo": "1.png",
-      "category": "beIN Sports HD",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "bein4hd",
-      "name": "beIN Sports 4 HD",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/1_.m3u8?",
-      "logo": "1.png",
-      "category": "beIN Sports HD",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "bein5hd",
-      "name": "beIN Sports 5 HD",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/32_.m3u8?",
-      "logo": "1.png",
-      "category": "beIN Sports HD",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "bein6hd",
-      "name": "beIN Sports 6 HD",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/30_.m3u8?",
-      "logo": "1.png",
-      "category": "beIN Sports HD",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "bein7hd",
-      "name": "beIN Sports 7 HD",
+      "name": "قناة beIN SPORTS HD1",
       "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
       "logo": "1.png",
-      "category": "beIN Sports HD",
-      "active": true,
-      "ad_free": true
+      "category": "beIN Sports HD"
     },
     {
-      "id": "beinp1",
-      "name": "beIN Sports Premium 1",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "beinp1",
-      "category": "beIN Sports Premium",
-      "active": true,
-      "ad_free": true
+      "name": "قناة beIN SPORTS HD2",
+      "url": "https://playertest.longtailvideo.com/adaptive/bipbop/gear4/prog_index.m3u8",
+      "logo": "1.png",
+      "category": "beIN Sports HD"
     },
     {
-      "id": "beinp2",
-      "name": "beIN Sports Premium 2",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "beinp2",
-      "category": "beIN Sports Premium",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "beinp3",
-      "name": "beIN Sports Premium 3",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "beinp3",
-      "category": "beIN Sports Premium",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "ssc1",
-      "name": "SSC 1 HD",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/159_.m3u8?",
+      "name": "قناة SSC 1",
+      "url": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
       "logo": "ssc.png",
-      "category": "SSC الدوري السعودي",
-      "active": true,
-      "ad_free": true
+      "category": "SSC الدوري السعودي"
     },
     {
-      "id": "ssc2",
-      "name": "SSC 2 HD",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/163_.m3u8?",
+      "name": "قناة SSC 2",
+      "url": "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8",
       "logo": "ssc.png",
-      "category": "SSC الدوري السعودي",
-      "active": true,
-      "ad_free": true
+      "category": "SSC الدوري السعودي"
     },
     {
-      "id": "ssc3",
-      "name": "SSC 3 HD",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/147_.m3u8?",
-      "logo": "ssc.png",
-      "category": "SSC الدوري السعودي",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "sscextra1",
-      "name": "SSC Extra 1",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/193_.m3u8?",
-      "logo": "ssc.png",
-      "category": "SSC الدوري السعودي",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "sscextra2",
-      "name": "SSC Extra 2",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/226_.m3u8?",
-      "logo": "ssc.png",
-      "category": "SSC الدوري السعودي",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "adsports1",
-      "name": "Abu Dhabi Sports 1",
+      "name": "قناة الكأس 1",
       "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "adsports1",
-      "category": "قنوات أبوظبي الرياضية",
-      "active": true,
-      "ad_free": true
+      "logo": "3.png",
+      "category": "قنوات الكأس"
     },
     {
-      "id": "adsports2",
-      "name": "Abu Dhabi Sports 2",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "adsports2",
-      "category": "قنوات أبوظبي الرياضية",
-      "active": true,
-      "ad_free": true
+      "name": "قناة الكأس 2",
+      "url": "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8",
+      "logo": "3.png",
+      "category": "قنوات الكأس"
     },
     {
-      "id": "adsports3",
-      "name": "Abu Dhabi Sports 3",
+      "name": "قناة أبوظبي الرياضية",
       "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "adsports3",
-      "category": "قنوات أبوظبي الرياضية",
-      "active": true,
-      "ad_free": true
+      "logo": "2.png",
+      "category": "قنوات أخرى"
     },
     {
-      "id": "adsports4",
-      "name": "Abu Dhabi Sports 4",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "adsports4",
-      "category": "قنوات أبوظبي الرياضية",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "dubaisports1",
-      "name": "Dubai Sports 1",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "dubaisports1",
-      "category": "قنوات دبي الرياضية",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "dubaisports2",
-      "name": "Dubai Sports 2",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "dubaisports2",
-      "category": "قنوات دبي الرياضية",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "dubaisports3",
-      "name": "Dubai Sports 3",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "dubaisports3",
-      "category": "قنوات دبي الرياضية",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "alkass1",
-      "name": "Al Kass 1",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "alkass1",
-      "category": "قنوات الكأس",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "alkass2",
-      "name": "Al Kass 2",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "alkass2",
-      "category": "قنوات الكأس",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "alkass3",
-      "name": "Al Kass 3",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "alkass3",
-      "category": "قنوات الكأس",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "alkass4",
-      "name": "Al Kass 4",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "alkass4",
-      "category": "قنوات الكأس",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "onsport",
-      "name": "ON Sport",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "onsport",
-      "category": "قنوات مصر الرياضية",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "alahly",
-      "name": "Al Ahly TV",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "alahly",
-      "category": "قنوات مصر الرياضية",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "zamalek",
-      "name": "Zamalek TV",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "zamalek",
-      "category": "قنوات مصر الرياضية",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "nilesport",
-      "name": "Nile Sport",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "nilesport",
-      "category": "قنوات مصر الرياضية",
-      "active": true,
-      "ad_free": true
-    },
-    {
-      "id": "test",
-      "name": "قناة اختبار (تعمل دائماً)",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "test",
-      "category": "قنوات اختبار",
-      "active": true,
-      "ad_free": true
+      "name": "قناة دبي الرياضية",
+      "url": "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8",
+      "logo": "2.png",
+      "category": "قنوات أخرى"
     }
   ]
 }
