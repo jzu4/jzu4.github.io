@@ -1,52 +1,46 @@
 {
   "channels": [
     {
-      "name": "قناة beIN SPORTS HD1",
+      "name": "beIN SPORTS HD1",
       "url": "https://stream.sainaertebat.com/hls2/bein1.m3u8",
-      "logo": "1.png",
-      "category": "beIN Sports HD"
+      "logo": "bei.png",
+      "category": "beIN Sports"
     },
     {
-      "name": "قناة beIN SPORTS HD2",
+      "name": "beIN SPORTS HD2",
       "url": "https://playertest.longtailvideo.com/adaptive/bipbop/gear4/prog_index.m3u8",
-      "logo": "1.png",
-      "category": "beIN Sports HD"
+      "logo": "bei.png",
+      "category": "beIN Sports"
     },
     {
       "name": "قناة SSC 1",
       "url": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
       "logo": "ssc.png",
-      "category": "SSC الدوري السعودي"
+      "category": "SSC"
     },
     {
       "name": "قناة SSC 2",
       "url": "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8",
       "logo": "ssc.png",
-      "category": "SSC الدوري السعودي"
+      "category": "SSC"
     },
     {
       "name": "قناة الكأس 1",
       "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "3.png",
+      "logo": "2.png",
       "category": "قنوات الكأس"
     },
     {
       "name": "قناة الكأس 2",
       "url": "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8",
-      "logo": "3.png",
+      "logo": "2.png",
       "category": "قنوات الكأس"
     },
     {
-      "name": "قناة أبوظبي الرياضية",
+      "name": "ON Sports",
       "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
       "logo": "2.png",
-      "category": "قنوات أخرى"
-    },
-    {
-      "name": "قناة دبي الرياضية",
-      "url": "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8",
-      "logo": "2.png",
-      "category": "قنوات أخرى"
+      "category": "ON Sports"
     }
   ]
 }
