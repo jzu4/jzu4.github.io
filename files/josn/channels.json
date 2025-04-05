@@ -13,6 +13,24 @@
       "category": "beIN Sports"
     },
     {
+      "name": "beIN SPORTS HD3",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/241_.m3u8?",
+      "logo": "bei.png",
+      "category": "beIN Sports"
+    },
+    {
+      "name": "beIN SPORTS HD4",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/1_.m3u8?",
+      "logo": "bei.png",
+      "category": "beIN Sports"
+    },
+    {
+      "name": "beIN SPORTS HD5",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/32_.m3u8?",
+      "logo": "bei.png",
+      "category": "beIN Sports"
+    },
+    {
       "name": "قناة SSC 1",
       "url": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
       "logo": "ssc.png",
