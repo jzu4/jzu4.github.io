@@ -38,27 +38,57 @@
     },
     {
       "name": "SSC 2",
-      "url": "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/163_.m3u8?",
       "logo": "ssc.png",
       "category": "SSC"
     },
     {
-      "name": "قناة الكأس 1",
-      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-      "logo": "2.png",
-      "category": "قنوات الكأس"
+      "name": "SSC 3",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/147_.m3u8?",
+      "logo": "ssc.png",
+      "category": "SSC"
     },
     {
-      "name": "قناة الكأس 2",
-      "url": "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8",
+      "name": "SSC 4",
+      "url": "https://https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/178_.m3u8?",
+      "logo": "ssc.png",
+      "category": "SSC"
+    },
+    {
+      "name": "SSC 5",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/179_.m3u8?",
+      "logo": "ssc.png",
+      "category": "SSC"
+    },
+    {
+      "name": "SSC Extra1",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/193_.m3u8?",
+      "logo": "ssc.png",
+      "category": "SSC"
+    },
+    {
+      "name": "SSC Extra2",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/226_.m3u8?",
+      "logo": "ssc.png",
+      "category": "SSC"
+    },
+    {
+      "name": "الكأس 1",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/73_.m3u8?",
       "logo": "2.png",
-      "category": "قنوات الكأس"
+      "category": "الكأس سبورت"
+    },
+    {
+      "name": "الكأس 2",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/111_.m3u8?",
+      "logo": "2.png",
+      "category": "الكأس سبورت"
     },
     {
       "name": "ON Sports",
       "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
       "logo": "3.png",
-      "category": "ON Sports"
+      "category": "أو أن سبورت"
     }
   ]
 }
