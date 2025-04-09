@@ -77,6 +77,12 @@
       "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
       "logo": "3.png",
       "category": "أو أن سبورت"
+    },
+    {
+      "name": "Test",
+      "url": "",
+      "logo": "",
+      "category": "Test"
     }
   ]
 }
