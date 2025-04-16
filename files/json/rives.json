@@ -1,6 +1,60 @@
 {
   "channels": [
     {
+      "name": "السعودية",
+      "url": "https://cdn-globecast.akamaized.net/live/eds/saudi_tv/hls_roku/index.m3u8",
+      "logo": "https://jzu4.github.io/files/img/5A1AA698-B4EA-437D-BBEC-80C91FC5298B.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "السعودية الثانيه",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-ksa-now/71ed3aa814c643306c0a8bc4fcc7d17f/index.m3u8",
+      "logo": "https://i.imgur.com/sEOjApe.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "الاخبارية",
+      "url": "https://cdn-globecast.akamaized.net/live/eds/al_ekhbariya/hls_roku/index.m3u8",
+      "logo": "https://i.imgur.com/WcRlHQm.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "القران الكريم",
+      "url": "http://m.live.net.sa:1935/live/quran/gmswf.m3u8",
+      "logo": "https://i.imgur.com/A2fJysM.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "السنة النبوية",
+      "url": "http://m.live.net.sa:1935/live/sunnah/playlist.m3u8",
+      "logo": "https://i.imgur.com/S6LcTJv.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "اقرا",
+      "url": "https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv3/playlist.m3u8",
+      "logo": "https://i.imgur.com/HPVsIa4.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "الرسالة",
+      "url": "https://rotana.hibridcdn.net/rotana/risala_net-7Y83PP5adWixDF93/playlist.m3u8",
+      "logo": "https://i.imgur.com/7o4HgrP.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "الاخبارية",
+      "url": "https://cdn-globecast.akamaized.net/live/eds/al_ekhbariya/hls_roku/index.m3u8",
+      "logo": "https://i.imgur.com/WcRlHQm.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "الحدث",
+      "url": "https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8",
+      "logo": "‏https://i.imgur.com/De4SEWE.png",
+      "category": "السعودية"
+    },
+    {
       "name": "beIN SPORTS HD1",
       "url": "https://stream.sainaertebat.com/hls2/bein1.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
@@ -78,59 +132,5 @@
       "logo": "3.png",
       "category": "أو أن سبورت"
     },
-    {
-      "name": "السعودية",
-      "url": "https://cdn-globecast.akamaized.net/live/eds/saudi_tv/hls_roku/index.m3u8",
-      "logo": "https://i.imgur.com/GRQTndk.png",
-      "category": "السعودية"
-    },
-    {
-      "name": "السعودية الثانيه",
-      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-ksa-now/71ed3aa814c643306c0a8bc4fcc7d17f/index.m3u8",
-      "logo": "https://i.imgur.com/sEOjApe.png",
-      "category": "السعودية"
-    },
-    {
-      "name": "الاخبارية",
-      "url": "https://cdn-globecast.akamaized.net/live/eds/al_ekhbariya/hls_roku/index.m3u8",
-      "logo": "https://i.imgur.com/WcRlHQm.png",
-      "category": "السعودية"
-    },
-    {
-      "name": "القران الكريم",
-      "url": "http://m.live.net.sa:1935/live/quran/gmswf.m3u8",
-      "logo": "https://i.imgur.com/A2fJysM.png",
-      "category": "السعودية"
-    },
-    {
-      "name": "السنة النبوية",
-      "url": "http://m.live.net.sa:1935/live/sunnah/playlist.m3u8",
-      "logo": "https://i.imgur.com/S6LcTJv.png",
-      "category": "السعودية"
-    },
-    {
-      "name": "اقرا",
-      "url": "https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv3/playlist.m3u8",
-      "logo": "https://i.imgur.com/HPVsIa4.png",
-      "category": "السعودية"
-    },
-    {
-      "name": "الرسالة",
-      "url": "https://rotana.hibridcdn.net/rotana/risala_net-7Y83PP5adWixDF93/playlist.m3u8",
-      "logo": "https://i.imgur.com/7o4HgrP.png",
-      "category": "السعودية"
-    },
-    {
-      "name": "الاخبارية",
-      "url": "https://cdn-globecast.akamaized.net/live/eds/al_ekhbariya/hls_roku/index.m3u8",
-      "logo": "https://i.imgur.com/WcRlHQm.png",
-      "category": "السعودية"
-    },
-    {
-      "name": "الحدث",
-      "url": "https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8",
-      "logo": "‏https://i.imgur.com/De4SEWE.png",
-      "category": "السعودية"
-    }
   ]
 }
