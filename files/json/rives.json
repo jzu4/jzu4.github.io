@@ -15,61 +15,61 @@
     {
       "name": "beIN SPORTS HD3",
       "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/241_.m3u8?",
-      "logo": "bei.png",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "بي ان سبورت"
     },
     {
       "name": "beIN SPORTS HD4",
       "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/1_.m3u8?",
-      "logo": "bei.png",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category":  "بي ان سبورت"
     },
     {
       "name": "beIN SPORTS HD5",
       "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/32_.m3u8?",
-      "logo": "bei.png",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "بي ان سبورت"
     },
     {
       "name": "SSC 1",
       "url": "https://stream.sainaertebat.com/hls2/ssc1.m3u8",
-      "logo": "ssc.png",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
       "category": "SSC"
     },
     {
       "name": "SSC 2",
       "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/163_.m3u8?",
-      "logo": "ssc.png",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
       "category": "SSC"
     },
     {
       "name": "SSC 3",
       "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/147_.m3u8?",
-      "logo": "ssc.png",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
       "category": "SSC"
     },
     {
       "name": "SSC 4",
       "url": "https://https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/178_.m3u8?",
-      "logo": "ssc.png",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
       "category": "SSC"
     },
     {
       "name": "SSC 5",
       "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/179_.m3u8?",
-      "logo": "ssc.png",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
       "category": "SSC"
     },
     {
       "name": "SSC Extra1",
       "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/193_.m3u8?",
-      "logo": "ssc.png",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
       "category": "SSC"
     },
     {
       "name": "SSC Extra2",
       "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/226_.m3u8?",
-      "logo": "ssc.png",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
       "category": "SSC7"
     },
     {
@@ -79,10 +79,58 @@
       "category": "أو أن سبورت"
     },
     {
-      "name": "Test",
-      "url": "http://elvi.me:8080/live/73303551687977/36080862095840/124234.ts",
-      "logo": "",
-      "category": "Test"
+      "name": "السعودية",
+      "url": "https://cdn-globecast.akamaized.net/live/eds/saudi_tv/hls_roku/index.m3u8",
+      "logo": "https://i.imgur.com/GRQTndk.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "السعودية الثانيه",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-ksa-now/71ed3aa814c643306c0a8bc4fcc7d17f/index.m3u8",
+      "logo": "https://i.imgur.com/sEOjApe.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "الاخبارية",
+      "url": "https://cdn-globecast.akamaized.net/live/eds/al_ekhbariya/hls_roku/index.m3u8",
+      "logo": "https://i.imgur.com/WcRlHQm.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "القران الكريم",
+      "url": "http://m.live.net.sa:1935/live/quran/gmswf.m3u8",
+      "logo": "https://i.imgur.com/A2fJysM.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "السنة النبوية",
+      "url": "http://m.live.net.sa:1935/live/sunnah/playlist.m3u8",
+      "logo": "https://i.imgur.com/S6LcTJv.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "اقرا",
+      "url": "https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv3/playlist.m3u8",
+      "logo": "https://i.imgur.com/HPVsIa4.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "الرسالة",
+      "url": "https://rotana.hibridcdn.net/rotana/risala_net-7Y83PP5adWixDF93/playlist.m3u8",
+      "logo": "https://i.imgur.com/7o4HgrP.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "الاخبارية",
+      "url": "https://cdn-globecast.akamaized.net/live/eds/al_ekhbariya/hls_roku/index.m3u8",
+      "logo": "https://i.imgur.com/WcRlHQm.png",
+      "category": "السعودية"
+    },
+    {
+      "name": "الحدث",
+      "url": "https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8",
+      "logo": "‏https://i.imgur.com/De4SEWE.png",
+      "category": "السعودية"
     }
   ]
 }
