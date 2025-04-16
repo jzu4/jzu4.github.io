@@ -9,7 +9,7 @@
     {
       "name": "beIN SPORTS HD2",
       "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/240_.m3u8?",
-      "logo": "bei.png",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "بي ان سبورت"
     },
     {
@@ -70,7 +70,7 @@
       "name": "SSC Extra2",
       "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/226_.m3u8?",
       "logo": "ssc.png",
-      "category": "SSC"
+      "category": "SSC7"
     },
     {
       "name": "ON Sports",
