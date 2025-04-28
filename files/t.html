@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rivox TV Logo</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: transparent;
+      font-family: Arial, sans-serif;
+    }
+    .logo-container {
+      text-align: center;
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+    .logo-main {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      top: 20px;
+      left: 60px;
+      background: #0f0f1e;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 
+                  inset 0 0 20px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+    .logo-main::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      background: linear-gradient(45deg, #ff0844, #2121e2);
+      z-index: -1;
+      border-radius: 34px;
+      filter: blur(10px);
+      opacity: 0.7;
+    }
+    .r-letter {
+      color: white;
+      font-size: 80px;
+      font-weight: 900;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      position: relative;
+      z-index: 1;
+    }
+    .r-letter::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 5px;
+      background: linear-gradient(90deg, #ff0844, #2121e2);
+      bottom: 10px;
+      left: 10px;
+      border-radius: 5px;
+    }
+    .play-icon {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 25px solid rgba(255, 255, 255, 0.9);
+      top: 75px;
+      left: 80px;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+    .brand-text {
+      position: absolute;
+      bottom: 40px;
+      width: 100%;
+      text-align: center;
+    }
+    .rivox-text {
+      font-size: 40px;
+      font-weight: 900;
+      color: #0f0f1e;
+      text-shadow: 1px 1px 0 #ff0844, 2px 2px 0 #2121e2;
+      letter-spacing: 1px;
+    }
+    .tv-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ff0844;
+      margin-left: 5px;
+      vertical-align: super;
+      text-shadow: 0 0 10px rgba(255, 8, 68, 0.3);
+    }
+    .highlight {
+      position: absolute;
+      width: 100px;
+      height: 10px;
+      background: linear-gradient(90deg, rgba(255, 8, 68, 0.7), rgba(33, 33, 226, 0.7));
+      border-radius: 5px;
+      top: 15px;
+      left: 15px;
+      filter: blur(3px);
+      transform: rotate(-30deg);
+    }
+    .download-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background: #2121e2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .download-button:hover {
+      background: #ff0844;
+    }
+  </style>
+  <script>
+    function downloadLogo() {
+      // Create a canvas element
+      const canvas = document.createElement('canvas');
+      canvas.width = 500;
+      canvas.height = 500;
+      const ctx = canvas.getContext('2d');
+      
+      // Set background
+      ctx.fillStyle = 'transparent';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Get HTML content
+      const data = new XMLSerializer().serializeToString(document.querySelector('.logo-container'));
+      const DOMURL = window.URL || window.webkitURL || window;
+      
+      const img = new Image();
+      const svgBlob = new Blob([data], {type: 'image/svg+xml'});
+      const url = DOMURL.createObjectURL(svgBlob);
+      
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        DOMURL.revokeObjectURL(url);
+        
+        const imgURI = canvas
+          .toDataURL('image/png')
+          .replace('image/png', 'image/octet-stream');
+        
+        // Trigger download
+        const link = document.createElement('a');
+        link.download = 'rivox-tv-logo.png';
+        link.href = imgURI;
+        link.click();
+      };
+      
+      img.src = url;
+    }
+    
+    // Alternative method for download using html2canvas
+    function captureAndDownload() {
+      const logoContainer = document.querySelector('.logo-container');
+      
+      // Create temporary transparent div
+      const tempBackground = document.createElement('div');
+      tempBackground.style.position = 'fixed';
+      tempBackground.style.top = '0';
+      tempBackground.style.left = '0';
+      tempBackground.style.width = '100%';
+      tempBackground.style.height = '100%';
+      tempBackground.style.backgroundColor = 'white';
+      tempBackground.style.zIndex = '-1';
+      document.body.appendChild(tempBackground);
+      
+      html2canvas(logoContainer, {
+        backgroundColor: null,
+        scale: 3,
+        logging: false,
+        allowTaint: true,
+        useCORS: true
+      }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'rivox-tv-logo.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        
+        // Remove temp background
+        document.body.removeChild(tempBackground);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="logo-container">
+    <div class="logo-main">
+      <div class="highlight"></div>
+      <div class="r-letter">R</div>
+      <div class="play-icon"></div>
+    </div>
+    <div class="brand-text">
+      <span class="rivox-text">RIVOX</span><span class="tv-text">TV</span>
+    </div>
+  </div>
+  
+  <button class="download-button" onclick="window.print()">حفظ اللوغو</button>
+  
+  <script>
+    // Print settings for clean logo export
+    window.onbeforeprint = function() {
+      document.querySelector('.download-button').style.display = 'none';
+    };
+    
+    window.onafterprint = function() {
+      document.querySelector('.download-button').style.display = 'block';
+    };
+  </script>
+</body>
+</html>
