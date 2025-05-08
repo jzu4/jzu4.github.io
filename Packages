@@ -479,6 +479,26 @@ Author: ipapplus
 Icon: https://i.imgur.com/ffrKJBH.jpeg
 Header: https://i.imgur.com/xAIYmyc.jpeg
 
+Package: com.ipapplus.instarab
+Architecture: iphoneos-arm64e
+Version: 2.0.0
+Section: Localizations
+Maintainer: ipapplus
+Installed-Size: 256
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate
+Filename: ./debian_file/com.ipapplus.instarab_2.0.0_iphoneos-arm64e.deb
+Size: 91386
+MD5sum: 82ff40c7196495e763f8ca8a595c4f5d
+SHA1: fe80153b3f75a9693c7452ab1adb409b22e0804d
+SHA256: f73348eff65ac33d0b78108ac13a73096469d3b2a4ef5dbe53e30edb974d8845
+SHA512: 4cefe9986eaa5ba70d226090f5c44450fb4dc26cedd595ef774e492b88692ffdeea578ec4e562c5e23bb93150914eee2b1ef61c6c75dfd7270d79807d8dd3f35
+Description: اللغة العربية لإنستغرام، مترجمة من  @ipapplus وبمساهمة من @r22i0.
+Name: Instagram (Arabic Localized)
+Author: ipapplus
+Icon: https://i.postimg.cc/SQ5KCNF0/IMG-7607.jpg
+Header: https://i.postimg.cc/PJNPhPgy/IMG-7790.jpg
+
 Package: com.rivesDev.classicFolders3.rootless
 Architecture: iphoneos-arm64
 Version: 1.0
