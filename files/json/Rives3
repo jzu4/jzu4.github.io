@@ -1,0 +1,50 @@
+{
+  "movies": [
+    {
+      "title": "فيلم ذا دارك نايت",
+      "image": "https://example.com/images/dark_knight.jpg",
+      "url": "https://example.com/movies/the-dark-knight"
+    },
+    {
+      "title": "فيلم انسبشن",
+      "image": "https://example.com/images/inception.jpg",
+      "url": "https://example.com/movies/inception"
+    }
+  ],
+  "series": [
+    {
+      "title": "مسلسل بريكنغ باد",
+      "image": "https://example.com/images/breaking_bad.jpg",
+      "url": "https://example.com/series/breaking-bad",
+      "episodes": [
+        {
+          "title": "الحلقة 1",
+          "url": "https://example.com/series/breaking-bad/ep1"
+        },
+        {
+          "title": "الحلقة 2",
+          "url": "https://example.com/series/breaking-bad/ep2"
+        }
+      ]
+    },
+    {
+      "title": "مسلسل قيم اوف ثرونز",
+      "image": "https://example.com/images/game_of_thrones.jpg",
+      "url": "https://example.com/series/game-of-thrones",
+      "episodes": [
+        {
+          "title": "الحلقة 1",
+          "url": "https://example.com/series/game-of-thrones/ep1"
+        },
+        {
+          "title": "الحلقة 2",
+          "url": "https://example.com/series/game-of-thrones/ep2"
+        },
+        {
+          "title": "الحلقة 3",
+          "url": "https://example.com/series/game-of-thrones/ep3"
+        }
+      ]
+    }
+  ]
+}
