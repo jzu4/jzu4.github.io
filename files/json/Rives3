@@ -1,48 +1,62 @@
 {
   "movies": [
     {
-      "title": "فيلم ذا دارك نايت",
-      "image": "https://example.com/images/dark_knight.jpg",
-      "url": "https://example.com/movies/the-dark-knight"
+      "title": "فيلم الجوكر",
+      "image": "https://example.com/images/joker.jpg",
+      "categories": ["دراما", "جريمة", "تشويق"],
+      "url": "https://example.com/watch/joker"
     },
     {
-      "title": "فيلم انسبشن",
-      "image": "https://example.com/images/inception.jpg",
-      "url": "https://example.com/movies/inception"
+      "title": "فيلم انترستيلر",
+      "image": "https://example.com/images/interstellar.jpg",
+      "categories": ["خيال علمي", "مغامرة", "دراما"],
+      "url": "https://example.com/watch/interstellar"
     }
   ],
   "series": [
     {
-      "title": "مسلسل بريكنغ باد",
-      "image": "https://example.com/images/breaking_bad.jpg",
-      "url": "https://example.com/series/breaking-bad",
+      "title": "مسلسل ناركوس",
+      "image": "https://example.com/images/narcos.jpg",
+      "categories": ["جريمة", "دراما", "تاريخ"],
       "episodes": [
         {
           "title": "الحلقة 1",
-          "url": "https://example.com/series/breaking-bad/ep1"
+          "url": "https://example.com/series/narcos/ep1"
         },
         {
           "title": "الحلقة 2",
-          "url": "https://example.com/series/breaking-bad/ep2"
+          "url": "https://example.com/series/narcos/ep2"
+        },
+        {
+          "title": "الحلقة 3",
+          "url": "https://example.com/series/narcos/ep3"
         }
       ]
     },
     {
-      "title": "مسلسل قيم اوف ثرونز",
-      "image": "https://example.com/images/game_of_thrones.jpg",
-      "url": "https://example.com/series/game-of-thrones",
+      "title": "مسلسل تشيرنوبيل",
+      "image": "https://example.com/images/chernobyl.jpg",
+      "categories": ["دراما", "تاريخ", "تشويق"],
       "episodes": [
         {
           "title": "الحلقة 1",
-          "url": "https://example.com/series/game-of-thrones/ep1"
+          "url": "https://example.com/series/chernobyl/ep1"
         },
         {
           "title": "الحلقة 2",
-          "url": "https://example.com/series/game-of-thrones/ep2"
+          "url": "https://example.com/series/chernobyl/ep2"
         },
         {
           "title": "الحلقة 3",
-          "url": "https://example.com/series/game-of-thrones/ep3"
+          "url": "https://example.com/series/chernobyl/ep3"
+        },
+        {
+          "title": "الحلقة 4",
+          "url": "https://example.com/series/chernobyl/ep4"
+        },
+        {
+          "title": "الحلقة 5",
+          "url": "https://example.com/series/chernobyl/ep5"
         }
       ]
     }
