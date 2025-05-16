@@ -1,3 +1,41 @@
+Package: com.sparklechan.swifty
+Architecture: iphoneos-arm64
+Version: 2.0
+Section: Utilities
+Maintainer: FCCT
+Depends: swift, clang-14, ldid, git
+Conflicts: com.sparklechan.sparkkit
+Filename: ./debian_file/FridaCodeManager-roothide.deb
+Size: 3084160
+MD5sum: c40d1af2a580a1e79b6a07f3c216fa37
+SHA1: a4315534fa546b0b5cb849e7a048c3844e2e2e6e
+SHA256: 88b85bbe31bf2e79a98e221836dff9bfdaed8a71bc9780e2579299f8de25d81b
+SHA512: cbf20b38dcb32a4f6379f4dd321a334561aea72b15a50ec88f07df047910fddd91e644f5cf830634a3c5531c0e9e8520bcafcc1aa78618b65e35036bf31bc345
+Description: Full fledged Xcode-like IDE for iOS
+Tag: role::hacker
+Name: FridaCodeManager
+Icon: https://raw.githubusercontent.com/fridakitten/FridaCodeManager/main/Blueprint/FridaCodeManager.app/AppIcon.png
+Author: FCCT
+
+Package: com.sparklechan.swifty
+Architecture: iphoneos-arm64
+Version: 2.0
+Section: Utilities
+Maintainer: FCCT
+Depends: swift, clang-14, ldid, git
+Conflicts: com.sparklechan.sparkkit
+Filename: ./debian_file/FridaCodeManager-rootless.deb
+Size: 3084472
+MD5sum: 6013fbfb7d45e3dd3ade9ba5eabe3fa8
+SHA1: a8429e4cf634a3108d8de67dd566c4ebd1a25269
+SHA256: cafd295eda3443dea8e1df3023e9cc6b90ce4e18d9dcdefce04b3e34107a7472
+SHA512: 26e7d8a43f873aff52fe23a6c8f159405b3f5bde6adfe78d5e4a4e03acd179272adebfcd9a5a2d3ec0fc62c214f714362f9018fb27e8d71e21ee51da5393de55
+Description: Full fledged Xcode-like IDE for iOS
+Tag: role::hacker
+Name: FridaCodeManager
+Icon: https://raw.githubusercontent.com/fridakitten/FridaCodeManager/main/Blueprint/FridaCodeManager.app/AppIcon.png
+Author: FCCT
+
 Package: com.ipapplus.instarab
 Architecture: iphoneos-arm64
 Version: 1.2.0
