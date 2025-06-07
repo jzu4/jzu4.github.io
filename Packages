@@ -12,3 +12,17 @@ SHA1: 6595dfc37b6004bd5f547b6155aadee40be29618
 SHA256: 184afd30b74f36712e30f53c4281ecd4986fcf8de1cad327e847287c086ca008
 Name: com.ry7yy.jedbo
 
+Package: com.bandarhl.bhinsta
+Version: 1.0.3
+Architecture: iphoneos-arm64
+Maintainer: 
+Description: com.bandarhl.bhinsta package for iOS
+Section: Tweaks
+Filename: ./debs/com.bandarhl.bhinsta_1.0.3_iphoneos-arm64.deb
+Size: 162788
+Installed-Size: 158
+MD5sum: af010de66b571b34c7f731cb6cb454d6
+SHA1: c8524e132e6d3a23f232bc638b405a580643108b
+SHA256: a8e0b68b4772267f9a8953ed258017737d882c9a1dad06b57d495c27c76d4d5b
+Name: com.bandarhl.bhinsta
+
