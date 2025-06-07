@@ -1,16 +1,18 @@
-Package: com.ry7yy.jedbo
-Version: 2.1.0-1
+Package: com.bandarhl.bhinsta
+Version: 1.0.3
 Architecture: iphoneos-arm64
-Maintainer: 
-Description: com.ry7yy.jedbo package for iOS
+Maintainer: Bandar Alruwaili
+Installed-Size: 648
+Depends: mobilesubstrate
+Filename: debs/com.bandarhl.bhinsta_1.0.3_iphoneos-arm64.deb
+Size: 162788
+MD5sum: af010de66b571b34c7f731cb6cb454d6
+SHA1: c8524e132e6d3a23f232bc638b405a580643108b
+SHA256: a8e0b68b4772267f9a8953ed258017737d882c9a1dad06b57d495c27c76d4d5b
 Section: Tweaks
-Filename: ./debs/com.ry7yy.jedbo_2.1.0-1_iphoneos-arm64.deb
-Size: 69648
-Installed-Size: 68
-MD5sum: 3347547c5fe8e9152350fd5578a77f3c
-SHA1: 6595dfc37b6004bd5f547b6155aadee40be29618
-SHA256: 184afd30b74f36712e30f53c4281ecd4986fcf8de1cad327e847287c086ca008
-Name: com.ry7yy.jedbo
+Description: An awesome tweak for Instagram!
+Author: Bandar Alruwaili
+Name: BHInsta
 
 Package: com.bandarhl.bhinsta
 Version: 1.0.3
