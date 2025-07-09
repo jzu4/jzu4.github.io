@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>StarzStore</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;800&display=swap" rel="stylesheet">
+  <title>StarzPanel - مركز التحكم</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,133 +14,135 @@
 
     body {
       font-family: 'Cairo', sans-serif;
-      background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+      background: #111827;
       color: white;
+      min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
-      padding: 20px;
+      align-items: center;
+      padding: 30px;
     }
 
-    .container {
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 24px;
-      padding: 35px 30px;
-      max-width: 420px;
+    .panel {
       width: 100%;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-      text-align: center;
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: all 0.3s ease;
+      max-width: 500px;
+      background: #1f2937;
+      border-radius: 20px;
+      padding: 25px 30px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     }
 
-    .avatar {
-      width: 90px;
-      height: 90px;
-      margin: auto;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid #00ffc3;
-      box-shadow: 0 0 15px #00ffc3aa;
-      margin-bottom: 20px;
-      animation: pulse 2s infinite;
+    .panel h1 {
+      font-size: 26px;
+      margin-bottom: 5px;
+      color: #00dc82;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-      100% { transform: scale(1); }
-    }
-
-    .title {
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
-
-    .desc {
-      font-size: 15px;
-      color: #ccc;
+    .panel p.subtitle {
+      color: #aaa;
       margin-bottom: 25px;
+      font-size: 14px;
     }
 
-    .info-box {
-      background-color: #1e1e30;
+    .status-box {
+      background: #111;
       border: 1px solid #333;
       border-radius: 12px;
       padding: 15px;
       margin-bottom: 20px;
+    }
+
+    .status-box span {
+      display: block;
+      margin-bottom: 6px;
       color: #0ff;
       font-weight: bold;
-      font-size: 15px;
     }
 
-    .message {
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 30px;
-      color: #eee;
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 25px;
     }
 
-    .main-btn {
-      background: linear-gradient(135deg, #00ffc3, #00aaff);
-      padding: 14px 25px;
-      border: none;
+    .feature {
+      background-color: #374151;
+      padding: 12px;
       border-radius: 10px;
-      font-size: 17px;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      text-align: center;
+      background: #00dc82;
+      padding: 12px;
+      border-radius: 8px;
       font-weight: bold;
       color: #000;
       text-decoration: none;
-      display: inline-block;
-      margin-bottom: 15px;
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
-    .main-btn:hover {
-      transform: translateY(-2px);
+    .btn.secondary {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .btn:hover {
       opacity: 0.9;
     }
 
-    .secondary-btn {
-      display: block;
-      margin-top: 10px;
-      color: #0ff;
-      text-decoration: underline;
-      font-size: 14px;
-    }
-
     .footer {
-      margin-top: 25px;
+      text-align: center;
+      margin-top: 30px;
       font-size: 12px;
-      color: #aaa;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="avatar">
-      <img src="your-logo.png" alt="logo" style="width:100%; height:100%;">
+  <div class="panel">
+    <h1>StarzPanel</h1>
+    <p class="subtitle">لوحة التحكم الخاصة بحسابك</p>
+
+    <div class="status-box">
+      <span>الإصدار: 17.10</span>
+      <span>آخر تحديث: يوليو 2025</span>
+      <span>الحالة: ✅ نشط</span>
     </div>
 
-    <div class="title">StarzStore</div>
-    <div class="desc">عالمك للتطبيقات المخصصة والمزايا الإضافية</div>
-
-    <div class="info-box">الإصدار 17.10 • التحديث: يوليو 2025</div>
-
-    <div class="message">
-      أهلًا بك في عالم مختلف من التخصيص والتحكم الكامل ✨<br>
-      معنا، بتعيش تجربة سناب بلس مطورة مليئة بالمميزات الحصرية والخيارات الذكية.
+    <div class="features">
+      <div class="feature">
+        مزايا حصرية
+        <span>✓</span>
+      </div>
+      <div class="feature">
+        تحكم إضافي بالتطبيقات
+        <span>✓</span>
+      </div>
+      <div class="feature">
+        دعم سريع عبر الواتساب
+        <span>✓</span>
+      </div>
     </div>
 
-    <a href="#" class="main-btn">🔐 شراء الأكواد الآن</a>
-    <a href="https://wa.me/966XXXXXXXXX" class="secondary-btn">راسلنا على واتساب</a>
+    <div class="btn-group">
+      <a href="#" class="btn">🔒 شراء الأكواد</a>
+      <a href="https://wa.me/966XXXXXXXXX" class="btn secondary">💬 تواصل عبر واتساب</a>
+    </div>
 
     <div class="footer">
-      © Starz Store 2025 - جميع الحقوق محفوظة
+      جميع الحقوق محفوظة © StarzStore 2025
     </div>
   </div>
 
