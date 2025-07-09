@@ -7,247 +7,225 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --main: #00ffc3;
-      --accent: #1e90ff;
-      --glow: 0 0 80px 15px #00ffc399, 0 0 32px 10px #1e90ff55;
+      --main: #16e4b4;
+      --accent: #185e89;
+      --glow: 0 0 50px 10px #16e4b488, 0 0 24px 8px #185e89bb;
+      --bg: #161c23;
     }
     html, body { height: 100%; margin: 0; padding: 0;}
     body {
       font-family: 'Tajawal', sans-serif;
       min-height: 100vh;
-      background: linear-gradient(130deg, #0f0c29, #302b63 75%, #24243e 100%);
+      background: var(--bg);
       color: #fff;
       overflow-x: hidden;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .bg-anim {
+    /* خلفية ناعمة */
+    .soft-bg {
       position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(ellipse 90% 70% at 50% 10%, #16e4b422 0%, transparent 80%), 
+                  radial-gradient(circle 45% at 80% 85%, #185e8942 0%, transparent 70%),
+                  var(--bg);
       z-index: 0;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .star {
-      position: absolute;
-      border-radius: 50%;
-      background: white;
-      opacity: 0.5;
-      animation: star-move 16s linear infinite;
-    }
-    @keyframes star-move {
-      from { transform: translateY(-60px);}
-      to { transform: translateY(100vh);}
     }
 
+    /* الصورة الرئيسية الكبيرة مع الإضاءة */
     .image-glow-container {
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      margin-top: 56px;
+      width: 100vw;
+      margin-top: 34px;
       margin-bottom: 0;
       z-index: 2;
       position: relative;
-      height: 225px;
-      pointer-events: none;
-      /* Space for glow effect */
     }
     .image-glow-container img {
-      height: 210px;
-      width: auto;
+      height: 34vh;
+      max-height: 270px;
+      max-width: 82vw;
+      min-height: 160px;
+      object-fit: contain;
       display: block;
-      pointer-events: auto;
-      filter: drop-shadow(0 0 80px #00ffc3a0) drop-shadow(0 0 44px #1e90ff99);
-      /* this gives that nice glowing effect */
-      /* If you want stronger or less, adjust values above */
+      margin: 0 auto;
+      border: none;
       background: none !important;
-      border: none !important;
-      margin: 0;
-      z-index: 2;
+      filter: drop-shadow(0 0 55px #16e4b4cc) drop-shadow(0 0 24px #185e89cc);
+      /* إضاءة ناعمة من نفس ألوان المتجر */
+    }
+
+    @media (max-width: 700px) {
+      .image-glow-container img {
+        height: 32vw;
+        min-height: 95px;
+        max-height: 180px;
+        max-width: 95vw;
+      }
     }
 
     .hero {
-      min-height: 44vh;
+      min-height: 34vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
       text-align: center;
       position: relative;
       z-index: 2;
+      margin-bottom: 10px;
     }
     .hero h1 {
-      font-size: 42px;
+      font-size: 2.4rem;
       font-weight: 800;
-      margin-bottom: 18px;
+      margin: 22px 0 18px 0;
       color: var(--main);
-      text-shadow: 0 4px 40px #00ffc344, 0 2px 10px #222c;
-      animation: fadeinup 0.8s 0.18s both;
+      text-shadow: 0 2px 18px #16e4b466, 0 1px 4px #185e8999;
     }
     .hero p {
-      color: #e0f7fa;
-      font-size: 21px;
-      max-width: 550px;
-      margin: 0 auto 35px auto;
-      line-height: 1.8;
-      animation: fadeinup 1s 0.5s both;
-    }
-    @keyframes fadeinup {
-      from { opacity: 0; transform: translateY(40px);}
-      to { opacity: 1; transform: translateY(0);}
+      color: #e3fbf6;
+      font-size: 1.17rem;
+      max-width: 540px;
+      margin: 0 auto 24px auto;
+      line-height: 1.85;
     }
     .cta-btn {
-      background: linear-gradient(90deg, var(--main) 60%, var(--accent) 120%);
+      background: linear-gradient(90deg, var(--main) 55%, var(--accent) 120%);
       color: #13161c;
       border: none;
-      border-radius: 15px;
-      padding: 17px 44px;
-      font-size: 22px;
+      border-radius: 13px;
+      padding: 15px 38px;
+      font-size: 1.27rem;
       font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 2px 26px #00ffc36e;
-      margin-top: 8px;
-      margin-bottom: 36px;
-      transition: 0.18s cubic-bezier(.33,1.12,.48,1.09);
-      animation: fadeinup 1s 1.15s both;
+      box-shadow: 0 2px 18px #16e4b466;
+      margin-top: 10px;
+      margin-bottom: 24px;
+      transition: 0.16s cubic-bezier(.33,1.12,.48,1.09);
       text-decoration: none;
       display: inline-block;
       letter-spacing: 1px;
     }
-    .cta-btn:hover { opacity: 0.93; transform: scale(1.045); }
-
+    .cta-btn:hover { opacity: 0.94; transform: scale(1.025);}
     .features {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 26px;
-      margin: 40px auto 14px auto;
-      max-width: 1120px;
+      gap: 19px;
+      margin: 28px auto 5px auto;
+      max-width: 1100px;
       z-index: 2;
       position: relative;
     }
     .feature {
-      min-width: 215px;
-      max-width: 330px;
-      background: rgba(30, 33, 50, 0.74);
-      border-radius: 22px;
-      border: 1.5px solid rgba(255,255,255,0.13);
-      padding: 26px 16px 22px 16px;
-      box-shadow: 0 4px 28px #00ffc321;
-      backdrop-filter: blur(20px);
+      min-width: 168px;
+      max-width: 305px;
+      background: rgba(24,38,54, 0.78);
+      border-radius: 18px;
+      border: 1.5px solid #16e4b426;
+      padding: 22px 14px 16px 14px;
+      box-shadow: 0 2px 14px #16e4b411;
+      backdrop-filter: blur(9px);
       color: #fff;
       text-align: right;
-      animation: fadeinup 1.1s both;
-      animation-delay: 1.32s;
-      transition: 0.21s;
+      animation: fadeinup 1s both;
+      animation-delay: 1.1s;
+      transition: 0.18s;
     }
-    .feature:hover { border-color: var(--main); box-shadow: 0 4px 40px #00ffc38a; }
     .feature h3 {
       color: var(--main);
-      font-size: 19px;
+      font-size: 17px;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       margin-top: 0;
     }
     .feature p {
-      color: #b8ecf2;
-      font-size: 15px;
+      color: #c9f5eb;
+      font-size: 14px;
       font-weight: 500;
       line-height: 1.8;
+      margin: 0;
     }
     .whatsapp-float {
       position: fixed;
-      bottom: 28px;
-      left: 26px;
+      bottom: 21px;
+      left: 18px;
       background: #25d366;
       color: #fff;
-      width: 62px; height: 62px;
+      width: 52px; height: 52px;
       border-radius: 50%;
-      box-shadow: 0 0 30px #25d36699;
+      box-shadow: 0 0 16px #25d36689;
       display: flex;
       align-items: center; justify-content: center;
-      font-size: 36px;
+      font-size: 29px;
       text-decoration: none;
       z-index: 300;
-      transition: 0.16s;
+      transition: 0.13s;
     }
     .whatsapp-float:hover { background: #1fa855; }
     footer {
       color: #aaa;
       text-align: center;
-      padding: 48px 12px 22px 12px;
-      font-size: 15px;
-      letter-spacing: 1.5px;
+      padding: 30px 12px 14px 12px;
+      font-size: 14px;
+      letter-spacing: 1.2px;
       background: transparent;
-      margin-top: 35px;
+      margin-top: 22px;
+      z-index: 4;
+      position: relative;
     }
-    @media (max-width: 850px) {
-      .features { flex-direction: column; align-items: center; gap: 15px;}
-      .feature { width: 100%; max-width: 420px;}
-      .image-glow-container img { height: 120px;}
-      .hero h1 { font-size: 27px;}
+    @media (max-width: 700px) {
+      .features { flex-direction: column; align-items: center; gap: 11px;}
+      .feature { width: 100%; max-width: 97vw;}
+      .hero h1 { font-size: 1.42rem;}
+      .image-glow-container { margin-top: 12px;}
     }
   </style>
 </head>
 <body>
-  <!-- خلفية نجوم متحركة -->
-  <div class="bg-anim" id="stars-bg"></div>
-
-  <!-- صورة شفافة مع إضاءة خلفية -->
+  <!-- خلفية ناعمة هادية -->
+  <div class="soft-bg"></div>
+  <!-- صورة شفافة PNG كبيرة مع إضاءة خلفية -->
   <div class="image-glow-container">
     <img src="z.png" alt="شعار أو صورة المتجر" id="main-logo">
-    <!-- ضع رابط صورتك الشفافة (PNG) هنا بدل المثال أعلاه -->
+    <!-- غير الرابط أعلاه لرابط شعارك أو أي صورة شفافة PNG -->
   </div>
-
   <!-- البطل -->
   <section class="hero">
     <h1>StarzStore</h1>
     <p>
-      المتجر الإلكتروني العصري لكل ما يخص خدماتك الرقمية… أكواد، باقات، حلول مطوّرة ودعم سريع – كل هذا في منصة واحدة، بسهولة واحترافية!
+      المتجر الإلكتروني العصري لكل ما تحتاجه من أكواد واشتراكات وخدمات رقمية... استمتع بأمان وسهولة ودعم سريع على مدار الساعة.
     </p>
     <a class="cta-btn" href="#">المتجر الإلكتروني</a>
   </section>
-
   <!-- المميزات -->
   <div class="features" id="features">
     <div class="feature">
-      <h3>منتجات رقمية متنوعة</h3>
-      <p>كل ما تحتاجه من أكواد واشتراكات وحلول متجددة باستمرار.</p>
+      <h3>تنوع المنتجات</h3>
+      <p>كل الخدمات الرقمية والأكواد والباقات في مكان واحد مع تجربة شراء مرنة وسريعة.</p>
     </div>
     <div class="feature">
       <h3>دعم لحظي</h3>
-      <p>رد فوري عبر الواتساب لأي استفسار أو طلب مساعدة.</p>
+      <p>خدمة عملاء نشطة عبر واتساب على مدار اليوم.</p>
     </div>
     <div class="feature">
-      <h3>تجربة آمنة ومرنة</h3>
-      <p>حماية بيانات وطلباتك، مع سهولة في التصفح والدفع والمتابعة.</p>
+      <h3>دفع آمن</h3>
+      <p>نستخدم أحدث أنظمة الأمان والتشفير لجميع عملياتك.</p>
     </div>
     <div class="feature">
-      <h3>واجهة احترافية</h3>
-      <p>تصميم عصري وسريع يضمن لك تصفح وشراء بدون أي تعقيد.</p>
+      <h3>واجهة متجاوبة</h3>
+      <p>صفحة تنسجم مع جميع الأجهزة سواء الجوال أو الآيباد بدون مشاكل.</p>
     </div>
   </div>
-
   <!-- زر واتساب عائم -->
   <a class="whatsapp-float" href="https://wa.me/966XXXXXXXXX" title="تواصل واتساب" target="_blank">💬</a>
-
   <footer>
     StarzStore © 2025 | جميع الحقوق محفوظة
   </footer>
-
-  <!-- سكربت توليد النجوم للخلفية -->
-  <script>
-    // توليد نجوم للخلفية
-    const stars = 110, bg = document.getElementById('stars-bg');
-    for (let i = 0; i < stars; i++) {
-      let s = document.createElement('div');
-      s.className = 'star';
-      s.style.left = (Math.random()*100) + 'vw';
-      s.style.top = (-60 + Math.random()*1000) + 'px';
-      s.style.width = s.style.height = (1+Math.random()*2.2)+'px';
-      s.style.opacity = 0.36 + Math.random()*0.5;
-      s.style.animationDuration = (10 + Math.random()*16)+'s';
-      bg.appendChild(s);
-    }
-  </script>
 </body>
 </html>
