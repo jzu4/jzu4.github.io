@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StarzStore | أقوى تجربة رقمية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main: #00ffc3;
+      --glass: rgba(30, 33, 50, 0.66);
+      --blur: blur(24px);
+      --border: rgba(255,255,255,0.13);
+      --accent: #1e90ff;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      background: #0f0c29;
+      overflow-x: hidden;
+    }
+
+    /* خلفية متحركة "نجوم" */
+    .bg-anim {
+      position: fixed;
+      z-index: 0;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      background: white;
+      opacity: 0.5;
+      animation: star-move 16s linear infinite;
+    }
+    @keyframes star-move {
+      from { transform: translateY(-60px);}
+      to { transform: translateY(100vh);}
+    }
+
+    /* الهيدر */
+    header {
+      width: 100vw;
+      padding: 16px 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(20,20,40,0.45);
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 99;
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: 2px;
+      color: var(--main);
+      text-shadow: 0 2px 12px #0008;
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s;
+      opacity: 0.84;
+    }
+    nav a:hover { color: var(--main); opacity: 1; }
+
+    /* البطل */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding-top: 110px;
+    }
+    .hero h1 {
+      font-size: 45px;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--main), #fff 90%);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      margin-bottom: 15px;
+      animation: fadeinup 1s 0.3s both;
+    }
+    .hero p {
+      color: #ddd;
+      font-size: 20px;
+      max-width: 510px;
+      margin: 0 auto 38px auto;
+      line-height: 1.8;
+      animation: fadeinup 1s 0.7s both;
+    }
+    @keyframes fadeinup {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .cta-btn {
+      background: linear-gradient(90deg, var(--main) 60%, var(--accent) 120%);
+      color: #13161c;
+      border: none;
+      border-radius: 14px;
+      padding: 17px 42px;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 2px 26px #00ffc36e;
+      margin-top: 5px;
+      transition: 0.18s cubic-bezier(.33,1.12,.48,1.09);
+      animation: fadeinup 1s 1.2s both;
+    }
+    .cta-btn:hover { opacity: 0.93; transform: scale(1.045); }
+
+    /* مميزات */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+      margin: 55px auto 15px auto;
+      max-width: 1100px;
+      z-index: 2;
+      position: relative;
+    }
+    .feature {
+      min-width: 235px;
+      max-width: 320px;
+      background: var(--glass);
+      border-radius: 22px;
+      border: 1.5px solid var(--border);
+      padding: 30px 20px 24px 20px;
+      box-shadow: 0 4px 28px #00ffc321;
+      backdrop-filter: var(--blur);
+      color: #fff;
+      text-align: right;
+      animation: fadeinup 0.9s both;
+      animation-delay: 1.35s;
+      transition: 0.22s;
+    }
+    .feature:hover { border-color: var(--main); box-shadow: 0 4px 40px #00ffc38a; }
+
+    .feature h3 {
+      color: var(--main);
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 11px;
+      margin-top: 0;
+    }
+    .feature p {
+      color: #c0e7ef;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.8;
+    }
+
+    /* واتساب عائم */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      left: 26px;
+      background: #25d366;
+      color: #fff;
+      width: 62px; height: 62px;
+      border-radius: 50%;
+      box-shadow: 0 0 30px #25d36699;
+      display: flex;
+      align-items: center; justify-content: center;
+      font-size: 36px;
+      text-decoration: none;
+      z-index: 300;
+      transition: 0.16s;
+    }
+    .whatsapp-float:hover { background: #1fa855; }
+
+    /* الفوتر */
+    footer {
+      color: #aaa;
+      text-align: center;
+      padding: 48px 12px 22px 12px;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      background: transparent;
+    }
+    @media (max-width: 850px) {
+      .features { flex-direction: column; align-items: center; gap: 18px;}
+      .feature { width: 100%; max-width: 400px; }
+      header { padding: 13px 3vw;}
+      .hero h1 { font-size: 28px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- خلفية نجوم متحركة -->
+  <div class="bg-anim" id="stars-bg"></div>
+
+  <!-- هيدر ثابت -->
+  <header>
+    <span class="logo">StarzStore</span>
+    <nav>
+      <a href="#features">مميزات</a>
+      <a href="#contact">تواصل</a>
+      <a href="#">الدخول</a>
+    </nav>
+  </header>
+
+  <!-- البطل -->
+  <section class="hero">
+    <h1>غيّر عالمك الرقمي مع <span style="color:#00ffc3;">StarzStore</span></h1>
+    <p>
+      منصة ذكية تمنحك تحكم كامل في تطبيقاتك، تحديثات فورية، دعم حقيقي، ومزايا حصرية تشعرّك أنك النخبة الرقمية.<br>
+      كل ما تحتاجه... في مكان واحد. 
+    </p>
+    <a class="cta-btn" href="#">جرّب الآن أو اطلب كودك المميز</a>
+  </section>
+
+  <!-- المميزات -->
+  <div class="features" id="features">
+    <div class="feature">
+      <h3>تحكم فائق</h3>
+      <p>كل إعداد، كل ميزة، صار تحت سيطرتك. واجهة سهلة وسريعة تناسبك بأي وقت.</p>
+    </div>
+    <div class="feature">
+      <h3>تحديثات مستمرة</h3>
+      <p>كل جديد يصلك أول بأول – نطور ونحسن حتى تشعر أنك تملك أفضل نظام دايمًا.</p>
+    </div>
+    <div class="feature">
+      <h3>دعم سريع</h3>
+      <p>تواصل مع فريقنا مباشرة عبر الواتساب أو تيليجرام. الرد خلال دقائق.</p>
+    </div>
+    <div class="feature">
+      <h3>تجربة آمنة</h3>
+      <p>أمان وخصوصية عالية، بياناتك مشفرة ومحفوظة بأفضل تقنيات الحماية.</p>
+    </div>
+  </div>
+
+  <!-- زر واتساب عائم -->
+  <a class="whatsapp-float" id="contact" href="https://wa.me/966XXXXXXXXX" title="تواصل واتساب" target="_blank">💬</a>
+
+  <!-- الفوتر -->
+  <footer>
+    StarzStore © 2025 | جميع الحقوق محفوظة
+  </footer>
+
+  <!-- سكربت توليد النجوم للخلفية -->
+  <script>
+    // توليد نجوم للخلفية
+    const stars = 110, bg = document.getElementById('stars-bg');
+    for (let i = 0; i < stars; i++) {
+      let s = document.createElement('div');
+      s.className = 'star';
+      s.style.left = (Math.random()*100) + 'vw';
+      s.style.top = (-60 + Math.random()*1000) + 'px';
+      s.style.width = s.style.height = (1+Math.random()*2.2)+'px';
+      s.style.opacity = 0.36 + Math.random()*0.5;
+      s.style.animationDuration = (10 + Math.random()*16)+'s';
+      bg.appendChild(s);
+    }
+  </script>
+</body>
+</html>
