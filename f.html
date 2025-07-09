@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>StarzStore</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -15,55 +14,68 @@
 
     body {
       font-family: 'Cairo', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      height: 100vh;
+      background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 100vh;
       padding: 20px;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      max-width: 400px;
+    .container {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      padding: 35px 30px;
+      max-width: 420px;
       width: 100%;
-      padding: 30px 25px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
       text-align: center;
-      transition: 0.3s;
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.3s ease;
     }
 
-    .logo {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 15px;
+    .avatar {
+      width: 90px;
+      height: 90px;
+      margin: auto;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #00ffc3;
+      box-shadow: 0 0 15px #00ffc3aa;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
     }
 
     .title {
       font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 5px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #ffffff;
     }
 
-    .subtitle {
+    .desc {
       font-size: 15px;
       color: #ccc;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
-    .version {
-      background-color: rgba(0, 255, 170, 0.15);
-      border: 1px solid #00ffaa;
-      color: #00ffaa;
-      padding: 10px;
+    .info-box {
+      background-color: #1e1e30;
+      border: 1px solid #333;
       border-radius: 12px;
-      margin-bottom: 25px;
+      padding: 15px;
+      margin-bottom: 20px;
+      color: #0ff;
       font-weight: bold;
+      font-size: 15px;
     }
 
     .message {
@@ -73,37 +85,31 @@
       color: #eee;
     }
 
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .btn {
-      flex: 1;
-      padding: 12px;
+    .main-btn {
+      background: linear-gradient(135deg, #00ffc3, #00aaff);
+      padding: 14px 25px;
+      border: none;
       border-radius: 10px;
+      font-size: 17px;
       font-weight: bold;
+      color: #000;
       text-decoration: none;
-      color: white;
-      transition: 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-size: 15px;
+      display: inline-block;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
     }
 
-    .btn:hover {
-      transform: scale(1.05);
+    .main-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
     }
 
-    .btn.whatsapp {
-      background-color: #25D366;
-    }
-
-    .btn.codes {
-      background-color: #FF6B35;
+    .secondary-btn {
+      display: block;
+      margin-top: 10px;
+      color: #0ff;
+      text-decoration: underline;
+      font-size: 14px;
     }
 
     .footer {
@@ -115,24 +121,23 @@
 </head>
 <body>
 
-  <div class="card">
-    <img class="logo" src="your-logo.png" alt="logo">
-    <div class="title">StarzStore</div>
-    <div class="subtitle">خلّي التطبيقات تشتغل على مزاجك</div>
-
-    <div class="version">
-      <i class="bi bi-phone"></i> الإصدار: 17.10 | آخر تحديث: يوليو 2025
+  <div class="container">
+    <div class="avatar">
+      <img src="your-logo.png" alt="logo" style="width:100%; height:100%;">
     </div>
+
+    <div class="title">StarzStore</div>
+    <div class="desc">عالمك للتطبيقات المخصصة والمزايا الإضافية</div>
+
+    <div class="info-box">الإصدار 17.10 • التحديث: يوليو 2025</div>
 
     <div class="message">
-      شكرًا لثقتك بنا وانضمامك لعالم سناب بلس 🌟<br>
-      نعدك بتجربة فريدة مليئة بالمزايا الحصرية والتحكم الإضافي اللي يليق فيك.
+      أهلًا بك في عالم مختلف من التخصيص والتحكم الكامل ✨<br>
+      معنا، بتعيش تجربة سناب بلس مطورة مليئة بالمميزات الحصرية والخيارات الذكية.
     </div>
 
-    <div class="buttons">
-      <a href="#" class="btn codes"><i class="bi bi-cart"></i> شراء الأكواد</a>
-      <a href="https://wa.me/966XXXXXXXXX" class="btn whatsapp"><i class="bi bi-whatsapp"></i> واتساب</a>
-    </div>
+    <a href="#" class="main-btn">🔐 شراء الأكواد الآن</a>
+    <a href="https://wa.me/966XXXXXXXXX" class="secondary-btn">راسلنا على واتساب</a>
 
     <div class="footer">
       © Starz Store 2025 - جميع الحقوق محفوظة
