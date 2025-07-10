@@ -5,212 +5,202 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>الجودي - متجر الجودي</title>
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {margin:0; padding:0; box-sizing:border-box;}
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0f1620;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:#0a0a0a;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 .container {
-    background: rgba(255,255,255,0.05);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-    border-radius: 20px;
-    border: 2px solid #9B59B6;
-    width: 350px;
-    max-width: 90vw;
-    min-height: 500px;
-    max-height: 80vh;
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    animation: fadeIn 0.6s ease-out;
-    backdrop-filter: blur(14px);
+    background:rgba(255,255,255,0.04);
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
+    border-radius:22px;
+    border:2px solid #9B59B6;
+    width:350px;
+    max-width:94vw;
+    min-height:500px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    position:relative;
+    animation:fadeIn 0.6s;
+    backdrop-filter:blur(14px);
 }
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px);}
-    to { opacity: 1; transform: translateY(0);}
+    from{opacity:0;transform:translateY(18px);}
+    to{opacity:1;transform:translateY(0);}
 }
 .header {
-    background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
-    color: #FDFD96;
-    padding: 25px 12px 10px 12px;
-    position: relative;
-    border-bottom: 2px solid #FDFD96;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background:transparent;
+    color:#FDFD96;
+    padding:30px 12px 8px 12px;
+    border-bottom:2px solid #FDFD96;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 .main-logo-img {
-    max-width: 170px;
-    width: 95vw;
-    height: auto;
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 13px auto;
     box-shadow: none;
     border: none;
     border-radius: 0;
     background: none;
+    width: auto;
+    max-width: 100%;
+    height: auto;
 }
 .store-name {
-    color: #FDFD96;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    margin-bottom: 2px;
+    color:#FDFD96;
+    font-size:2rem;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    text-shadow:0 2px 5px rgba(0,0,0,0.4);
+    margin-bottom:2px;
 }
 .app-name {
-    color: #FFFBCC;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 2px;
+    color:#FFFBCC;
+    font-size:1.07rem;
+    font-weight:700;
+    margin-bottom:2px;
 }
 .logo-text {
-    color: #FFFBCC;
-    font-size: 0.97rem;
-    font-weight: 600;
-    text-shadow: 1px 1px 2px #000;
+    color:#FFFBCC;
+    font-size:0.97rem;
+    font-weight:600;
+    text-shadow:1px 1px 2px #000;
 }
 .content {
-    padding: 12px 10px;
-    color: #FDFD96;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
+    padding:13px 10px;
+    color:#FDFD96;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:relative;
+    z-index:1;
 }
 .version-info {
-    background: linear-gradient(135deg, #9B59B6, #8E44AD);
-    color: #FDFD96;
-    font-weight: 800;
-    text-shadow: 1px 1px 2px #2C3E50;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    border: 2px solid #9B59B6;
-    box-shadow: 0 4px 12px rgba(155, 89, 182, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
-    font-size: 0.92rem;
-    position: relative;
-    overflow: hidden;
+    background:linear-gradient(135deg,#9B59B6,#8E44AD);
+    color:#FDFD96;
+    font-weight:800;
+    text-shadow:1px 1px 2px #2C3E50;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:14px;
+    border:2px solid #9B59B6;
+    box-shadow:0 4px 12px rgba(155,89,182,0.3),inset 0 1px 0 rgba(255,255,255,0.2);
+    font-size:0.92rem;
+    position:relative;
+    overflow:hidden;
 }
 .social-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 10px;
-    padding: 0 6px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:10px;
+    padding:0 6px;
 }
 .social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 6px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #FDFD96;
-    font-weight: bold;
-    font-size: 0.88rem;
-    background: linear-gradient(135deg, #8E44AD, #9B59B6);
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
-    position: relative;
-    overflow: hidden;
-    min-height: 40px;
-    backdrop-filter: blur(10px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: slideInUp 0.5s ease-out;
-    animation-fill-mode: both;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 6px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#FDFD96;
+    font-weight:bold;
+    font-size:0.88rem;
+    background:linear-gradient(135deg,#8E44AD,#9B59B6);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 4px 12px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.2);
+    position:relative;
+    overflow:hidden;
+    min-height:40px;
+    backdrop-filter:blur(10px);
+    transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+    animation:slideInUp 0.5s ease-out;
+    animation-fill-mode:both;
 }
-.social-btn:nth-child(1) { animation-delay: 0.1s; }
-.social-btn:nth-child(2) { animation-delay: 0.2s; }
+.social-btn:nth-child(1){animation-delay:0.1s;}
+.social-btn:nth-child(2){animation-delay:0.2s;}
 .social-btn img {
-    width: 18px;
-    height: 18px;
-    margin-left: 6px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    width:18px;
+    height:18px;
+    margin-left:7px;
+    filter:drop-shadow(0 2px 4px rgba(0,0,0,0.18));
 }
 .social-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.3);
-    border-color: rgba(255,255,255,0.4);
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 8px 20px rgba(0,0,0,0.36),inset 0 1px 0 rgba(255,255,255,0.3);
+    border-color:rgba(255,255,255,0.25);
 }
 .buy-codes-section {
-    margin-top: 14px;
-    padding: 0 6px;
+    margin-top:14px;
+    padding:0 6px;
 }
 .buy-codes-btn {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 16px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #2C3E50;
-    font-weight: bold;
-    font-size: 1.03rem;
-    background: linear-gradient(135deg, #F1C40F, #F39C12);
-    letter-spacing: 0.5px;
-    border: none;
-    box-shadow: 0 5px 15px rgba(241, 196, 15, 0.32), inset 0 1px 0 rgba(255,255,255,0.18);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    min-height: 48px;
-    animation: slideInUp 0.5s ease-out 0.5s both;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:13px 16px;
+    border-radius:12px;
+    text-decoration:none;
+    color:#2C3E50;
+    font-weight:bold;
+    font-size:1.03rem;
+    background:linear-gradient(135deg,#F1C40F,#F39C12);
+    letter-spacing:0.5px;
+    border:none;
+    box-shadow:0 5px 15px rgba(241,196,15,0.24),inset 0 1px 0 rgba(255,255,255,0.18);
+    transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+    position:relative;
+    min-height:48px;
+    animation:slideInUp 0.5s ease-out 0.5s both;
 }
 .buy-codes-btn img {
-    width: 21px;
-    height: 21px;
-    margin-left: 7px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    width:21px;
+    height:21px;
+    margin-left:7px;
+    filter:drop-shadow(0 2px 4px rgba(0,0,0,0.15));
 }
 .buy-codes-btn:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 10px 25px rgba(241,196,15,0.23), inset 0 1px 0 rgba(255,255,255,0.3);
-    border-color: rgba(255,255,255,0.19);
+    transform:translateY(-3px) scale(1.03);
+    box-shadow:0 10px 25px rgba(241,196,15,0.21),inset 0 1px 0 rgba(255,255,255,0.26);
+    border-color:rgba(255,255,255,0.13);
 }
 @keyframes slideInUp {
-    from {opacity:0;transform:translateY(20px);}
-    to {opacity:1;transform:translateY(0);}
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
 }
 .footer {
-    background: transparent;
-    border-top: 1px solid #FDFD96;
-    color: #FFFBCC;
-    font-weight: 600;
-    font-size: 0.78rem;
-    text-align: center;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.36);
-    margin-top: auto;
-    padding-bottom: 13px;
-    position: relative;
+    background:transparent;
+    border-top:1px solid #FDFD96;
+    color:#FFFBCC;
+    font-weight:600;
+    font-size:0.78rem;
+    text-align:center;
+    text-shadow:0 1px 2px rgba(0,0,0,0.34);
+    margin-top:auto;
+    padding-bottom:13px;
+    position:relative;
 }
-@media (max-width: 480px) {
-    .container { min-width: 96vw; }
-    .main-logo-img { max-width: 90vw; }
-    .store-name { font-size: 1.3rem; }
+@media (max-width:480px) {
+    .container{min-width:96vw;}
+    .main-logo-img{max-width:90vw;}
+    .store-name{font-size:1.3rem;}
 }
 </style>
 </head>
 <body>
 <div class="container">
 <div class="header">
-<img src="https://jzu4.github.io/files/img/IMG_1730.png" alt="شعار متجر الجودي" class="main-logo-img"/>
+<img src="B6C2A2E6-D3A4-4D11-9385-885F414AE6F2.jpeg" alt="شعار متجر الجودي" class="main-logo-img"/>
 <div class="store-name">ALJODI</div>
 <div class="app-name">متجر الجودي</div>
 <div class="logo-text">متجر الجودي موزع رسمي متخصص في بيع اكواد الشيتو والشارب شوتر والشدات</div>
@@ -242,39 +232,32 @@ body {
 </div>
 </div>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const socialBtns = document.querySelectorAll('.social-btn');
-    const buyCodesBtn = document.querySelector('.buy-codes-btn');
-    [...socialBtns, buyCodesBtn].forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            const ripple = document.createElement('span');
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = e.clientX - rect.left - size / 2;
-            const y = e.clientY - rect.top - size / 2;
-            ripple.style.cssText = `
-                position: absolute;
-                width: ${size}px;
-                height: ${size}px;
-                left: ${x}px;
-                top: ${y}px;
-                background: rgba(255,255,255,0.3);
-                border-radius: 50%;
-                transform: scale(0);
-                animation: ripple 0.5s linear;
-                pointer-events: none;
+document.addEventListener('DOMContentLoaded',function(){
+    const socialBtns=document.querySelectorAll('.social-btn');
+    const buyCodesBtn=document.querySelector('.buy-codes-btn');
+    [...socialBtns,buyCodesBtn].forEach(btn=>{
+        btn.addEventListener('click',function(e){
+            const ripple=document.createElement('span');
+            const rect=this.getBoundingClientRect();
+            const size=Math.max(rect.width,rect.height);
+            const x=e.clientX-rect.left-size/2;
+            const y=e.clientY-rect.top-size/2;
+            ripple.style.cssText=`
+                position:absolute;width:${size}px;height:${size}px;left:${x}px;top:${y}px;
+                background:rgba(255,255,255,0.3);border-radius:50%;transform:scale(0);
+                animation:ripple 0.5s linear;pointer-events:none;
             `;
             this.appendChild(ripple);
-            setTimeout(() => { ripple.remove(); }, 500);
+            setTimeout(()=>{ripple.remove();},500);
         });
     });
 });
-const style = document.createElement('style');
-style.textContent = `
+const style=document.createElement('style');
+style.textContent=`
     @keyframes ripple {
         to {
-            transform: scale(3);
-            opacity: 0;
+            transform:scale(3);
+            opacity:0;
         }
     }
 `;
