@@ -1,249 +1,416 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StarzStore | المتجر الإلكتروني الاحترافي</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@600;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --main: #00ffc3;
-      --glass: rgba(30, 33, 50, 0.74);
-      --blur: blur(20px);
-      --border: rgba(255,255,255,0.13);
-      --accent: #1e90ff;
-    }
-    html, body { height: 100%; margin: 0; padding: 0;}
-    body {
-      font-family: 'Tajawal', sans-serif;
-      min-height: 100vh;
-      margin: 0;
-      background: #0f0c29;
-      overflow-x: hidden;
-    }
-    .bg-anim {
-      position: fixed;
-      z-index: 0;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .star {
-      position: absolute;
-      border-radius: 50%;
-      background: white;
-      opacity: 0.5;
-      animation: star-move 16s linear infinite;
-    }
-    @keyframes star-move {
-      from { transform: translateY(-60px);}
-      to { transform: translateY(100vh);}
-    }
-
-    .top-img-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      width: 100vw;
-      margin-top: 44px;
-      margin-bottom: 28px;
-      z-index: 2;
-      position: relative;
-    }
-    .top-img {
-      width: 330px;
-      max-width: 95vw;
-      border-radius: 25px;
-      box-shadow: 0 10px 60px #00ffc366, 0 2px 15px #1e90ff44;
-      border: 4px solid rgba(255,255,255,0.15);
-      background: #111;
-      object-fit: cover;
-      animation: fadeinup 1.1s;
-    }
-
-    .hero {
-      min-height: 50vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-    .hero h1 {
-      font-size: 42px;
-      font-weight: 800;
-      margin-bottom: 18px;
-      color: var(--main);
-      text-shadow: 0 4px 40px #00ffc344, 0 2px 10px #222c;
-      animation: fadeinup 0.8s 0.18s both;
-    }
-    .hero p {
-      color: #e0f7fa;
-      font-size: 21px;
-      max-width: 550px;
-      margin: 0 auto 35px auto;
-      line-height: 1.8;
-      animation: fadeinup 1s 0.5s both;
-    }
-    @keyframes fadeinup {
-      from { opacity: 0; transform: translateY(40px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-    .cta-btn {
-      background: linear-gradient(90deg, var(--main) 60%, var(--accent) 120%);
-      color: #13161c;
-      border: none;
-      border-radius: 15px;
-      padding: 17px 44px;
-      font-size: 22px;
-      font-weight: 800;
-      cursor: pointer;
-      box-shadow: 0 2px 26px #00ffc36e;
-      margin-top: 8px;
-      margin-bottom: 36px;
-      transition: 0.18s cubic-bezier(.33,1.12,.48,1.09);
-      animation: fadeinup 1s 1.15s both;
-      text-decoration: none;
-      display: inline-block;
-      letter-spacing: 1px;
-    }
-    .cta-btn:hover { opacity: 0.93; transform: scale(1.045); }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 26px;
-      margin: 40px auto 14px auto;
-      max-width: 1120px;
-      z-index: 2;
-      position: relative;
-    }
-    .feature {
-      min-width: 215px;
-      max-width: 330px;
-      background: var(--glass);
-      border-radius: 22px;
-      border: 1.5px solid var(--border);
-      padding: 26px 16px 22px 16px;
-      box-shadow: 0 4px 28px #00ffc321;
-      backdrop-filter: var(--blur);
-      color: #fff;
-      text-align: right;
-      animation: fadeinup 1.1s both;
-      animation-delay: 1.32s;
-      transition: 0.21s;
-    }
-    .feature:hover { border-color: var(--main); box-shadow: 0 4px 40px #00ffc38a; }
-    .feature h3 {
-      color: var(--main);
-      font-size: 19px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      margin-top: 0;
-    }
-    .feature p {
-      color: #b8ecf2;
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 1.8;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 28px;
-      left: 26px;
-      background: #25d366;
-      color: #fff;
-      width: 62px; height: 62px;
-      border-radius: 50%;
-      box-shadow: 0 0 30px #25d36699;
-      display: flex;
-      align-items: center; justify-content: center;
-      font-size: 36px;
-      text-decoration: none;
-      z-index: 300;
-      transition: 0.16s;
-    }
-    .whatsapp-float:hover { background: #1fa855; }
-    footer {
-      color: #aaa;
-      text-align: center;
-      padding: 48px 12px 22px 12px;
-      font-size: 15px;
-      letter-spacing: 1.5px;
-      background: transparent;
-      margin-top: 35px;
-    }
-    @media (max-width: 850px) {
-      .features { flex-direction: column; align-items: center; gap: 15px;}
-      .feature { width: 100%; max-width: 420px;}
-      .top-img { width: 90vw; max-width: 95vw;}
-      .hero h1 { font-size: 27px;}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حقوق الطبع والنشر - zork</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { overflow-x: hidden; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Cairo', Arial, sans-serif;
+            background: #1a0101;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            padding-bottom: 80px;
+            position: relative;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        /* Animated Gradient Background */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(220,53,69,0.38) 0%, transparent 30%),
+                radial-gradient(circle at 80% 60%, rgba(255, 99, 71,0.28) 0%, transparent 30%),
+                radial-gradient(circle at 50% 90%, rgba(255, 165, 0,0.23) 0%, transparent 30%);
+            filter: blur(60px);
+            animation: gradientMove 20s ease-in-out infinite;
+            z-index: 1;
+        }
+        @keyframes gradientMove {
+            0%, 100% { transform: scale(1) rotate(0deg);}
+            33% { transform: scale(1.1) rotate(120deg);}
+            66% { transform: scale(0.9) rotate(240deg);}
+        }
+        /* Stars Effect */
+        .stars {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 2;
+        }
+        .star {
+            position: absolute; width: 2px; height: 2px;
+            background: #fff; border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        @keyframes twinkle {
+            0%,100% { opacity: 0; transform: scale(1);}
+            50% { opacity: 1; transform: scale(1.5);}
+        }
+        /* Floating Particles */
+        .particles {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            overflow: hidden; z-index: 3; pointer-events: none;
+        }
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            animation: float-particle 25s linear infinite;
+        }
+        @keyframes float-particle {
+            0% { transform: translateY(100vh) translateX(0) scale(0); opacity: 0;}
+            10%,90% { opacity: 0.32;}
+            100% { transform: translateY(-100px) translateX(100px) scale(1); opacity: 0;}
+        }
+        /* Main Container */
+        .container {
+            background: linear-gradient(135deg, rgba(40,0,0,0.95) 0%, rgba(20,0,0,0.92) 100%);
+            backdrop-filter: blur(20px) saturate(150%);
+            -webkit-backdrop-filter: blur(20px) saturate(150%);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 35px;
+            padding: 60px 45px;
+            max-width: 650px;
+            width: calc(100% - 40px);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            box-shadow:
+                0 30px 60px rgba(0,0,0,0.8),
+                0 0 0 1px rgba(255,255,255,0.09) inset,
+                0 0 100px rgba(220,53,69,0.08);
+        }
+        /* Logo Section */
+        .logo-section { margin-bottom: 40px; position: relative;}
+        .logo-wrapper { position: relative; width: 150px; height: 150px; margin: 0 auto;}
+        /* Animated Border */
+        .logo-border {
+            position: absolute; inset: -4px;
+            background: linear-gradient(45deg, #DC3545, #FFA500, #FF6347, #DC3545);
+            border-radius: 50%;
+            animation: rotateBorder 3s linear infinite;
+            z-index: 1;
+        }
+        @keyframes rotateBorder {
+            0% { transform: rotate(0deg);}
+            100% { transform: rotate(360deg);}
+        }
+        .logo {
+            position: relative; width: 100%; height: 100%;
+            background: #220606;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; z-index: 2;
+            box-shadow: 0 0 30px rgba(220,53,69,0.3) inset, 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .logo img {
+            width: 85%; height: 85%; object-fit: cover; border-radius: 50%;
+        }
+        .logo-placeholder {
+            font-size: 60px;
+            background: linear-gradient(135deg, #DC3545, #FF6347, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px rgba(220,53,69,0.5));
+        }
+        .logo-pulse {
+            position: absolute; inset: -50px;
+            background: radial-gradient(circle, rgba(220,53,69,0.18) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+            z-index: 0;
+        }
+        @keyframes pulse {
+            0%,100% { transform: scale(1); opacity: 0.4;}
+            50% { transform: scale(1.2); opacity: 0.7;}
+        }
+        /* Typography */
+        h1 {
+            font-size: clamp(3rem, 6vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+        .title-main {
+            background: linear-gradient(135deg, #fff 0%, #DC3545 50%, #fff 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleShine 4s ease-in-out infinite;
+            filter: drop-shadow(0 2px 10px rgba(220,53,69,0.13));
+        }
+        @keyframes titleShine {
+            0%,100% { background-position: 0% 50%;}
+            50% { background-position: 100% 50%;}
+        }
+        .subtitle {
+            font-size: 1.35rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        /* Divider */
+        .divider {
+            width: 200px; height: 4px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.07);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+        .divider::before,
+        .divider::after {
+            content: '';
+            position: absolute; top: 0;
+            width: 100px; height: 100%;
+            background: linear-gradient(90deg, transparent, #DC3545, transparent);
+            animation: dividerMove 3s ease-in-out infinite;
+        }
+        .divider::after { animation-delay: 1.5s;}
+        @keyframes dividerMove {
+            0% { left: -100px;}
+            100% { left: 200px;}
+        }
+        /* Year Badge */
+        .year-badge { display: inline-block; position: relative; margin-bottom: 30px;}
+        .year {
+            font-size: 3rem; font-weight: 900;
+            background: linear-gradient(135deg,#DC3545 0%,#FFA500 50%,#DC3545 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text; display: inline-block;
+            filter: drop-shadow(0 0 30px rgba(220,53,69,0.25));
+            animation: yearGlow 3s ease-in-out infinite;
+        }
+        @keyframes yearGlow {
+            0%,100% { filter: drop-shadow(0 0 20px rgba(220,53,69,0.22)); background-position: 0% 50%;}
+            50% { filter: drop-shadow(0 0 40px rgba(220,53,69,0.39)); background-position: 100% 50%;}
+        }
+        /* Copyright Text */
+        .copyright-box {
+            background: rgba(255,255,255,0.015);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .copyright-box::before {
+            content: '';
+            position: absolute; top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.04), transparent);
+            animation: shimmer 8s linear infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: rotate(0deg);}
+            100% { transform: rotate(360deg);}
+        }
+        .text {
+            font-size: 1.15rem; line-height: 1.9;
+            color: rgba(255,255,255,0.88);
+            position: relative; z-index: 1;
+        }
+        /* Buttons */
+        .buttons {
+            display: flex; justify-content: center; gap: 20px;
+            margin-top: 45px; flex-wrap: wrap;
+        }
+        .btn {
+            padding: 20px 42px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.09rem;
+            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative; overflow: hidden;
+            display: inline-flex; align-items: center; gap: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.23);
+        }
+        .btn::before {
+            content: '';
+            position: absolute; top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.17), transparent);
+            transition: left 0.5s;
+        }
+        .btn:hover::before { left: 100%;}
+        .btn:hover {
+            transform: translateY(-5px) scale(1.025);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+        }
+        .btn-store {
+            background: linear-gradient(135deg,#DC3545 0%,#FF6347 100%);
+            color: #fff; border: 2px solid transparent;
+        }
+        .btn-store:hover {
+            border-color: rgba(220,53,69,0.19);
+            box-shadow: 0 15px 40px rgba(220,53,69,0.22);
+        }
+        .btn-telegram {
+            background: linear-gradient(135deg, #229ED9 0%, #0088CC 100%);
+            color: #fff; border: 2px solid transparent;
+        }
+        .btn-telegram:hover {
+            border-color: #229ED9;
+            box-shadow: 0 15px 40px rgba(34,158,217,0.20);
+        }
+        .btn-instagram {
+            background: linear-gradient(135deg,#fd5c63 0%,#e1306c 60%,#fa7e1e 100%);
+            color: #fff; border: 2px solid transparent;
+        }
+        .btn-instagram:hover {
+            border-color: #e1306c;
+            box-shadow: 0 15px 40px rgba(250,126,30,0.14);
+        }
+        .store-icon {
+            width: 28px; height: 28px;
+            background: rgba(255,255,255,0.13);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+        }
+        .store-icon img { width: 20px; height: 20px; object-fit: contain; }
+        .whatsapp-icon, .telegram-icon, .instagram-icon {
+            width: 28px; height: 28px; fill: currentColor;
+        }
+        /* Footer */
+        .footer {
+            position: fixed; bottom: 20px; left: 0; right: 0;
+            text-align: center;
+            font-size: 0.93rem;
+            color: rgba(255,255,255,0.56);
+            z-index: 10;
+        }
+        .footer .heart {
+            color: #DC3545;
+            display: inline-block;
+            font-size: 1.1rem;
+            animation: heartBeat 1.5s ease-in-out infinite;
+        }
+        @keyframes heartBeat {
+            0%,100% { transform: scale(1) rotate(0deg);}
+            10% { transform: scale(1.1) rotate(-5deg);}
+            20% { transform: scale(1.2) rotate(5deg);}
+            30% { transform: scale(1.1) rotate(-5deg);}
+        }
+        @media (max-width: 600px) {
+            body { padding-bottom: 60px;}
+            .container { padding: 40px 18px; width: calc(100% - 10px);}
+            .logo-wrapper { width: 110px; height: 110px;}
+            h1 { font-size: 2.2rem;}
+            .year { font-size: 2.1rem;}
+            .subtitle { font-size: 1.1rem;}
+            .text { font-size: 0.99rem;}
+            .buttons { flex-direction: column; width: 100%; gap: 13px;}
+            .btn { width: 100%; justify-content: center; padding: 16px 15px;}
+            .footer { font-size: 0.84rem; bottom: 11px;}
+        }
+    </style>
 </head>
 <body>
-  <!-- خلفية نجوم متحركة -->
-  <div class="bg-anim" id="stars-bg"></div>
-
-  <!-- صورة الموقع -->
-  <div class="top-img-container">
-    <img class="top-img" src="E6200FA4-4200-472B-9502-A30911D06A87.png" alt="StarzStore Logo">
-    <!-- بدل الرابط أعلاه لرابط صورة موقعك أو لوجو المتجر أو سكرينشوت لتطبيقك -->
-  </div>
-
-  <!-- البطل -->
-  <section class="hero">
-    <h1>StarzStore</h1>
-    <p>
-      متجر إلكتروني يقدم لك كل ما تحتاجه من خدمات رقمية، أكواد مميزة، دعم فائق السرعة، وتجربة مستخدم عصرية واحترافية تناسب تطلعاتك.  
-    </p>
-    <a class="cta-btn" href="#">المتجر الإلكتروني</a>
-  </section>
-
-  <!-- المميزات -->
-  <div class="features" id="features">
-    <div class="feature">
-      <h3>تنوع المنتجات</h3>
-      <p>كل الخدمات الرقمية والأكواد في مكان واحد، من باقات سناب بلس إلى حلول متخصصة ومزايا حصرية.</p>
+    <!-- Animated Background -->
+    <div class="gradient-bg"></div>
+    <!-- Stars -->
+    <div class="stars" id="stars"></div>
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <div class="logo-wrapper">
+                <div class="logo-pulse"></div>
+                <div class="logo-border"></div>
+                <div class="logo">
+                    <img src="zork-logo.png" alt="zork Logo">
+                </div>
+            </div>
+        </div>
+        <h1 class="title-main">zork</h1>
+        <p class="subtitle">متجر زورك — كل شيء تحبه في مكان واحد</p>
+        <div class="divider"></div>
+        <div class="buttons">
+            <!-- زر شراء الكود -->
+            <a href="https://zork-follow.com/ar/كود-سناب-بلس/p1827087590" class="btn btn-store">
+                <span class="store-icon">🛒</span>
+                <span>لشراء الكود من هنا</span>
+            </a>
+            <!-- زر قناة التليجرام -->
+            <a href="https://t.me/zork112" class="btn btn-telegram">
+                <svg class="telegram-icon" viewBox="0 0 24 24"><path d="M9.06 16.92l-.39 3.67c.56 0 .8-.24 1.09-.53l2.62-2.49 5.44 3.97c1 .54 1.72.26 1.98-.93l3.59-16.81c.33-1.54-.57-2.14-1.54-1.78l-20.7 8c-1.42.54-1.39 1.31-.25 1.65l5.29 1.65 12.29-7.8c.58-.39 1.1-.17.67.22"/></svg>
+                <span>قناة التليجرام</span>
+            </a>
+            <!-- زر حساب الانستقرام -->
+            <a href="https://www.instagram.com/Zork_me" class="btn btn-instagram">
+                <svg class="instagram-icon" viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0122 7.5v9A5.5 5.5 0 0116.5 22h-9A5.5 5.5 0 012 16.5v-9A5.5 5.5 0 017.5 2zm0 1.5A4 4 0 003.5 7.5v9A4 4 0 007.5 20.5h9A4 4 0 0020.5 16.5v-9A4 4 0 0016.5 3.5h-9zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-1.13a1.13 1.13 0 110 2.25 1.13 1.13 0 010-2.25z"/></svg>
+                <span>حسابنا على الإنستقرام</span>
+            </a>
+        </div>
     </div>
-    <div class="feature">
-      <h3>دعم لحظي</h3>
-      <p>فريقنا متواجد دائماً عبر واتساب للإجابة على كل استفسارك بسرعة واحترافية.</p>
+    <!-- Footer -->
+    <div class="footer">
+        صُمم بكل <span class="heart">❤️</span> من Zork
     </div>
-    <div class="feature">
-      <h3>أمان عالي</h3>
-      <p>حماية بياناتك وتجربتك أولويتنا – كل الطلبات والاشتراكات تمر عبر أنظمة مشفرة وآمنة.</p>
-    </div>
-    <div class="feature">
-      <h3>سهولة الاستخدام</h3>
-      <p>واجهة سهلة وسريعة، تقدر تطلب وتتابع كل شيء بضغطة زر وبدون تعقيد.</p>
-    </div>
-  </div>
-
-  <!-- زر واتساب عائم -->
-  <a class="whatsapp-float" href="https://wa.me/966XXXXXXXXX" title="تواصل واتساب" target="_blank">💬</a>
-
-  <footer>
-    StarzStore © 2025 | جميع الحقوق محفوظة
-  </footer>
-
-  <!-- سكربت توليد النجوم للخلفية -->
-  <script>
-    // توليد نجوم للخلفية
-    const stars = 110, bg = document.getElementById('stars-bg');
-    for (let i = 0; i < stars; i++) {
-      let s = document.createElement('div');
-      s.className = 'star';
-      s.style.left = (Math.random()*100) + 'vw';
-      s.style.top = (-60 + Math.random()*1000) + 'px';
-      s.style.width = s.style.height = (1+Math.random()*2.2)+'px';
-      s.style.opacity = 0.36 + Math.random()*0.5;
-      s.style.animationDuration = (10 + Math.random()*16)+'s';
-      bg.appendChild(s);
-    }
-  </script>
+    <script>
+        // Create stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            starsContainer.appendChild(star);
+        }
+        // Floating particles - ألوان حمراء وبرتقالية
+        const particlesContainer = document.getElementById('particles');
+        const particleColors = ['#DC3545', '#FF6347', '#FFA500', '#FFF0E0'];
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            const size = Math.random() * 6 + 3;
+            const color = particleColors[Math.floor(Math.random() * particleColors.length)];
+            const left = Math.random() * 100;
+            const animationDuration = Math.random() * 10 + 25;
+            const animationDelay = Math.random() * 5;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = left + '%';
+            particle.style.background = color;
+            particle.style.boxShadow = `0 0 ${size * 2}px ${color}`;
+            particle.style.animationDuration = animationDuration + 's';
+            particle.style.animationDelay = animationDelay + 's';
+            particlesContainer.appendChild(particle);
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.remove();
+                }
+            }, (animationDuration + animationDelay) * 1000);
+        }
+        for (let i = 0; i < 8; i++) { setTimeout(createParticle, i * 500);}
+        setInterval(createParticle, 2000);
+    </script>
 </body>
 </html>
