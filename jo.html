@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+<!--
+================================================================================
+    صفحة حقوق المتجر - الجودي | متجر الجودي
+    تم التطوير بواسطة: الجودي
+    الإصدار: 17.10
+    آخر تحديث: يوليو 2025
+================================================================================
+
+    🎨 نظام الألوان المستخدم:
+    - اللون الرئيسي: #9B59B6 (أخضر مائل للأزرق)
+    - لون الخط: #FDFD96 (أبيض مائل للأصفر)
+    - لون الخلفية الأساسي: #2C3E50 (أخضر داكن)
+    - لون الخلفية الثانوي: #34495E (أخضر داكن فاتح)
+    - لون شراء الأكواد: #F1C40F إلى #F39C12 (برتقالي)
+
+    🔗 الروابط المستخدمة:
+    - تليجرام: https://t.me/urxui
+    - واتساب: https://wa.me/966558954130
+    - انستغرام: https://instagram.com/ura9q3
+    - تيك توك: https://tiktok.com/@ura9q3
+    - شراء الأكواد: https://urxui.co/Shop
+
+    📱 الأيقونات المستخدمة:
+    - تليجرام: 📱
+    - واتساب: 💬
+    - انستغرام: 📸
+    - تيك توك: 🎵
+    - شراء الأكواد: 💎
+    - الوجو: 🪐
+
+    🎯 التخطيط:
+    - الصف الأول: تليجرام | واتساب
+    - الصف الثاني: تيك توك | انستغرام
+    - الصف الثالث: شراء الأكواد (كامل العرض)
+
+    📋 ملاحظات التخصيص:
+    - يمكن تغيير الألوان من خلال تعديل قيم CSS
+    - يمكن تغيير الروابط من خلال تعديل href في الأزرار
+    - يمكن تغيير النصوص من خلال تعديل المحتوى
+    - التصميم متجاوب مع جميع أحجام الشاشات
+================================================================================
+-->
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>الجودي - متجر الجودي</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: transparent;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: linear-gradient(145deg, #2C3E50 0%, #34495E 100%);
+            border-radius: 15px;
+            box-shadow: 
+                0 15px 30px rgba(0,0,0,0.4),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+            overflow: hidden;
+            width: 350px;
+            max-width: 90vw;
+            height: auto;
+            min-height: 500px;
+            max-height: 80vh;
+            text-align: center;
+            border: 2px solid #9B59B6;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(155, 89, 182, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(155, 89, 182, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
+            color: #FDFD96;
+            padding: 15px 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(145deg, #FDFD96, #FFFBCC);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            box-shadow: 
+                0 4px 15px rgba(0,0,0,0.3),
+                inset 0 2px 0 rgba(255,255,255,0.8);
+            border: 2px solid #FDFD96;
+            margin-bottom: 6px;
+            animation: logoGlow 3s ease-in-out infinite alternate;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            box-shadow: 
+                0 6px 20px rgba(155, 89, 182, 0.4),
+                inset 0 2px 0 rgba(255,255,255,0.8);
+        }
+
+        .logo:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes logoGlow {
+            0% { box-shadow: 0 6px 20px rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.8); }
+            100% { box-shadow: 0 10px 25px rgba(155, 89, 182, 0.4), inset 0 2px 0 rgba(255,255,255,0.8); }
+        }
+
+        .store-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 2;
+            letter-spacing: 1px;
+        }
+
+        .app-name {
+            font-size: 1rem;
+            opacity: 0.95;
+            font-weight: 400;
+            margin-bottom: 3px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .content {
+            padding: 12px 10px;
+            background: transparent;
+            color: #FDFD96;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .version-info {
+            background: linear-gradient(135deg, #9B59B6, #8E44AD);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            color: #FDFD96;
+            border: 2px solid #9B59B6;
+            box-shadow: 
+                0 4px 12px rgba(155, 89, 182, 0.3),
+                inset 0 1px 0 rgba(255,255,255,0.2);
+            position: relative;
+            overflow: hidden;
+            font-size: 0.8rem;
+        }
+
+        .version-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .social-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 12px;
+            padding: 0 6px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 6px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                0 4px 12px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.2);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            min-height: 40px;
+        }
+
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .social-btn:hover::before {
+            left: 100%;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 8px 20px rgba(0,0,0,0.4),
+                inset 0 1px 0 rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .social-btn:active {
+            transform: translateY(-1px) scale(1.02);
+            transition: all 0.1s ease;
+        }
+
+        .telegram {
+            background: linear-gradient(135deg, #0088cc, #229ED9);
+        }
+
+        .whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+
+        .instagram {
+            background: linear-gradient(135deg, #E4405F, #C13584);
+        }
+
+        .tiktok {
+            background: linear-gradient(135deg, #000000, #25F4EE);
+        }
+
+        .social-icon {
+            font-size: 1rem;
+            margin-left: 5px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+            transition: transform 0.3s ease;
+        }
+
+        .social-btn:hover .social-icon {
+            transform: scale(1.1) rotate(3deg);
+        }
+
+        .buy-codes-section {
+            margin-top: 10px;
+            padding: 0 6px;
+        }
+
+        .buy-codes-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                0 5px 15px rgba(241, 196, 15, 0.4),
+                inset 0 1px 0 rgba(255,255,255,0.2);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, #F1C40F, #F39C12);
+            min-height: 45px;
+        }
+
+        .buy-codes-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .buy-codes-btn:hover::before {
+            left: 100%;
+        }
+
+        .buy-codes-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 
+                0 10px 25px rgba(241, 196, 15, 0.5),
+                inset 0 1px 0 rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .buy-codes-btn:active {
+            transform: translateY(-1px) scale(1.01);
+            transition: all 0.1s ease;
+        }
+
+        .buy-codes-icon {
+            font-size: 1.2rem;
+            margin-left: 6px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+            transition: transform 0.3s ease;
+        }
+
+        .buy-codes-btn:hover .buy-codes-icon {
+            transform: scale(1.1) rotate(3deg);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #9B59B6, #8E44AD);
+            color: #FDFD96;
+            padding: 10px;
+            font-size: 0.7rem;
+            margin-top: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+
+
+        /* تطبيق نفس الشكل على جميع أحجام الشاشات */
+        @media (max-width: 768px) {
+            .header {
+                padding: 18px 12px;
+            }
+
+            .logo {
+                width: 45px;
+                height: 45px;
+                font-size: 1.6rem;
+            }
+
+            .store-name {
+                font-size: 1.4rem;
+            }
+
+            .app-name {
+                font-size: 1.1rem;
+            }
+
+            .logo-text {
+                font-size: 0.8rem;
+            }
+
+            .content {
+                padding: 12px 10px;
+            }
+
+            .social-links {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                padding: 0 6px;
+            }
+
+            .social-btn {
+                padding: 10px 6px;
+                font-size: 0.8rem;
+                min-height: 45px;
+            }
+            
+            .social-icon {
+                font-size: 1.1rem;
+            }
+
+            .buy-codes-btn {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+                min-height: 50px;
+            }
+
+            .buy-codes-icon {
+                font-size: 1.3rem;
+            }
+
+            .back-button {
+                top: 8px;
+                right: 8px;
+                padding: 5px 10px;
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 15px 10px;
+            }
+
+            .logo {
+                width: 40px;
+                height: 40px;
+                font-size: 1.4rem;
+            }
+
+            .store-name {
+                font-size: 1.3rem;
+            }
+
+            .app-name {
+                font-size: 1rem;
+            }
+
+            .logo-text {
+                font-size: 0.7rem;
+            }
+
+            .content {
+                padding: 10px 8px;
+            }
+
+            .social-links {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                padding: 0 5px;
+            }
+
+            .social-btn {
+                padding: 8px 5px;
+                font-size: 0.7rem;
+                min-height: 40px;
+            }
+            
+            .social-icon {
+                font-size: 1rem;
+            }
+
+            .buy-codes-btn {
+                padding: 10px 12px;
+                font-size: 0.8rem;
+                min-height: 45px;
+            }
+
+            .buy-codes-icon {
+                font-size: 1.2rem;
+            }
+
+
+        }
+
+        @media (max-width: 360px) {
+            .header {
+                padding: 12px 8px;
+            }
+
+            .logo {
+                width: 35px;
+                height: 35px;
+                font-size: 1.2rem;
+            }
+
+            .store-name {
+                font-size: 1.2rem;
+            }
+
+            .app-name {
+                font-size: 0.9rem;
+            }
+
+            .logo-text {
+                font-size: 0.6rem;
+            }
+
+            .content {
+                padding: 8px 6px;
+            }
+
+            .social-links {
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+                padding: 0 4px;
+            }
+
+            .social-btn {
+                padding: 6px 4px;
+                font-size: 0.6rem;
+                min-height: 35px;
+            }
+            
+            .social-icon {
+                font-size: 0.9rem;
+            }
+
+            .buy-codes-btn {
+                padding: 8px 10px;
+                font-size: 0.7rem;
+                min-height: 40px;
+            }
+
+            .buy-codes-icon {
+                font-size: 1.1rem;
+            }
+
+
+        }
+
+        /* تحسينات إضافية للتفاعل */
+        .container {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .social-btn {
+            animation: slideInUp 0.5s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .social-btn:nth-child(1) { animation-delay: 0.1s; }
+        .social-btn:nth-child(2) { animation-delay: 0.2s; }
+        .social-btn:nth-child(3) { animation-delay: 0.3s; }
+        .social-btn:nth-child(4) { animation-delay: 0.4s; }
+
+        .buy-codes-btn {
+            animation: slideInUp 0.5s ease-out;
+            animation-fill-mode: both;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+    .logo {
+        border-radius: 0 !important;
+        overflow: hidden;
+        padding: 0;
+        box-shadow: none !important;
+        border: none !important;
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    .header {
+        border-bottom: 2px solid #FDFD96;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .store-name {
+        color: #FDFD96;
+        font-size: 1.6rem;
+    }
+
+    .app-name {
+        color: #FFFBCC;
+    }
+
+    .footer {
+        background: linear-gradient(135deg, #9B59B6, #8E44AD);
+        color: #FFFBCC;
+        text-align: center;
+    }
+
+    .container {
+        border: 2px solid #9B59B6;
+    }
+    
+/* تحسين شكل الزر وتظليله */
+.buy-codes-btn {
+    background: linear-gradient(135deg, #F1C40F, #F39C12);
+    color: #2C3E50;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+/* تحسين الخلفية العامة */
+body {
+    background: linear-gradient(120deg, #2C3E50, #8E44AD);
+}
+
+/* تحسين تصميم الحاوية */
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+/* تحسين ظهور المعلومات */
+.version-info {
+    background: linear-gradient(135deg, #9B59B6, #8E44AD);
+    color: #FDFD96;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px #2C3E50;
+}
+
+/* تحسين روابط التواصل الاجتماعي */
+.social-btn {
+    background: linear-gradient(135deg, #8E44AD, #9B59B6);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #FDFD96;
+}
+
+/* تحسين الفوتر */
+.footer {
+    font-weight: 700;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    text-shadow: 1px 1px 2px #2C3E50;
+}
+
+/* تحسين نصوص الاسم والشعار */
+.store-name {
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.logo-text {
+    color: #FFFBCC;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* خلفية جديدة بناءً على الصورة */
+body {
+    background: #0f1620;
+}
+
+/* تحسين تأثير الإطار العام */
+.container {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 2px solid #9B59B6;
+    border-radius: 20px;
+}
+
+/* تعديل العنوان ليكون أكثر سطوعًا */
+.store-name {
+    color: #FDFD96;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* زر شراء الأكواد بشكل أنيق */
+.buy-codes-btn {
+    background: linear-gradient(135deg, #F1C40F, #F39C12);
+    color: #2C3E50;
+    font-weight: 900;
+    letter-spacing: 0.6px;
+    border-radius: 12px;
+}
+
+/* تحسين الفوتر */
+.footer {
+    background: transparent;
+    border-top: 1px solid #FDFD96;
+    color: #FFFBCC;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    padding-bottom: 12px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<div class="logo-container">
+<a class="logo" href="https://urxui.co" target="_blank">
+<img alt="الجودي" src="https://urxui.co/admin/uploads/logo.png" style="width: 100%; height: 100%; object-fit: cover;"/>
+</a>
+</div>
+<div class="store-name">الجودي</div>
+<div class="app-name">متجر الجودي</div>
+<div class="logo-text">متجر التطبيقات المحسنة</div>
+</div>
+<div class="content">
+<div class="version-info">
+                📱 الإصدار: 17.10 | آخر تحديث: يوليو 2025
+            </div>
+<div class="social-links">
+<!-- الصف الأول: تليجرام و واتساب -->
+<a class="social-btn telegram" href="https://t.me/urxui" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" style="width:16px;height:16px;margin-left:5px;">
+                    تليجرام
+                </a>
+<a class="social-btn whatsapp" href="https://wa.me/966558954130" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width:16px;height:16px;margin-left:5px;">
+                    واتساب
+                </a>
+<!-- الصف الثاني: تيك توك و انستغرام -->
+<a class="social-btn tiktok" href="https://tiktok.com/@ura9q3" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok" style="width:16px;height:16px;margin-left:5px;">
+                    تيك توك
+                </a>
+<a class="social-btn instagram" href="https://instagram.com/ura9q3" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" style="width:16px;height:16px;margin-left:5px;">
+                    انستغرام
+                </a>
+</div>
+<div class="buy-codes-section">
+<a class="buy-codes-btn" href="https://urxui.co/Shop" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Buy" style="width:16px;height:16px;margin-left:6px;">
+                    شراء الأكواد
+                </a>
+</div>
+</div>
+<div class="footer">
+<p>© 2025 الجودي - متجر الجودي</p>
+<p>جميع الحقوق محفوظة</p>
+</div>
+</div>
+<script>
+        // تحسينات تفاعلية إضافية
+        document.addEventListener('DOMContentLoaded', function() {
+            const socialBtns = document.querySelectorAll('.social-btn');
+            const buyCodesBtn = document.querySelector('.buy-codes-btn');
+            
+            // إضافة تأثير النقر المحسن
+            [...socialBtns, buyCodesBtn].forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    // إنشاء تأثير الموجة
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.cssText = `
+                        position: absolute;
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${x}px;
+                        top: ${y}px;
+                        background: rgba(255,255,255,0.3);
+                        border-radius: 50%;
+                        transform: scale(0);
+                        animation: ripple 0.5s linear;
+                        pointer-events: none;
+                    `;
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 500);
+                });
+            });
+        });
+
+        // إضافة CSS للموجة
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(3);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
