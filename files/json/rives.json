@@ -2,31 +2,31 @@
   "channels": [
     {
       "name": "beIN SPORTS HD1",
-      "url": "https://todays-video.online/ios/liveLink?id=104&key=e25874f2d86e061e06a571f8ef006e0b",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/40_.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "BeIN Sports"
     },
     {
       "name": "beIN SPORTS HD2",
-      "url": "https://todays-video.online/ios/liveLink?id=53&key=e25874f2d86e061e06a571f8ef006e0b",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/38_.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "BeIN Sports"
     },
     {
       "name": "beIN SPORTS HD3",
-      "url": "https://todays-video.online/ios/liveLink?id=54&key=e25874f2d86e061e06a571f8ef006e0b",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/250_.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "BeIN Sports"
     },
     {
       "name": "beIN SPORTS HD4",
-      "url": "https://todays-video.online/ios/liveLink?id=55&key=e25874f2d86e061e06a571f8ef006e0b",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/251_.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category":  "BeIN Sports"
     },
     {
       "name": "beIN SPORTS HD5",
-      "url": "https://todays-video.online/ios/liveLink?id=56&key=e25874f2d86e061e06a571f8ef006e0b",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/251_.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "BeIN Sports"
     },
