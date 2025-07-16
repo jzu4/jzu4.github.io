@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⌯ Rives | الصفحة الشخصية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@800;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --main: #ff5353;
+      --main2: #cf1b6b;
+      --bg1: #1a1627;
+      --bg2: #343046;
+      --accent: #fff;
+      --gray: #bdbdbd;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      min-height: 100vh;
+      font-family: 'Cairo', Arial, sans-serif;
+      color: var(--accent);
+      overflow-x: hidden;
+      background: linear-gradient(120deg, var(--bg1) 0%, var(--bg2) 100%);
+      position: relative;
+    }
+
+    /* خلفية متدرجة تتحرك */
+    .bg-anim {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .gradient {
+      position: absolute;
+      width: 120vw; height: 120vw;
+      min-width: 800px; min-height: 800px;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%) scale(1.1);
+      background: radial-gradient(ellipse at 38% 60%, #ff535355 0%, #cf1b6b18 60%, transparent 100%);
+      filter: blur(46px) brightness(1.14);
+      animation: bgmove 9s ease-in-out infinite alternate;
+      opacity: 0.85;
+    }
+    @keyframes bgmove {
+      0% {transform: translate(-50%,-48%) scale(1);}
+      100% {transform: translate(-50%,-53%) scale(1.14);}
+    }
+    .main-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 7vw;
+      position: relative;
+      z-index: 2;
+    }
+    .profile-area {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 46px;
+      width: 100%;
+      max-width: 900px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .profile-side {
+      min-width: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .avatar-wrap {
+      position: relative;
+      width: 170px;
+      height: 170px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: avatarIn .85s .22s both cubic-bezier(.62,-0.11,.24,1.15);
+    }
+    @keyframes avatarIn {
+      0% { opacity: 0; transform: scale(0.85) translateY(-55px);}
+      100% { opacity: 1; transform: none;}
+    }
+    .avatar-float {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 8px 44px #ff53538a, 0 0 0 16px #fff3;
+      background: #fff;
+      z-index: 2;
+      animation: floatpic 3.3s ease-in-out infinite alternate;
+    }
+    @keyframes floatpic {
+      0% { transform: translateY(0);}
+      100% { transform: translateY(13px);}
+    }
+    .img-glow {
+      position: absolute;
+      width: 190px; height: 190px;
+      border-radius: 50%;
+      left: 50%; top: 50%;
+      transform: translate(-50%,-50%);
+      background: radial-gradient(circle,#ff535346 35%, transparent 100%);
+      filter: blur(10px);
+      z-index: 1;
+      pointer-events: none;
+      animation: pulseGlow 4s ease-in-out infinite alternate;
+    }
+    @keyframes pulseGlow {
+      0% { opacity: .66;}
+      100% { opacity: .99;}
+    }
+    .profile-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      min-width: 240px;
+      max-width: 440px;
+      position: relative;
+      z-index: 2;
+      animation: mainIn .8s .3s both cubic-bezier(.66,-0.03,.29,1.09);
+    }
+    @keyframes mainIn {
+      0% { opacity: 0; transform: translateY(40px) scale(.96);}
+      100% { opacity: 1; transform: none;}
+    }
+    .myname {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: var(--main);
+      letter-spacing: 2.1px;
+      background: linear-gradient(90deg, var(--main), #fff 70%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 1px 14px #ff535321;
+      line-height: 1.2;
+      animation: fadeIn .8s .32s both;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: #fff;
+      opacity: .92;
+      font-weight: 700;
+      margin-bottom: 15px;
+      letter-spacing: .4px;
+      animation: fadeIn .7s .43s both;
+    }
+    @keyframes fadeIn { from{ opacity:0 } to{ opacity:1 } }
+    .intro-type {
+      color: var(--gray);
+      font-size: 1.15rem;
+      min-height: 36px;
+      font-weight: 500;
+      letter-spacing: .6px;
+      margin-bottom: 21px;
+      direction: rtl;
+      border-inline-start: 3px solid var(--main2);
+      padding-inline-start: 12px;
+      white-space: pre-line;
+      font-family: 'Cairo', Arial, sans-serif;
+      animation: fadeIn .7s .51s both;
+      background: #fff1;
+      border-radius: 9px;
+      padding-block: 7px;
+    }
+    .links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 22px;
+      margin-bottom: 20px;
+      animation: fadeIn .65s .67s both;
+    }
+    .links a {
+      color: var(--main);
+      background: #fff;
+      border-radius: 50%;
+      width: 50px; height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.42rem;
+      transition: background .18s, color .16s, transform .13s;
+      text-decoration: none;
+      box-shadow: 0 3px 24px #ff535324;
+      border: none;
+    }
+    .links a:hover {
+      background: var(--main2);
+      color: #fff;
+      transform: scale(1.12) rotate(-7deg);
+    }
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-bottom: 6px;
+      animation: fadeIn .6s .77s both;
+    }
+    .skill {
+      background: #ff535318;
+      color: #ff5353;
+      border-radius: 16px;
+      padding: 6px 17px;
+      font-size: 1.06rem;
+      font-weight: 700;
+      border: 1px solid #ff53532c;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      user-select: none;
+      transition: background .13s, color .13s;
+    }
+    .skill:hover {
+      background: var(--main2);
+      color: #fff;
+    }
+    .footer {
+      color: #8d8d8d;
+      font-size: .96rem;
+      margin-top: 22px;
+      letter-spacing: .19px;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      opacity: .86;
+      width: 100vw;
+      padding-bottom: 8px;
+    }
+    @media (max-width: 950px) {
+      .main-section {padding: 0 2vw;}
+      .profile-area {max-width: 99vw;}
+      .profile-main {max-width: 99vw;}
+    }
+    @media (max-width: 700px) {
+      .profile-area {flex-direction: column; gap: 10px;}
+      .profile-main, .profile-side {align-items: center;}
+      .profile-main {text-align: center;}
+      .skills-row, .links {justify-content: center;}
+    }
+    @media (max-width: 500px) {
+      .main-section {padding: 0 2vw;}
+      .avatar-wrap {width: 99px; height: 99px;}
+      .avatar-float {width: 85px; height: 85px;}
+      .img-glow {width: 110px; height: 110px;}
+      .myname {font-size: 1.25rem;}
+      .subtitle, .intro-type {font-size: .91rem;}
+      .links a {width: 32px; height: 32px; font-size: .99rem;}
+      .skills-row {gap: 5px;}
+      .skill {font-size: .74rem; padding: 4px 7px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-anim"><div class="gradient"></div></div>
+  <div class="main-section">
+    <div class="profile-area">
+      <div class="profile-side">
+        <div class="avatar-wrap">
+          <span class="img-glow"></span>
+          <img class="avatar-float" src="https://i.ibb.co/7vYXnXM/avatar.png" alt="Avatar">
+        </div>
+      </div>
+      <div class="profile-main">
+        <div class="myname">عبدالرحمن | Rives</div>
+        <div class="subtitle">مطور تطبيقات & مهتم بالتقنية</div>
+        <div class="intro-type" id="typewriter"></div>
+        <div class="links">
+          <a href="https://t.me/yourusername" title="تليجرام" target="_blank"><i class="fab fa-telegram"></i></a>
+          <a href="https://x.com/yourusername" title="تويتر" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <a href="mailto:yourmail@email.com" title="إيميل"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/yourusername" title="Github" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="skills-row">
+          <div class="skill"><i class="fab fa-apple"></i> Swift</div>
+          <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+          <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+          <div class="skill"><i class="fab fa-python"></i> Python</div>
+          <div class="skill"><i class="fas fa-cloud"></i> APIs</div>
+          <div class="skill"><i class="fas fa-microchip"></i> Linux</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    &copy; 2025 ⌯ Rives. صُنع بحب 🤎 جميع الحقوق محفوظة
+  </div>
+  <script>
+    // Typewriter effect
+    const lines = [
+      'شغوف بصناعة أفكار وحلول تقنية بسيطة وقوية.',
+      'أحب القهوة، والبرمجة بالنسبة لي متعة وليست مجرد عمل.',
+      '“التفاصيل الصغيرة تخلق الفرق.”'
+    ];
+    let line = 0, idx = 0, deleting = false;
+    const el = document.getElementById('typewriter');
+    function typeLoop() {
+      let current = lines[line];
+      if (!deleting) {
+        el.textContent = current.slice(0, idx+1);
+        idx++;
+        if (idx === current.length) {
+          deleting = true;
+          setTimeout(typeLoop, 1600);
+        } else {
+          setTimeout(typeLoop, 45 + Math.random()*30);
+        }
+      } else {
+        el.textContent = current.slice(0, idx-1);
+        idx--;
+        if (idx === 0) {
+          deleting = false;
+          line = (line + 1) % lines.length;
+          setTimeout(typeLoop, 550);
+        } else {
+          setTimeout(typeLoop, 25);
+        }
+      }
+    }
+    typeLoop();
+  </script>
+</body>
+</html>
