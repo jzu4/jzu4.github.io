@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سكربت متاجر iOS - أنشئ متجرك الآن</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main: #ff4b2b;
+      --main2: #ff416c;
+      --bg: #181925;
+      --gray: #f6f6f6;
+      --white: #fff;
+      --card: #23243c;
+      --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      padding: 35px 0 20px 0;
+      text-align: center;
+      background: linear-gradient(90deg, var(--main), var(--main2));
+      color: #fff;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 8px;
+      font-size: 1.1rem;
+      opacity: .92;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 45px auto 0 auto;
+      padding: 0 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 28px 20px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 10px 36px 0 rgba(31, 38, 135, 0.35);
+    }
+    .card i {
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, var(--main), var(--main2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.15rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .card p {
+      font-size: 0.98rem;
+      color: #e8e8e8;
+      opacity: 0.88;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 35px 0 0 0;
+    }
+    .cta-btn {
+      background: linear-gradient(90deg, var(--main), var(--main2));
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      padding: 16px 38px;
+      font-size: 1.2rem;
+      font-family: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background .2s, transform .18s;
+      box-shadow: 0 2px 14px 0 #ff4b2b30;
+      margin-top: 10px;
+    }
+    .cta-btn:hover {
+      background: linear-gradient(90deg, var(--main2), var(--main));
+      transform: translateY(-2px) scale(1.035);
+    }
+
+    footer {
+      margin-top: 45px;
+      background: #202134;
+      color: #fff;
+      text-align: center;
+      padding: 14px 0 10px 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      border-radius: 14px 14px 0 0;
+      opacity: .88;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .container { gap: 20px; }
+      .card { padding: 19px 10px; }
+      .cta-btn { padding: 12px 20px; font-size: 1rem;}
+    }
+  </style>
+  <!-- أيقونات fontawesome -->
+  <script src="https://kit.fontawesome.com/7aab95ba2d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>سكربت متاجر iOS المخصص</h1>
+    <p>أنشئ متجرك الإلكتروني ووزّع تطبيقاتك على أجهزة iOS بمرونة وأمان كاملين.</p>
+  </header>
+
+  <div class="container">
+
+    <section class="features">
+      <div class="card">
+        <i class="fas fa-certificate"></i>
+        <h3>ربط شهادة المطور</h3>
+        <p>أضف شهادة Apple Developer الخاصة بك وربطها مع النظام لإدارة تطبيقاتك بسهولة.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-store-alt"></i>
+        <h3>إنشاء متجر خاص بك</h3>
+        <p>متجر إلكتروني احترافي بتصميم أنيق يعرض تطبيقاتك ويوفر تجربة سهلة للمستخدمين.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-upload"></i>
+        <h3>رفع تطبيقات IPA</h3>
+        <p>قم برفع تطبيقات iOS بصيغة IPA مباشرة لتظهر للمستخدمين فورًا.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-cloud-download-alt"></i>
+        <h3>تثبيت مباشر عبر OTA</h3>
+        <p>روابط تثبيت فورية (Over-the-Air) بدون الحاجة لـ App Store أو جلبريك.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-user-check"></i>
+        <h3>إدارة الاشتراكات</h3>
+        <p>تابع اشتراكات المستخدمين، تاريخ الانتهاء، وعدّل مدة الضمان بكل مرونة.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tools"></i>
+        <h3>لوحة تحكم متكاملة</h3>
+        <p>إدارة كاملة للتطبيقات، الشهادات، المستخدمين، مع إرسال الإشعارات بنقرة واحدة.</p>
+      </div>
+    </section>
+
+    <div class="cta">
+      <p style="font-size:1.12rem; margin-bottom:9px;">جاهز تبني متجرك؟</p>
+      <button class="cta-btn">ابدأ الآن</button>
+    </div>
+
+  </div>
+  <footer>
+    &copy; <span id="year"></span> جميع الحقوق محفوظة. صُنع بحب 🤍
+  </footer>
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
