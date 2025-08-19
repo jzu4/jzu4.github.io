@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>⌯ Rives | الصفحة الشخصية</title>
 
-  <!-- SEO بسيطة -->
+  <!-- SEO -->
   <meta name="description" content="عبدالرحمن | Rives — مطوّر تطبيقات يهتم بتجربة الاستخدام والأداء.">
   <meta property="og:title" content="⌯ Rives | الصفحة الشخصية">
   <meta property="og:description" content="شغوف بصناعة حلول تقنية تجمع بين البساطة والإبداع.">
@@ -40,24 +40,18 @@
       min-height:100vh;
       font-family:'Cairo',Arial,sans-serif;
       color:var(--text);
-      background:
-        radial-gradient(900px 500px at 80% 15%, #ff7a9022 0%, transparent 60%),
-        linear-gradient(120deg,var(--bg1) 0%,var(--bg2) 100%);
       overflow-x:hidden; position:relative; line-height:1.7;
+      background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+      background-size: 800% 800%;
+      animation: gradientMove 18s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    /* خلفية ناعمة متحركة */
-    .bg-anim{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-    .gradient{
-      position:absolute;left:50%;top:55%;
-      width:120vmax;height:120vmax;min-width:760px;min-height:760px;
-      transform:translate(-50%,-50%) scale(1.06);
-      background:radial-gradient(ellipse at 35% 55%, #ff7a9030 0%, #f64c7216 55%, transparent 100%);
-      filter:blur(48px);opacity:.75;animation:bgmove 9s ease-in-out infinite alternate;
-    }
-    @keyframes bgmove{0%{transform:translate(-52%,-49%) scale(1)}100%{transform:translate(-48%,-53%) scale(1.12)}}
-
-    /* رأس مبسّط */
+    /* رأس */
     header.site-header{
       position:fixed;top:0;inset-inline:0;z-index:15;
       backdrop-filter:blur(6px) saturate(1.05);
@@ -78,29 +72,18 @@
       width:100%;max-width:980px;justify-content:center;flex-wrap:wrap;
     }
     .profile-side{min-width:230px;display:grid;place-items:center;position:relative}
-    .avatar-wrap{
-      position:relative;width:200px;height:200px;margin-bottom:12px;display:grid;place-items:center;
-      animation:avatarIn .8s .15s both cubic-bezier(.62,-0.11,.24,1.15);
-    }
-    @keyframes avatarIn{0%{opacity:0;transform:scale(.9) translateY(-40px)}100%{opacity:1;transform:none}}
+    .avatar-wrap{position:relative;width:200px;height:200px;margin-bottom:12px;display:grid;place-items:center;}
     .avatar-float{
       width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid #fff;
-      box-shadow: var(--shadow), var(--glow); background:#fff; z-index:2; animation:floatpic 3.6s ease-in-out infinite alternate;
+      box-shadow: var(--shadow), var(--glow); background:#fff;
+      animation:floatpic 3.6s ease-in-out infinite alternate;
     }
     @keyframes floatpic{0%{transform:translateY(0)}100%{transform:translateY(12px)}}
-    .img-glow{
-      position:absolute;width:230px;height:230px;border-radius:50%;left:50%;top:50%;
-      transform:translate(-50%,-50%);background:radial-gradient(circle,#ff7a904a 30%,transparent 100%);
-      filter:blur(14px);z-index:1;pointer-events:none;animation:pulseGlow 4.2s ease-in-out infinite alternate;
-    }
-    @keyframes pulseGlow{0%{opacity:.6}100%{opacity:.95}}
 
     .profile-main{
       flex:1;display:flex;flex-direction:column;align-items:flex-end;
       min-width:280px;max-width:560px;position:relative;z-index:2;
-      animation:mainIn .7s .25s both cubic-bezier(.66,-.03,.29,1.09);
     }
-    @keyframes mainIn{0%{opacity:0;transform:translateY(30px) scale(.98)}100%{opacity:1;transform:none}}
 
     .myname{
       font-size:clamp(1.5rem,3.2vw,2.7rem);font-weight:800;margin:0 0 8px;
@@ -108,64 +91,54 @@
       -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
       letter-spacing:2px; text-shadow:0 1px 14px #f64c7225; line-height:1.2;
     }
-    .subtitle{
-      font-size:clamp(1rem,2.2vw,1.22rem);color:var(--text);opacity:.92;font-weight:700;margin:0 0 16px;
-    }
+    .subtitle{font-size:clamp(1rem,2.2vw,1.22rem);opacity:.92;font-weight:700;margin:0 0 16px;}
     .intro-static{
       color:var(--text-soft);background:var(--card);font-size:clamp(.98rem,2vw,1.06rem);
       font-weight:700;letter-spacing:.2px;margin:0 0 18px;direction:rtl;
       border-inline-start:4px solid var(--main);padding-inline-start:13px;border-radius:12px;padding-block:10px;
     }
 
-    /* روابط */
+    /* روابط دائرية */
     .links{display:grid; gap:10px; margin:8px 0 14px;grid-template-columns: repeat(6, 48px);justify-content: end;}
     .links a{width:48px;height:48px; display:grid;place-items:center;color:#fff; text-decoration:none;
       border-radius:14px;background:linear-gradient(#ffffff08,#ffffff05);border:1px solid #ffffff24;
-      backdrop-filter:saturate(1.1) blur(2px);transition:transform .14s, box-shadow .18s, background .2s, border-color .2s;
+      backdrop-filter:saturate(1.1) blur(2px);transition:transform .14s, box-shadow .18s;
       box-shadow:0 4px 18px #00000020;}
-    .links a i{font-size:1.2rem; opacity:.95}
-    .links a:hover{transform:translateY(-2px);background:linear-gradient(#ffffff16,#ffffff10);border-color:#ffffff40;box-shadow:0 10px 26px #00000028;}
+    .links a:hover{transform:translateY(-2px);background:linear-gradient(#ffffff16,#ffffff10);}
 
-    /* روابط موسعة */
-    .links-wide{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end; margin:2px 0 12px;}
-    .links-wide a{height:56px; min-width:120px; padding:0 14px;display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      color:#fff; text-decoration:none; border-radius:16px;background:linear-gradient(#ffffff0d,#ffffff07);border:1px solid #ffffff24;
-      backdrop-filter:saturate(1.1) blur(2px);transition:transform .14s, box-shadow .18s, background .2s, border-color .2s;
-      box-shadow:0 6px 22px #00000022;font-weight:800; letter-spacing:.2px;}
-    .links-wide a:hover{transform:translateY(-2px);background:linear-gradient(#ffffff18,#ffffff0d);border-color:#ffffff40;box-shadow:0 12px 28px #0000002a;}
+    /* روابط طويلة عمودية */
+    .links-wide{
+      display:flex; flex-direction:column; gap:12px; align-items:stretch;
+      margin:20px 0 18px; width:100%; max-width:280px; align-self:flex-end;
+    }
+    .links-wide a{height:56px; width:100%; display:flex; align-items:center; justify-content:center; gap:10px;
+      color:#fff; text-decoration:none; border-radius:16px;background:linear-gradient(#ffffff0d,#ffffff07);
+      border:1px solid #ffffff24; backdrop-filter:saturate(1.1) blur(2px);
+      transition:transform .14s, box-shadow .18s; font-weight:800; letter-spacing:.2px;
+      box-shadow:0 6px 22px #00000022;}
+    .links-wide a:hover{transform:translateY(-2px);background:linear-gradient(#ffffff18,#ffffff0d);}
 
     /* مهارات */
-    .skills-head{margin:10px 0 6px; font-size:.95rem; color:var(--muted); opacity:.9; font-weight:800;}
+    .skills-head{margin:10px 0 6px; font-size:.95rem; opacity:.9; font-weight:800;}
     .skills-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin:0}
     .skill{background:var(--chip-bg);color:#ff9ab0;border-radius:14px;padding:7px 12px;font-size:.9rem;font-weight:800;
-      border:1px solid var(--chip-br);display:inline-flex;align-items:center;gap:6px;user-select:none;cursor:default;}
+      border:1px solid var(--chip-br);display:inline-flex;align-items:center;gap:6px;}
     .skill:hover{transform:translateY(-2px);box-shadow:0 6px 18px #ff7a9033;background:var(--main2);color:#fff}
 
-    /* === تذييل كـ بار منفصل مع ظل === */
+    /* تذييل */
     .footer{
-      color:#fff;font-size:.98rem;width:100%;text-align:center;position:fixed;left:0;bottom:0;z-index:11;
-      background:linear-gradient(180deg, #191b2a 0%, #1f2240 100%);
+      color:#fff;font-size:.9rem;width:100%;text-align:center;position:fixed;left:0;bottom:0;z-index:11;
+      background:rgba(25,27,42,.8); backdrop-filter:blur(8px);
       box-shadow:0 -4px 18px rgba(0,0,0,0.55);
       border-top:1px solid rgba(255,255,255,0.08);
-      min-height:58px;display:flex;align-items:center;justify-content:center;padding:0 14px;
+      min-height:50px;display:flex;align-items:center;justify-content:center;padding:0 14px;
     }
     .footer .foot-wrap{display:flex; align-items:center; gap:12px; flex-wrap:wrap; justify-content:center;max-width:1000px;}
-    .footer .brand-mini{display:flex; align-items:center; gap:8px; font-weight:800; letter-spacing:.4px;}
-    .footer .brand-mini .dot{width:8px; height:8px; border-radius:50%; background:var(--main2); box-shadow:0 0 12px #ff7a9088}
-    .footer .sep{opacity:.45}
-    .footer .meta{opacity:.9}
-
-    /* تجاوب */
-    @media (max-width:700px){
-      .profile-area{flex-direction:column;gap:18px}
-      .profile-main,.profile-side{align-items:center;text-align:center}
-      .links, .links-wide{justify-content:center}
-    }
+    .footer .brand-mini{display:flex; align-items:center; gap:8px; font-weight:800;}
+    .footer .brand-mini .dot{width:8px; height:8px; border-radius:50%; background:var(--main2);}
   </style>
 </head>
 <body>
-  <div class="bg-anim" aria-hidden="true"><div class="gradient"></div></div>
-
   <header class="site-header">
     <div class="brand">
       <span class="dot"></span>
@@ -178,14 +151,15 @@
       <div class="profile-area">
         <div class="profile-side">
           <div class="avatar-wrap">
-            <span class="img-glow"></span>
             <img class="avatar-float" src="https://i.ibb.co/7vYXnXM/avatar.png" alt="صورة شخصية لعبدالرحمن">
           </div>
         </div>
         <div class="profile-main">
           <h1 class="myname">عبدالرحمن | Rives</h1>
           <p class="subtitle">مطور تطبيقات &amp; مهتم بالتقنية</p>
-          <p class="intro-static">شغوف بصناعة حلول تقنية تجمع بين البساطة والإبداع.<br>القهوة أولاً… ثم يأتي الكود. ☕️💻</p>
+          <p class="intro-static">شغوف بصناعة حلول تقنية تجمع بين البساطة والإبداع.<br>القهوة أولاً… ثم يأتي الكود ☕️💻</p>
+
+          <!-- روابط -->
           <nav class="links">
             <a href="#"><i class="fab fa-telegram"></i></a>
             <a href="#"><i class="fab fa-x-twitter"></i></a>
@@ -194,12 +168,16 @@
             <a href="#"><i class="fa-solid fa-link"></i></a>
             <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
           </nav>
+
+          <!-- روابط طويلة عمودية -->
           <div class="links-wide">
-            <a><i class="fab fa-telegram"></i><span class="label">Telegram</span></a>
-            <a><i class="fab fa-x-twitter"></i><span class="label">X</span></a>
-            <a><i class="fas fa-envelope"></i><span class="label">Email</span></a>
-            <a><i class="fab fa-github"></i><span class="label">GitHub</span></a>
+            <a><i class="fab fa-telegram"></i><span>Telegram</span></a>
+            <a><i class="fab fa-x-twitter"></i><span>X</span></a>
+            <a><i class="fas fa-envelope"></i><span>Email</span></a>
+            <a><i class="fab fa-github"></i><span>GitHub</span></a>
           </div>
+
+          <!-- مهارات -->
           <p class="skills-head">مهاراتي:</p>
           <div class="skills-row">
             <div class="skill"><i class="fab fa-apple"></i> Swift</div>
@@ -220,10 +198,7 @@
         <span class="dot"></span>
         <span>⌯ Rives</span>
       </div>
-      <span class="sep">•</span>
-      <span class="meta">&copy; 2025 جميع الحقوق محفوظة</span>
-      <span class="sep">•</span>
-      <span class="meta">صُنع بحب 🤎</span>
+      <span class="meta">&copy; 2025 جميع الحقوق محفوظة • صُنع بحب 🤎</span>
     </div>
   </footer>
 </body>
