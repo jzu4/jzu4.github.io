@@ -332,6 +332,24 @@ Name: WatusiTools
 Author: Fouad Raheb <support@fouadraheb.com>
 Depiction: https://apt.fouadraheb.com/package/com.f0u4d.watusitools
 
+Package: com.fiore.calculatorconverter
+Architecture: iphoneos-arm64e
+Version: 1.0.1
+Section: Tweaks
+Maintainer: fiore
+Installed-Size: 404
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate
+Filename: ./debian_file//com.fiore.calculatorconverter_1.0.1_iphoneos-arm64e.deb
+Size: 79600
+MD5sum: 3852e3a9a889731a512325cc6d850c94
+SHA1: 387485308a3ba5e03cab04cde9f22e03f1b47c7e
+SHA256: d678c6ce943555a2b4946b3f6bf7f24ab60b99929de1d3896207b77a75bc241e
+SHA512: f39906788757532e86f8e0924b05e4d7de9a62e0a145b90be7af07f7bf46823ea046e18a22e5a130f729cbb49c977c25804de9faa1c43d1ece342f76ab11b044
+Description: Add iOS 18 unit conversion to the Calculator app.
+Name: CalculatorConverter
+Author: fiore
+
 Package: com.fiore.calculatorhistory
 Architecture: iphoneos-arm64e
 Version: 1.1.1
