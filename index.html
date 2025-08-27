@@ -1,205 +1,198 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>⌯ Rives | الصفحة الشخصية</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RivesDev</title>
+  <meta name="description" content="RivesDev" />
+  <meta property="og:title" content="RivesDev" />
+  <meta property="og:description" content="RivesDev" />
+  <meta name="color-scheme" content="light dark" />
 
-  <!-- SEO -->
-  <meta name="description" content="عبدالرحمن | Rives — مطوّر تطبيقات يهتم بتجربة الاستخدام والأداء.">
-  <meta property="og:title" content="⌯ Rives | الصفحة الشخصية">
-  <meta property="og:description" content="شغوف بصناعة حلول تقنية تجمع بين البساطة والإبداع.">
-
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     :root{
-      --main:#F64C72;
-      --main2:#FF7A90;
-      --bg1:#191b2a;
-      --bg2:#1f2240;
-      --text:#ffffff;
-      --text-soft:#ffd7df;
-      --muted:#cfcfe6;
-      --chip-bg:#ff7a9016;
-      --chip-br:#ff7a9030;
-      --card:#ffffff0d;
-      --border:#ffffff24;
-      --focus:#ffdbe3;
-      --shadow: 0 12px 40px #00000025;
-      --glow: 0 0 0 10px #ffffff0a;
+      --bg:#ffffff;
+      --fg:#0b1220;
+      --muted:#667085;
+      --soft:#0b12200a;
+      --card:#ffffff;
+      --border:#e6e9ef;
+      --ring:#0b122016;
+      --link:#0b1220;
+      --accent:#19c5a1;
+      --accent-contrast:#ffffff;
+      --sileo:#19c5a1;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0a0d12;
+        --fg:#e7eaf0;
+        --muted:#9aa3af;
+        --soft:#ffffff10;
+        --card:#0f1319;
+        --border:#1f2937;
+        --ring:#ffffff1a;
+        --link:#e7eaf0;
+        --accent:#34d5ba;
+        --accent-contrast:#061013;
+        --sileo:#34d5ba;
+      }
     }
 
-    html,body{height:100%;margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-    *,*:before,*:after{box-sizing:inherit}
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
     body{
-      min-height:100vh;
-      font-family:'Cairo',Arial,sans-serif;
-      color:var(--text);
-      overflow-x:hidden; position:relative; line-height:1.7;
-      background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15);
-      background-size: 800% 800%;
-      animation: gradientMove 18s ease infinite;
+      margin:0;
+      font-family:"Cairo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      background:var(--bg); color:var(--fg); line-height:1.75;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    img{max-width:100%; display:block}
+    a{color:var(--link); text-decoration:none}
+    a:focus-visible,button:focus-visible{outline:2px solid var(--ring); outline-offset:3px; border-radius:10px}
+
+    .wrap{max-width:920px; margin:0 auto; padding:28px 16px}
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:18px;
+      padding:22px; box-shadow:0 8px 28px var(--ring);
     }
 
-    /* رأس */
-    header.site-header{
-      position:fixed;top:0;inset-inline:0;z-index:15;
-      backdrop-filter:blur(6px) saturate(1.05);
-      background:linear-gradient(180deg,#0c0d14aa,transparent);
-      padding:10px 14px; display:flex; align-items:center; justify-content:flex-start; gap:10px;
-    }
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.6px}
-    .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--main2);box-shadow:0 0 16px #ff7a9088}
-    main{padding-top:64px}
+    .brand{display:flex; align-items:center; justify-content:center; gap:10px; color:var(--muted); font-weight:800; letter-spacing:.3px; margin-bottom:6px}
+    .dot{width:10px; height:10px; border-radius:50%; background:currentColor; opacity:.22}
 
-    /* البطل */
-    .main-section{
-      min-height:100vh;display:flex;align-items:center;justify-content:center;
-      padding:24px 7vw 96px;position:relative;z-index:2;
+    .hero{
+      display:grid; grid-template-columns:220px 1fr; gap:28px; align-items:center;
     }
-    .profile-area{
-      display:flex;flex-direction:row-reverse;align-items:center;gap:42px;
-      width:100%;max-width:980px;justify-content:center;flex-wrap:wrap;
-    }
-    .profile-side{min-width:230px;display:grid;place-items:center;position:relative}
-    .avatar-wrap{position:relative;width:200px;height:200px;margin-bottom:12px;display:grid;place-items:center;}
-    .avatar-float{
-      width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid #fff;
-      box-shadow: var(--shadow), var(--glow); background:#fff;
-      animation:floatpic 3.6s ease-in-out infinite alternate;
-    }
-    @keyframes floatpic{0%{transform:translateY(0)}100%{transform:translateY(12px)}}
-
-    .profile-main{
-      flex:1;display:flex;flex-direction:column;align-items:flex-end;
-      min-width:280px;max-width:560px;position:relative;z-index:2;
+    @media (max-width:740px){
+      .hero{grid-template-columns:1fr; gap:16px}
     }
 
-    .myname{
-      font-size:clamp(1.5rem,3.2vw,2.7rem);font-weight:800;margin:0 0 8px;
-      background:linear-gradient(90deg,var(--main),#fff 70%);
-      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-      letter-spacing:2px; text-shadow:0 1px 14px #f64c7225; line-height:1.2;
-    }
-    .subtitle{font-size:clamp(1rem,2.2vw,1.22rem);opacity:.92;font-weight:700;margin:0 0 16px;}
-    .intro-static{
-      color:var(--text-soft);background:var(--card);font-size:clamp(.98rem,2vw,1.06rem);
-      font-weight:700;letter-spacing:.2px;margin:0 0 18px;direction:rtl;
-      border-inline-start:4px solid var(--main);padding-inline-start:13px;border-radius:12px;padding-block:10px;
+    .avatar{
+      width:176px; height:176px; border-radius:50%; object-fit:cover;
+      background:var(--soft); border:1px solid var(--border); margin-inline:auto;
     }
 
-    /* روابط دائرية */
-    .links{display:grid; gap:10px; margin:8px 0 14px;grid-template-columns: repeat(6, 48px);justify-content: end;}
-    .links a{width:48px;height:48px; display:grid;place-items:center;color:#fff; text-decoration:none;
-      border-radius:14px;background:linear-gradient(#ffffff08,#ffffff05);border:1px solid #ffffff24;
-      backdrop-filter:saturate(1.1) blur(2px);transition:transform .14s, box-shadow .18s;
-      box-shadow:0 4px 18px #00000020;}
-    .links a:hover{transform:translateY(-2px);background:linear-gradient(#ffffff16,#ffffff10);}
-
-    /* روابط طويلة عمودية */
-    .links-wide{
-      display:flex; flex-direction:column; gap:12px; align-items:stretch;
-      margin:20px 0 18px; width:100%; max-width:280px; align-self:flex-end;
+    .name{margin:6px 0 2px; font-size:clamp(26px,4.4vw,36px); font-weight:800; letter-spacing:.2px; text-align:center}
+    .role{margin:0 0 10px; color:var(--muted); font-weight:700; font-size:clamp(15px,2.4vw,18px); text-align:center}
+    .intro{
+      margin:0 auto 14px; padding:12px 14px; background:var(--soft); border:1px solid var(--border);
+      border-radius:12px; font-weight:600; max-width:60ch; text-align:center
     }
-    .links-wide a{height:56px; width:100%; display:flex; align-items:center; justify-content:center; gap:10px;
-      color:#fff; text-decoration:none; border-radius:16px;background:linear-gradient(#ffffff0d,#ffffff07);
-      border:1px solid #ffffff24; backdrop-filter:saturate(1.1) blur(2px);
-      transition:transform .14s, box-shadow .18s; font-weight:800; letter-spacing:.2px;
-      box-shadow:0 6px 22px #00000022;}
-    .links-wide a:hover{transform:translateY(-2px);background:linear-gradient(#ffffff18,#ffffff0d);}
 
-    /* مهارات */
-    .skills-head{margin:10px 0 6px; font-size:.95rem; opacity:.9; font-weight:800;}
-    .skills-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin:0}
-    .skill{background:var(--chip-bg);color:#ff9ab0;border-radius:14px;padding:7px 12px;font-size:.9rem;font-weight:800;
-      border:1px solid var(--chip-br);display:inline-flex;align-items:center;gap:6px;}
-    .skill:hover{transform:translateY(-2px);box-shadow:0 6px 18px #ff7a9033;background:var(--main2);color:#fff}
-
-    /* تذييل */
-    .footer{
-      color:#fff;font-size:.9rem;width:100%;text-align:center;position:fixed;left:0;bottom:0;z-index:11;
-      background:rgba(25,27,42,.8); backdrop-filter:blur(8px);
-      box-shadow:0 -4px 18px rgba(0,0,0,0.55);
-      border-top:1px solid rgba(255,255,255,0.08);
-      min-height:50px;display:flex;align-items:center;justify-content:center;padding:0 14px;
+    .social{display:flex; flex-wrap:wrap; gap:10px; margin:10px 0 14px; justify-content:center}
+    .social a{
+      inline-size:44px; block-size:44px; display:grid; place-items:center;
+      color:inherit; background:var(--card); border:1px solid var(--border);
+      border-radius:12px; transition:transform .12s ease, background .2s;
     }
-    .footer .foot-wrap{display:flex; align-items:center; gap:12px; flex-wrap:wrap; justify-content:center;max-width:1000px;}
-    .footer .brand-mini{display:flex; align-items:center; gap:8px; font-weight:800;}
-    .footer .brand-mini .dot{width:8px; height:8px; border-radius:50%; background:var(--main2);}
+    .social a:hover{transform:translateY(-2px)}
+
+    .divider{height:1px; background:var(--border); margin:16px auto; border-radius:1px; max-width:720px}
+
+    .sileo-badge{display:flex; align-items:center; justify-content:center; gap:10px; color:var(--muted); margin:4px 0 2px}
+    .sileo-logo{width:22px; height:22px; display:inline-block}
+    .sileo-logo rect{fill:var(--sileo)}
+    .sileo-logo path{fill:#ffffff}
+
+    .link-list{display:grid; gap:10px; margin:14px auto 6px; max-width:520px; justify-items:center}
+    .btn{
+      display:flex; align-items:center; justify-content:center; gap:10px;
+      min-height:52px; width:100%;
+      border-radius:12px; border:1px solid var(--border);
+      background:var(--card); color:inherit; font-weight:800; letter-spacing:.2px;
+      transition:transform .12s ease, background-color .2s ease, border-color .2s ease;
+      padding:12px 16px; text-align:center
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn i{opacity:.95}
+
+    .btn-accent{
+      background:linear-gradient(180deg, color-mix(in oklab, var(--accent) 92%, black 0%), var(--accent));
+      color:var(--accent-contrast);
+      border-color:color-mix(in oklab, var(--accent), #000 14%);
+    }
+    .btn-accent:hover{filter:brightness(0.98); transform:translateY(-2px)}
+
+    .section-label{margin:18px 0 8px; font-size:14px; color:var(--muted); font-weight:800; text-align:center}
+    .skills{display:flex; flex-wrap:wrap; gap:8px; justify-content:center}
+    .chip{padding:6px 10px; border-radius:999px; font-size:14px; font-weight:700; border:1px solid var(--border); background:var(--card); color:inherit}
+
+    footer{padding:26px 0 34px; color:var(--muted); text-align:center}
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <span class="dot"></span>
-      <span>⌯ Rives</span>
-    </div>
-  </header>
-
   <main>
-    <section class="main-section">
-      <div class="profile-area">
-        <div class="profile-side">
-          <div class="avatar-wrap">
-            <img class="avatar-float" src="https://i.ibb.co/7vYXnXM/avatar.png" alt="صورة شخصية لعبدالرحمن">
+    <div class="wrap">
+      <section class="card" aria-label="RivesDev">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Rives</span>
+        </div>
+
+        <div class="hero">
+          <div style="display:grid; place-items:center">
+            <img class="avatar" src="https://i.ibb.co/7vYXnXM/avatar.png" />
+          </div>
+
+          <div>
+            <h1 class="name">Rives</h1>
+            <p class="role">مطوّر تطبيقات ومواقع ويب</p>
+            <p class="intro">حياك الله ياعسل، جميع حساباتي موجوده بصفحة وحده.</p>
+
+            <nav class="social" aria-label="روابط اجتماعية">
+              <a href="t.me/jz_u4" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+              <a href="https://instagram.com/_jz.u4" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="x.com/_juz4" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            </nav>
+
+            <div class="divider" role="separator" aria-hidden="true"></div>
+
+            <div class="sileo-badge" aria-hidden="true">
+              <svg class="sileo-logo" viewBox="0 0 24 24" aria-hidden="true">
+                <defs>
+                  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="var(--sileo)"/>
+                    <stop offset="100%" stop-color="#12a890"/>
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#g)"/>
+                <path d="M7.2 12.2c0-2.6 2.1-4.7 4.7-4.7 1.2 0 2.3.5 3.2 1.3l1.2-1.2c-1.2-1.2-2.9-2-4.8-2-3.7 0-6.7 3-6.7 6.7 0 1.9.8 3.6 2 4.8l1.2-1.2c-.8-.9-1.3-2-1.3-3.2z" opacity=".95"/>
+                <path d="M16.8 11.8c0 2.6-2.1 4.7-4.7 4.7-1.2 0-2.3-.5-3.2-1.3l-1.2 1.2c1.2 1.2 2.9 2 4.8 2 3.7 0 6.7-3 6.7-6.7 0-1.9-.8-3.6-2-4.8l-1.2 1.2c.8.9 1.3 2 1.3 3.2z"/>
+              </svg>
+            </div>
+
+            <nav class="link-list" aria-label="روابط رئيسية">
+              <a class="btn btn-accent" href="sileo://source/add/https://jzu4.guthub.io" rel="noopener" aria-label="إضافة السورس إلى Sileo">
+                <i class="fa-solid fa-folder-plus"></i>
+                <span>إضافة السورس إلى Sileo</span>
+              </a>
+              <a class="btn" href="#" aria-label="Telegram">
+                <i class="fab fa-telegram"></i>
+                <span>قناتي على التليجرام</span>
+              </a>
+
+            <p class="section-label">مهارات</p>
+            <div class="skills">
+              <span class="chip"><i class="fab fa-apple"></i> ‎Swift</span>
+              <span class="chip"><i class="fab fa-html5"></i> ‎HTML</span>
+              <span class="chip"><i class="fab fa-css3-alt"></i> ‎CSS</span>
+              <span class="chip"><i class="fab fa-python"></i> ‎Python</span>
+              <span class="chip"><i class="fas fa-cloud"></i> ‎APIs</span>
+              <span class="chip"><i class="fas fa-microchip"></i> ‎Linux</span>
+            </div>
           </div>
         </div>
-        <div class="profile-main">
-          <h1 class="myname">Rives</h1>
-          <p class="subtitle">مطور تطبيقات &amp; مهتم بالتقنية</p>
-          <p class="intro-static">شغوف بصناعة حلول تقنية تجمع بين البساطة والإبداع.<br>القهوة أولاً… ثم يأتي الكود ☕️💻</p>
+      </section>
 
-          <!-- روابط -->
-          <nav class="links">
-            <a href="#"><i class="fab fa-telegram"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fa-solid fa-link"></i></a>
-            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
-          </nav>
-
-          <!-- روابط طويلة عمودية -->
-          <div class="links-wide">
-            <a><i class="fab fa-telegram"></i><span>Telegram</span></a>
-            <a><i class="fab fa-x-twitter"></i><span>X</span></a>
-            <a><i class="fas fa-envelope"></i><span>Email</span></a>
-            <a><i class="fab fa-github"></i><span>GitHub</span></a>
-          </div>
-
-          <!-- مهارات -->
-          <p class="skills-head">مهاراتي:</p>
-          <div class="skills-row">
-            <div class="skill"><i class="fab fa-apple"></i> Swift</div>
-            <div class="skill"><i class="fab fa-html5"></i> HTML</div>
-            <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
-            <div class="skill"><i class="fab fa-python"></i> Python</div>
-            <div class="skill"><i class="fas fa-cloud"></i> APIs</div>
-            <div class="skill"><i class="fas fa-microchip"></i> Linux</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="foot-wrap">
-      <div class="brand-mini">
-        <span class="dot"></span>
-        <span>⌯ Rives</span>
-      </div>
-      <span class="meta">&copy; 2025 جميع الحقوق محفوظة • صُنع بحب 🤎</span>
+      <footer>
+        <div>&copy; 2025 Rives</div>
+      </footer>
     </div>
-  </footer>
+  </main>
 </body>
 </html>
