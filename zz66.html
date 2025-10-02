@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 16px; font-family: system-ui, -apple-system, Segoe UI, Arial, sans-serif; background:#fafafa; color:#111; }
+    .wrap { max-width: 720px; margin: 0 auto; }
+    .card { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; }
+    textarea, button { width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:8px; font-size:14px; }
+    textarea { min-height: 260px; resize: vertical; }
+    .actions { margin-top:12px; display:flex; gap:12px; }
+    button.primary { background:#111; color:#fff; border:1px solid #111; cursor:pointer; }
+    button.primary:disabled { opacity:.6; cursor:not-allowed; }
+    .stats { font-size:12px; color:#666; margin-top:6px; text-align: start; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <textarea id="codes" placeholder="ألصق الأكواد هنا، كل كود في سطر (حد أقصى 100)"></textarea>
+      <div class="stats"><span id="count">0</span> كود</div>
+      <div class="actions">
+        <button id="go" class="primary">تحميل الملف</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const STORE_NAME = 'WOLF PLUS';
+    const STORE_LINK = 'alshaep.com';
+    const TUTORIAL_LINK = 'https://alshaep.com/Blogs/4';
+
+    const codesEl = document.getElementById('codes');
+    const countEl = document.getElementById('count');
+    const goBtn = document.getElementById('go');
+
+    function parseCodes() {
+      return codesEl.value.split('\n').map(s => s.trim()).filter(Boolean).slice(0, 100);
+    }
+
+    function updateCount() {
+      const parsed = parseCodes();
+      countEl.textContent = parsed.length;
+      const originalLines = codesEl.value.split('\n');
+      const cleaned = [];
+      for (let i = 0; i < originalLines.length && cleaned.length < 100; i++) {
+        const t = originalLines[i].trim();
+        if (t) cleaned.push(t);
+      }
+      if (cleaned.length !== parseCodes().length) {
+        codesEl.value = cleaned.join('\n');
+        countEl.textContent = cleaned.length;
+      }
+    }
+
+    codesEl.addEventListener('input', updateCount);
+
+    function buildText(codes) {
+      const lines = [];
+      for (const code of codes) {
+        lines.push('شكرا لاشتراكك في متجر ' + STORE_NAME);
+        lines.push('📱 افتح الرابط التالي لتفعيل الكوبون:');
+        lines.push(STORE_LINK);
+        lines.push('📝 رابط الشرح:');
+        lines.push(TUTORIAL_LINK);
+        lines.push('');
+        lines.push('🎫 الكوبون :');
+        lines.push(code);
+        lines.push('');
+      }
+      return lines.join('\n');
+    }
+
+    function download(name, text) {
+      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = name;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    goBtn.addEventListener('click', () => {
+      const codes = parseCodes();
+      if (codes.length === 0) {
+        alert('أدخل كودًا واحدًا على الأقل.');
+        return;
+      }
+      const content = buildText(codes);
+      const fileName = `coupons_WOLF_PLUS_${Date.now()}.txt`;
+      download(fileName, content);
+    });
+
+    updateCount();
+  </script>
+</body>
+</html>
