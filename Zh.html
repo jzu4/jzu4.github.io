@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>متجر الأناقة - ملابس عصرية</title>
+  <style>
+    :root{
+      --primary1:#667eea;
+      --primary2:#764ba2;
+      --accent:#ff6b6b;
+      --muted:#888;
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --radius:14px;
+      --glass: rgba(255,255,255,0.06);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    html,body{height:100%}
+    body{
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:999;
+      background:linear-gradient(135deg,var(--primary1),var(--primary2));
+      padding:12px 0;
+      box-shadow:0 6px 18px rgba(38,45,80,0.12);
+    }
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .navbar{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+    }
+    .logo{font-size:1.4rem;font-weight:700;color:#fff;display:flex;gap:10px;align-items:center}
+    .logo .brand-emoji{font-size:1.6rem}
+    nav{display:flex;align-items:center;gap:18px}
+    nav ul{display:flex;list-style:none;gap:18px;align-items:center}
+    nav a{color:#fff;text-decoration:none;font-weight:600;opacity:0.95}
+    .cart-icon{
+      background: rgba(255,255,255,0.14);
+      color: #fff;padding:8px 12px;border-radius:999px;font-weight:700;display:flex;gap:8px;align-items:center;cursor:pointer;
+    }
+
+    /* mobile menu */
+    .hamburger{
+      display:none;background:transparent;border:0;color:#fff;font-size:1.4rem;
+      padding:6px 8px;border-radius:8px;cursor:pointer;
+    }
+
+    /* Hero */
+    .hero{
+      background: linear-gradient(135deg,var(--primary1),var(--primary2));
+      color:#fff;text-align:center;padding:56px 20px;border-bottom-left-radius:22px;border-bottom-right-radius:22px;margin-bottom:20px;
+    }
+    .hero h1{font-size:2.2rem;margin-bottom:8px}
+    .hero p{opacity:0.95;margin-bottom:18px}
+    .btn{
+      background:#fff;color:var(--primary1);padding:12px 22px;border-radius:30px;border:0;font-weight:800;cursor:pointer;
+      box-shadow:0 8px 24px rgba(39,61,150,0.12);
+    }
+
+    /* Search / Filters */
+    .search-bar{
+      max-width:1200px;margin:-28px auto 20px;padding:0 20px;display:flex;gap:12px;align-items:center;
+    }
+    .search-input{
+      flex:1;background:var(--card);padding:12px 14px;border-radius:12px;box-shadow:0 6px 18px rgba(21,32,64,0.06);border:1px solid rgba(0,0,0,0.03);
+      display:flex;gap:8px;align-items:center;
+    }
+    .search-input input{border:0;outline:none;flex:1;font-size:0.95rem;background:transparent}
+    .filter-select{background:var(--card);padding:10px;border-radius:12px;border:1px solid rgba(0,0,0,0.03)}
+
+    /* Sections */
+    .section{max-width:1200px;margin:28px auto;padding:0 20px}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .section-title h2{font-size:1.3rem;color:#222}
+    .section-title p{color:var(--muted);font-size:0.95rem}
+
+    /* category grid */
+    .category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+    .category-card{
+      background:var(--card);border-radius:12px;padding:18px;display:flex;gap:12px;align-items:center;cursor:pointer;
+      box-shadow:0 8px 24px rgba(17,24,48,0.04);transition:transform .25s,box-shadow .25s;
+    }
+    .category-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(17,24,48,0.08)}
+    .category-emoji{font-size:1.9rem}
+    .category-info h3{color:var(--primary1);font-weight:700;margin-bottom:4px}
+    .category-info p{color:var(--muted);font-size:0.95rem}
+
+    /* products grid */
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .product-card{
+      background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(17,24,48,0.04);
+      transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;
+    }
+    .product-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(17,24,48,0.09)}
+    .product-media{
+      height:220px;background:linear-gradient(135deg,#f093fb 0%, #f5576c 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;
+    }
+    .product-media img{max-width:90%;max-height:90%;object-fit:contain;border-radius:8px}
+    .badge{position:absolute;top:12px;left:12px;background:var(--accent);color:#fff;padding:6px 10px;border-radius:999px;font-weight:700;font-size:0.85rem}
+    .product-body{padding:14px;flex:1;display:flex;flex-direction:column;gap:12px}
+    .product-title{font-weight:800;color:#222}
+    .price-row{display:flex;align-items:center;gap:10px;justify-content:space-between}
+    .price{color:var(--primary1);font-weight:900;font-size:1.1rem}
+    .old-price{text-decoration:line-through;color:var(--muted);font-size:0.95rem}
+    .card-actions{display:flex;gap:10px}
+    .add-to-cart{
+      flex:1;background:linear-gradient(135deg,var(--primary1),var(--primary2));color:#fff;border:0;padding:10px;border-radius:8px;font-weight:800;cursor:pointer;
+    }
+    .details-btn{background:transparent;border:1px solid rgba(0,0,0,0.07);padding:10px;border-radius:8px;cursor:pointer}
+
+    /* footer */
+    footer{background:#263444;color:#fff;padding:28px 20px;margin-top:36px;border-radius:10px}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:1200px;margin:0 auto}
+    .footer-section h4{color:var(--primary1);margin-bottom:8px}
+    .footer-section ul{list-style:none}
+    .footer-section li{color:#d6dbea;margin-bottom:8px;font-size:0.96rem}
+
+    .copyright{margin-top:16px;text-align:center;color:#9fb0c9;font-size:0.92rem}
+
+    /* modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px}
+    .modal{background:var(--card);max-width:900px;width:100%;border-radius:12px;overflow:hidden;display:flex;gap:0;flex-direction:row-reverse;box-shadow:0 30px 80px rgba(2,6,23,0.3)}
+    .modal .left{flex:1;padding:18px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff 0%, #f9fafb 100%)}
+    .modal .right{flex:1;padding:18px;display:flex;flex-direction:column;gap:12px}
+    .close-modal{background:transparent;border:0;font-size:1.5rem;cursor:pointer;color:var(--muted)}
+    .qty-row{display:flex;gap:8px;align-items:center}
+    .qty-row button{padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:#fff;cursor:pointer}
+
+    /* small screens */
+    @media (max-width:880px){
+      .modal{flex-direction:column-reverse}
+      .product-media{height:200px}
+    }
+    @media (max-width:720px){
+      nav ul{display:none}
+      .hamburger{display:block}
+      .search-bar{flex-direction:column;gap:8px}
+      .hero h1{font-size:1.6rem}
+      .category-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    /* tiny */
+    @media (max-width:420px){
+      .category-grid{grid-template-columns:repeat(1,1fr)}
+      .product-grid{grid-template-columns:repeat(1,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="logo"><span class="brand-emoji">👔</span> متجر الأناقة</div>
+      </div>
+
+      <nav aria-label="القائمة">
+        <button class="hamburger" id="openMenu" aria-expanded="false" aria-controls="mainNav">☰</button>
+        <ul id="mainNav">
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#categories">الأقسام</a></li>
+          <li><a href="#products">المنتجات</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="cart-icon" id="cartBtn" aria-label="السلة">
+          🛒 السلة (<span id="cartCount">0</span>)
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>أحدث صيحات الموضة 2025</h1>
+      <p>اكتشف مجموعتنا الحصرية من الملابس العصرية — جودة عالية وتصاميم أنيقة.</p>
+      <button class="btn" id="shopNow">تسوق الآن</button>
+    </div>
+  </section>
+
+  <!-- Search / Filters -->
+  <div class="search-bar">
+    <div class="search-input container" style="display:flex;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="opacity:.7"><path d="M21 21l-4.35-4.35" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="6" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <input id="search" placeholder="ابحث عن منتج، مثلاً: قميص كلاسيكي" aria-label="بحث عن منتجات">
+      <button class="btn" id="clearSearch" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.12);padding:8px 12px;border-radius:10px">مسح</button>
+    </div>
+    <select id="categoryFilter" class="filter-select" aria-label="فلتر الأقسام">
+      <option value="all">كل الأقسام</option>
+      <option value="men">ملابس رجالية</option>
+      <option value="women">ملابس نسائية</option>
+      <option value="kids">ملابس أطفال</option>
+      <option value="shoes">أحذية</option>
+      <option value="sport">رياضي</option>
+    </select>
+  </div>
+
+  <!-- Categories -->
+  <section class="section" id="categories">
+    <div class="section-title container">
+      <h2>تصفح حسب الفئة</h2>
+      <p>اختر القسم لعرض منتجاته</p>
+    </div>
+
+    <div class="container category-grid" id="categoryGrid">
+      <!-- كروت الفئات تولد جافاسكربت -->
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section" id="products">
+    <div class="section-title container">
+      <h2>أحدث المنتجات</h2>
+      <p id="resultsInfo">عرض كل المنتجات</p>
+    </div>
+
+    <div class="container product-grid" id="productGrid">
+      <!-- المنتجات تولد بواسطة جافاسكربت -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-grid container">
+      <div class="footer-section">
+        <h4>عن المتجر</h4>
+        <p style="color:#d6dbea">متجر الأناقة هو وجهتك للحصول على ملابس بجودة عالية وتصميم عصري. شحن سريع وخدمة عملاء مميزة.</p>
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <div style="background:var(--primary1);width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center">📘</div>
+          <div style="background:var(--primary1);width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center">📷</div>
+          <div style="background:var(--primary1);width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center">🐦</div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li>من نحن</li>
+          <li>سياسة الخصوصية</li>
+          <li>الشروط والأحكام</li>
+          <li>سياسة الإرجاع</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>خدمة العملاء</h4>
+        <ul>
+          <li>الأسئلة الشائعة</li>
+          <li>تتبع الطلب</li>
+          <li>الدفع والشحن</li>
+          <li>اتصل بنا</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li>📞 +966 50 123 4567</li>
+          <li>✉️ info@elegance.com</li>
+          <li>📍 الرياض، المملكة العربية السعودية</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container copyright">© 2025 متجر الأناقة. جميع الحقوق محفوظة.</div>
+  </footer>
+
+  <!-- Modal product details -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal" role="document">
+      <div class="left" id="modalImageWrap">
+        <!-- صورة المنتج -->
+      </div>
+      <div class="right">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <h3 id="modalTitle"></h3>
+            <div style="color:var(--muted)" id="modalCategory"></div>
+          </div>
+          <button class="close-modal" id="closeModal" aria-label="إغلاق">✕</button>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="price" id="modalPrice"></div>
+          <div class="old-price" id="modalOldPrice"></div>
+        </div>
+
+        <p id="modalDesc" style="color:#333;margin-top:6px"></p>
+
+        <div style="margin-top:auto;display:flex;gap:10px;align-items:center">
+          <div class="qty-row">
+            <button id="qtyDec">-</button>
+            <div id="qtyVal" style="min-width:36px;text-align:center">1</div>
+            <button id="qtyInc">+</button>
+          </div>
+          <button class="add-to-cart" id="modalAdd">أضف للسلة</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /***********************
+     * بيانات المنتجات — غيّر أو أضف منتجات بسهولة هنا
+     ***********************/
+    const PRODUCTS = [
+      {id:1,title:'قميص كلاسيكي',price:150,oldPrice:200,cat:'men',badge:'جديد',img:null,desc:'قميص قطن عالي الجودة مناسب للمناسبات وكاجوال.'},
+      {id:2,title:'فستان صيفي',price:210,oldPrice:300,cat:'women',badge:'خصم 30%',img:null,desc:'فستان مريح وخفيف لأوقات الصيف.'},
+      {id:3,title:'بنطال جينز',price:180,cat:'men',img:null,desc:'جينز مقاوم للتمزق وقصة مريحة.'},
+      {id:4,title:'جاكيت شتوي',price:399,oldPrice:500,cat:'men',badge:'الأكثر مبيعاً',img:null,desc:'جاكيت دافئ بتقنية مضادة للرياح.'},
+      {id:5,title:'حذاء رياضي',price:250,cat:'shoes',img:null,desc:'حذاء خفيف ومرن للتمارين والمشي.'},
+      {id:6,title:'تيشيرت رياضي',price:90,cat:'sport',badge:'جديد',img:null,desc:'قماش سريع الجفاف ومريح للحركة.'},
+      {id:7,title:'فساتين أطفال',price:120,cat:'kids',img:null,desc:'ملابس أطفال ناعمة ومضادة للحساسية.'}
+    ];
+
+    // عناصر الواجهة
+    const productGrid = document.getElementById('productGrid');
+    const categoryGrid = document.getElementById('categoryGrid');
+    const cartCountEl = document.getElementById('cartCount');
+    const cartBtn = document.getElementById('cartBtn');
+    const searchInput = document.getElementById('search');
+    const clearSearch = document.getElementById('clearSearch');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const resultsInfo = document.getElementById('resultsInfo');
+
+    // سلة: تخزين محلي
+    let CART = JSON.parse(localStorage.getItem('elegance_cart') || '{}');
+
+    function saveCart(){
+      localStorage.setItem('elegance_cart', JSON.stringify(CART));
+      updateCartUI();
+    }
+
+    function updateCartUI(){
+      const count = Object.values(CART).reduce((s,n)=>s+n,0);
+      cartCountEl.textContent = count;
+    }
+
+    // توليد فئات تلقائياً (من بيانات المنتجات)
+    function buildCategories(){
+      const cats = [
+        {id:'men',title:'ملابس رجالية',emoji:'👕',count:PRODUCTS.filter(p=>p.cat==='men').length},
+        {id:'women',title:'ملابس نسائية',emoji:'👗',count:PRODUCTS.filter(p=>p.cat==='women').length},
+        {id:'kids',title:'ملابس أطفال',emoji:'👶',count:PRODUCTS.filter(p=>p.cat==='kids').length},
+        {id:'shoes',title:'أحذية رياضية',emoji:'👟',count:PRODUCTS.filter(p=>p.cat==='shoes').length},
+        {id:'sport',title:'الملابس الرياضية',emoji:'🏃',count:PRODUCTS.filter(p=>p.cat==='sport').length},
+      ];
+
+      categoryGrid.innerHTML = '';
+      cats.forEach(c=>{
+        const el = document.createElement('div');
+        el.className = 'category-card';
+        el.innerHTML = `
+          <div style="display:flex;align-items:center;gap:12px">
+            <div class="category-emoji">${c.emoji}</div>
+            <div class="category-info">
+              <h3>${c.title}</h3>
+              <p>عدد المنتجات: ${c.count}</p>
+            </div>
+          </div>
+        `;
+        el.addEventListener('click', ()=> {
+          categoryFilter.value = c.id;
+          renderProducts();
+          // scroll to products
+          document.getElementById('products').scrollIntoView({behavior:'smooth'});
+        });
+        categoryGrid.appendChild(el);
+      });
+    }
+
+    // مولّد صورة بسيطة (placeholder SVG) حسب id لتبدو حقيقية
+    function placeholderSVG(text, bg1='#f5f7fa', bg2='#e9eefb'){
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800'>
+        <defs>
+          <linearGradient id='g' x1='0' x2='1' y1='0' y2='1'>
+            <stop offset='0' stop-color='${bg1}'/>
+            <stop offset='1' stop-color='${bg2}'/>
+          </linearGradient>
+        </defs>
+        <rect width='100%' height='100%' fill='url(#g)'/>
+        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='#7b6b9d' font-family='Segoe UI' font-size='100'>${text}</text>
+      </svg>`;
+      return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+    }
+
+    // إنشاء بطاقة المنتج
+    function createProductCard(p){
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      const imgSrc = p.img || placeholderSVG(p.title.charAt(0), '#fff3f5', '#f0f7ff');
+      card.innerHTML = `
+        <div class="product-media">
+          <img loading="lazy" src="${imgSrc}" alt="${p.title}" />
+          ${p.badge ? `<div class="badge">${p.badge}</div>` : ''}
+        </div>
+        <div class="product-body">
+          <div>
+            <div class="product-title">${p.title}</div>
+            <div style="color:var(--muted);font-size:0.95rem;margin-top:6px">${p.desc}</div>
+          </div>
+          <div class="price-row">
+            <div>
+              <div class="price">${formatCurrency(p.price)}</div>
+              ${p.oldPrice ? `<div class="old-price">${formatCurrency(p.oldPrice)}</div>` : ''}
+            </div>
+            <div style="display:flex;flex-direction:column;min-width:140px">
+              <div style="display:flex;gap:8px" class="card-actions">
+                <button class="details-btn" data-id="${p.id}">عرض</button>
+                <button class="add-to-cart" data-id="${p.id}">أضف للسلة</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    // تنسيق السعر
+    function formatCurrency(num){
+      // عمل تنسيق للأرقام بالعربي + الريال
+      try{
+        return new Intl.NumberFormat('ar-EG', {maximumFractionDigits:0}).format(num) + ' ريال';
+      }catch(e){
+        return num + ' ريال';
+      }
+    }
+
+    //عرض المنتجات مع فلتر وبحث
+    function renderProducts(){
+      const q = searchInput.value.trim().toLowerCase();
+      const cat = categoryFilter.value;
+      let results = PRODUCTS.filter(p=>{
+        if(cat !== 'all' && cat !== '' && p.cat !== cat) return false;
+        if(q && !(p.title.toLowerCase().includes(q) || (p.desc && p.desc.toLowerCase().includes(q)))) return false;
+        return true;
+      });
+
+      productGrid.innerHTML = '';
+      if(results.length === 0){
+        productGrid.innerHTML = `<div style="padding:24px;background:var(--card);border-radius:12px">لم يتم العثور على منتجات مطابقة.</div>`;
+      } else {
+        results.forEach(p=> productGrid.appendChild(createProductCard(p)));
+      }
+      resultsInfo.textContent = `عرض ${results.length} منتج${results.length>1?'':''}`;
+      attachProductListeners();
+    }
+
+    // أحداث الأزرار في بطاقات المنتج
+    function attachProductListeners(){
+      document.querySelectorAll('.add-to-cart').forEach(btn=>{
+        btn.removeEventListener('click', handleAddClick);
+        btn.addEventListener('click', handleAddClick);
+      });
+      document.querySelectorAll('.details-btn').forEach(btn=>{
+        btn.removeEventListener('click', handleDetails);
+        btn.addEventListener('click', handleDetails);
+      });
+    }
+
+    function handleAddClick(e){
+      const id = e.currentTarget.dataset.id;
+      addToCart(parseInt(id),1);
+      // feedback
+      e.currentTarget.textContent = '✓ تمت الإضافة';
+      e.currentTarget.style.opacity = '0.85';
+      setTimeout(()=>{ e.currentTarget.textContent = 'أضف للسلة'; e.currentTarget.style.opacity='1' }, 1200);
+    }
+
+    function addToCart(id, qty=1){
+      CART[id] = (CART[id] || 0) + qty;
+      saveCart();
+    }
+
+    // تفاصيل المنتج — المودال
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImageWrap = document.getElementById('modalImageWrap');
+    const modalPrice = document.getElementById('modalPrice');
+    const modalOldPrice = document.getElementById('modalOldPrice');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalAdd = document.getElementById('modalAdd');
+    const qtyVal = document.getElementById('qtyVal');
+    const qtyInc = document.getElementById('qtyInc');
+    const qtyDec = document.getElementById('qtyDec');
+    const modalCategory = document.getElementById('modalCategory');
+
+    let currentModalProduct = null;
+    let currentQty = 1;
+
+    function handleDetails(e){
+      const id = parseInt(e.currentTarget.dataset.id);
+      const p = PRODUCTS.find(x=>x.id===id);
+      openModal(p);
+    }
+
+    function openModal(p){
+      currentModalProduct = p;
+      currentQty = 1;
+      qtyVal.textContent = currentQty;
+      modalTitle.textContent = p.title;
+      modalCategory.textContent = categoryName(p.cat);
+      modalPrice.textContent = formatCurrency(p.price);
+      modalOldPrice.textContent = p.oldPrice ? formatCurrency(p.oldPrice) : '';
+      modalDesc.textContent = p.desc || '';
+      modalImageWrap.innerHTML = `<img src="${p.img || placeholderSVG(p.title.charAt(0),'#fff3f5','#eef6ff')}" alt="${p.title}" style="max-width:100%;max-height:100%;border-radius:10px"/>`;
+      modalBackdrop.style.display = 'flex';
+      modalBackdrop.setAttribute('aria-hidden','false');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    modalBackdrop.addEventListener('click', (ev)=>{ if(ev.target === modalBackdrop) closeModal(); });
+    function closeModal(){
+      modalBackdrop.style.display = 'none';
+      modalBackdrop.setAttribute('aria-hidden','true');
+      currentModalProduct = null;
+    }
+
+    qtyInc.addEventListener('click', ()=>{ currentQty++; qtyVal.textContent = currentQty; });
+    qtyDec.addEventListener('click', ()=>{ if(currentQty>1) currentQty--; qtyVal.textContent = currentQty; });
+
+    modalAdd.addEventListener('click', ()=>{
+      if(currentModalProduct){
+        addToCart(currentModalProduct.id, currentQty);
+        closeModal();
+      }
+    });
+
+    // فئات نصية للعرض
+    function categoryName(id){
+      return ({men:'ملابس رجالية',women:'ملابس نسائية',kids:'ملابس أطفال',shoes:'أحذية',sport:'رياضي'})[id] || 'عام';
+    }
+
+    // أزرار وأحداث أخرى
+    document.getElementById('shopNow').addEventListener('click', ()=>{ document.getElementById('products').scrollIntoView({behavior:'smooth'}); });
+
+    // بحث وفلاتر
+    searchInput.addEventListener('input', debounce(()=> renderProducts(), 300));
+    clearSearch.addEventListener('click', ()=>{ searchInput.value=''; renderProducts(); });
+    categoryFilter.addEventListener('change', ()=> renderProducts());
+
+    // فتح القائمة في الموبايل
+    const openMenu = document.getElementById('openMenu');
+    const mainNav = document.getElementById('mainNav');
+    openMenu.addEventListener('click', ()=>{
+      const shown = mainNav.style.display === 'flex';
+      if(shown){ mainNav.style.display = 'none'; openMenu.setAttribute('aria-expanded','false'); }
+      else { mainNav.style.display = 'flex'; openMenu.setAttribute('aria-expanded','true'); mainNav.style.flexDirection='column'; mainNav.style.gap='10px'; }
+    });
+
+    // سمة البداية: البناء
+    function init(){
+      buildCategories();
+      renderProducts();
+      updateCartUI();
+    }
+
+    // debounce
+    function debounce(fn,ms=200){ let t; return function(...args){ clearTimeout(t); t=setTimeout(()=>fn.apply(this,args),ms);} }
+
+    // quick: عند الضغط على أيقونة السلة — عرض ملخص بسيط
+    cartBtn.addEventListener('click', ()=>{
+      const keys = Object.keys(CART);
+      if(keys.length===0){ alert('السلة فارغة — أضف منتجات للشاشة.'); return; }
+      let msg='محتويات السلة:\n\n';
+      let total=0;
+      keys.forEach(k=>{
+        const p = PRODUCTS.find(x=>x.id==k);
+        const q = CART[k];
+        if(p){ total += p.price * q; msg += `${p.title} x ${q} = ${formatCurrency(p.price*q)}\n`; }
+      });
+      msg += `\nالمجموع: ${formatCurrency(total)}\n\nمتابعة عملية الدفع ليست مفعّلة في هذه النسخة (Mock).`;
+      if(confirm(msg+"\n\nهل تريد مسح السلة؟")){ CART={}; saveCart(); }
+    });
+
+    // init
+    init();
+
+    // — تحسين: تحديث واجهة عند فتح وإغلاق
+    window.addEventListener('storage', ()=> { CART = JSON.parse(localStorage.getItem('elegance_cart') || '{}'); updateCartUI(); });
+
+  </script>
+</body>
+</html>
