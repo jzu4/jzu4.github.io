@@ -8,7 +8,7 @@
     },
     {
       "name": "beIN SPORTS HD2",
-      "url": "https://sportina.life/BEIN2/video.m3u8",
+      "url": "https://prod-fastly-eu-west-1.video.pscp.tv/Transcoding/v1/hls/xON3S8k7y6LIMC_AThRGIgohPQFNX8SBSAigzXXh10AgMMDt1iTgkc5d73PJjdo3aLEV2Ey8zCRk8sPuB5tMiw/non_transcode/eu-west-1/periscope-replay-direct-prod-eu-west-1-public/master_dynamic_delta.m3u8?type=live",
       "logo": "https://devry7yy.org/img/IMG_6703.png",
       "category": "BeIN Sports"
     },
